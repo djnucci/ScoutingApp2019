@@ -1,11 +1,11 @@
 /**
  * Automatically generated file. DO NOT MODIFY
  */
-package com.RunnymedeRobotics.scoutingapp2019;
+package com.runnymederobotics.scoutingapp2019;
 
 public final class BuildConfig {
   public static final boolean DEBUG = Boolean.parseBoolean("true");
-  public static final String APPLICATION_ID = "com.RunnymedeRobotics.scoutingapp2019";
+  public static final String APPLICATION_ID = "com.runnymederobotics.scoutingapp2019";
   public static final String BUILD_TYPE = "debug";
   public static final String FLAVOR = "";
   public static final int VERSION_CODE = 1;

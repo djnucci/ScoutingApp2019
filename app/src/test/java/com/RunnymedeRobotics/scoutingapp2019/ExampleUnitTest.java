@@ -1,4 +1,4 @@
-package com.RunnymedeRobotics.scoutingapp2019;
+package com.runnymederobotics.scoutingapp2019;
 
 import org.junit.Test;
 
