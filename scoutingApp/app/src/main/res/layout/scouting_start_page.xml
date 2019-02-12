@@ -13,4 +13,17 @@
 
     <include layout="@layout/content_main" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:text="YEET YEET"
+            android:textSize="30sp" />
+    </LinearLayout>
+
 </android.support.design.widget.CoordinatorLayout>
