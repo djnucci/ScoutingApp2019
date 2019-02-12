@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new basicFragment(R.layout.app_bar_main)).commit();
-            navigationView.setCheckedItem(R.id.nav_match_schedule);
+            navigationView.setCheckedItem(R.id.nav_main_page);
         }
     }
 
@@ -76,12 +76,26 @@ public class MainActivity extends AppCompatActivity
         Fragment f;
 
         switch (id){
-            case R.id.nav_match_schedule:
+            case R.id.nav_main_page:
+                f = new basicFragment(R.layout.content_main);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,f).commit();
+                break;
+            case R.id.nav_schedule:
+                f = new basicFragment(R.layout.schedule);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,f).commit();
+                break;
+            case R.id.nav_file_transfer:
+                f = new basicFragment(R.layout.transfer);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,f).commit();
+                break;
+            case R.id.nav_scouting:
                 f = new basicFragment(R.layout.scouting_start_page);
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,f).commit();
                 break;
-            case R.id.nav_gallery:
-
+            case R.id.nav_stats:
+                f = new basicFragment(R.layout.stats);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,f).commit();
+                break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
