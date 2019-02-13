@@ -14,6 +14,8 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private int currentLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,10 +40,18 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            switch (currentLayout){
+                case R.layout.data_sharing:
+                case R.layout.transfer:
+                case R.layout.schedule:
+                    int layout = R.layout.app_bar_main;
+                    switchBasicFrag(layout);
+                    break;
+            }
         }
     }
 
@@ -73,33 +83,39 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        Fragment f;
+        int layout;
 
         switch (id){
             case R.id.nav_main_page:
-                f = new basicFragment(R.layout.content_main);
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,f).commit();
+                layout = R.layout.app_bar_main;
+                switchBasicFrag(layout);
                 break;
             case R.id.nav_schedule:
-                f = new basicFragment(R.layout.schedule);
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,f).commit();
+                layout = R.layout.schedule;
+                switchBasicFrag(layout);
                 break;
             case R.id.nav_file_transfer:
-                f = new basicFragment(R.layout.transfer);
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,f).commit();
+                layout = R.layout.transfer;
+                switchBasicFrag(layout);
                 break;
             case R.id.nav_scouting:
-                f = new basicFragment(R.layout.scouting_start_page);
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,f).commit();
+                layout = R.layout.scouting_start_page;
+                switchBasicFrag(layout);
                 break;
             case R.id.nav_stats:
-                f = new basicFragment(R.layout.stats);
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,f).commit();
+                layout = R.layout.stats;
+                switchBasicFrag(layout);
                 break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void switchBasicFrag(int layout){
+        Fragment f = new basicFragment(layout);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,f).commit();
+        currentLayout = layout;
     }
 }
