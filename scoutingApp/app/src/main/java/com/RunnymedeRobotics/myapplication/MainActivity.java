@@ -40,12 +40,13 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             switch (currentLayout){
-                case R.layout.data_sharing:
+                case R.layout.stats:
                 case R.layout.transfer:
                 case R.layout.schedule:
                     int layout = R.layout.app_bar_main;
