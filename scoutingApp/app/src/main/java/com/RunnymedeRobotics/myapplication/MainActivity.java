@@ -47,12 +47,26 @@ public class MainActivity extends AppCompatActivity
         } else {
             switch (currentLayout){
                 case R.layout.stats:
+                    navigationView.setCheckedItem(R.id.nav_main_page);
+                    break;
+                case R.layout.transfer:
+                    navigationView.setCheckedItem(R.id.nav_main_page);
+                    break;
+
+                case R.layout.schedule:
+                    navigationView.setCheckedItem(R.id.nav_main_page);
+                    break;
+            }
+
+            switch (currentLayout){
+                case R.layout.stats:
                 case R.layout.transfer:
                 case R.layout.schedule:
                     int layout = R.layout.app_bar_main;
                     switchBasicFrag(layout);
                     break;
             }
+
         }
     }
 
