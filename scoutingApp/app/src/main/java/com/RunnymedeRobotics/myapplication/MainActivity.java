@@ -12,7 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.RunnymedeRobotics.myapplication.fragment.basicFragment;
+import com.RunnymedeRobotics.myapplication.fragment.BasicFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new basicFragment(R.layout.app_bar_main)).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new BasicFragment(R.layout.app_bar_main)).commit();
             navigationView.setCheckedItem(R.id.nav_main_page);
         }
     }
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void switchBasicFrag(int layout){
-        Fragment f = new basicFragment(layout);
+        Fragment f = new BasicFragment(layout);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,f).commit();
         currentLayout = layout;
     }
