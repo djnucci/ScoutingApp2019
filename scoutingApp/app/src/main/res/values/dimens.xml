@@ -6,4 +6,5 @@
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="scouting_tab_height">65dp</dimen>
+    <dimen name="setup_button_text_height">24dp</dimen>
 </resources>

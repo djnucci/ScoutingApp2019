@@ -59,28 +59,69 @@
 
         </TableLayout>
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:scaleType="fitStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
                 tools:srcCompat="@drawable/starting_platform" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/setup_level_two_left"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="130dp"
-                android:layout_height="104dp"
-                android:layout_marginTop="75dp"
+                android:layout_width="250dp"
+                android:layout_height="195dp"
+                android:layout_marginTop="150dp"
                 android:background="#FFFFFF"
-                android:text="Button"
+                android:text="Level 2"
+                android:textSize="@dimen/setup_button_text_height"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/setup_level_three"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="250dp"
+                android:layout_height="242dp"
+                android:layout_marginTop="8dp"
+                android:background="#FFFFFF"
+                android:text="Level 3"
+                android:textSize="@dimen/setup_button_text_height"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setup_level_two_left" />
+
+            <Button
+                android:id="@+id/setup_level_two_right"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="250dp"
+                android:layout_height="199dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="125dp"
+                android:background="#FFFFFF"
+                android:text="Level 2"
+                android:textSize="@dimen/setup_button_text_height"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setup_level_three"
+                app:layout_constraintVertical_bias="0.0" />
+
         </android.support.constraint.ConstraintLayout>
 
     </LinearLayout>
