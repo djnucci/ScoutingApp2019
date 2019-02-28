@@ -15,60 +15,74 @@
         android:id="@+id/include"
         layout="@layout/content_main" />
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="61dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TableRow
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/scouting_setup_setup"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/scouting_tab_height"
+                    android:layout_weight="1"
+                    android:onClick="switchScoutingTab"
+                    android:text="Setup" />
+
+                <Button
+                    android:id="@+id/scouting_setup_match"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/scouting_tab_height"
+                    android:layout_weight="1"
+                    android:onClick="switchScoutingTab"
+                    android:text="Match Play" />
+
+                <Button
+                    android:id="@+id/scouting_setup_endgame"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/scouting_tab_height"
+                    android:layout_weight="1"
+                    android:onClick="switchScoutingTab"
+                    android:text="End Game" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/scouting_setup_setup"
-                style="@style/Widget.AppCompat.Button.Borderless"
+            <ImageView
+                android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/scouting_tab_height"
-                android:layout_weight="1"
-                android:onClick="switchScoutingTab"
-                android:text="Setup" />
-
-            <Button
-                android:id="@+id/scouting_setup_match"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/scouting_tab_height"
-                android:layout_weight="1"
-                android:onClick="switchScoutingTab"
-                android:text="Match Play" />
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/starting_platform" />
 
             <Button
-                android:id="@+id/scouting_setup_endgame"
+                android:id="@+id/button"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/scouting_tab_height"
-                android:layout_weight="1"
-                android:onClick="switchScoutingTab"
-                android:text="End Game" />
+                android:layout_width="130dp"
+                android:layout_height="104dp"
+                android:layout_marginTop="75dp"
+                android:background="#FFFFFF"
+                android:text="Button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
 
-        </TableRow>
-
-    </TableLayout>
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="256dp"
-            android:layout_height="156dp"
-            android:text="SETUP"
-            android:textAlignment="center"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
