@@ -119,6 +119,39 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="86dp"
+                app:layout_constraintBottom_toBottomOf="@+id/setup_level_one"
+                app:layout_constraintStart_toEndOf="@+id/setup_level_one"
+                app:layout_constraintTop_toTopOf="@+id/setup_level_one">
+
+                <RadioButton
+                    android:id="@+id/setup_hatch_radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hatch"
+                    android:textSize="@dimen/setup_button_text_height" />
+
+                <RadioButton
+                    android:id="@+id/setup_cargo_radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cargo"
+                    android:textSize="@dimen/setup_button_text_height" />
+
+                <RadioButton
+                    android:id="@+id/setup_nothing_radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nothing"
+                    android:textSize="@dimen/setup_button_text_height" />
+            </RadioGroup>
+
         </android.support.constraint.ConstraintLayout>
 
     </LinearLayout>
