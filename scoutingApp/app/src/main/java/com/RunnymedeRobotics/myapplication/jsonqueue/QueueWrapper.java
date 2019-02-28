@@ -1,6 +1,6 @@
-package com.example.simar.androidsqlitetest.jsonqueue;
+package com.RunnymedeRobotics.myapplication.jsonqueue;
 
-import com.example.simar.androidsqlitetest.pojo.SubmitMatch;
+import com.RunnymedeRobotics.myapplication.pojo.SubmitMatch;
 
 import java.util.ArrayList;
 

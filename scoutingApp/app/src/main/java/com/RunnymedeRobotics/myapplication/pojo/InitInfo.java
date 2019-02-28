@@ -1,4 +1,4 @@
-package com.example.simar.androidsqlitetest.pojo;
+package com.RunnymedeRobotics.myapplication.pojo;
 
 /**
  * The type Init info.

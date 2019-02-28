@@ -1,7 +1,7 @@
 package com.RunnymedeRobotics.myapplication.apicalls;
 
-import com.example.simar.androidsqlitetest.jsonqueue.QueueWrapper;
-import com.example.simar.androidsqlitetest.pojo.SubmitMatch;
+
+import com.RunnymedeRobotics.myapplication.jsonqueue.QueueWrapper;
 import com.google.gson.Gson;
 
 import org.apache.http.HttpResponse;

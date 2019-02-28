@@ -1,6 +1,6 @@
-package com.example.simar.androidsqlitetest.pojo;
+package com.RunnymedeRobotics.myapplication.pojo;
 
-import java.sql.SQLException;
+
 import java.util.ArrayList;
 
 /**

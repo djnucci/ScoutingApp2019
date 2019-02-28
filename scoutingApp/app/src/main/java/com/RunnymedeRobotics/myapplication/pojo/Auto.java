@@ -1,4 +1,4 @@
-package com.example.simar.androidsqlitetest.pojo;
+package com.RunnymedeRobotics.myapplication.pojo;
 
 /**
  * Class for the data structure for the auto data set on the MYSQL server

@@ -1,4 +1,4 @@
-package com.RunnymedeRobotics.myapplication;
+package com.RunnymedeRobotics.myapplication.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

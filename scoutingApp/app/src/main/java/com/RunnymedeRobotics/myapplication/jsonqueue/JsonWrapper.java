@@ -1,4 +1,4 @@
-package com.example.simar.androidsqlitetest.jsonqueue;
+package com.RunnymedeRobotics.myapplication.jsonqueue;
 
 import android.content.Context;
 import android.util.Log;
