@@ -1,9 +1,10 @@
-package com.RunnymedeRobotics.myapplication.jsonqueue;
+package com.RunnymedeRobotics.myapplication.filehandler;
 
 import android.content.Context;
 import android.util.Log;
 
-import com.google.gson.Gson;
+import com.RunnymedeRobotics.myapplication.MainActivity;
+import com.RunnymedeRobotics.myapplication.fragment.SettingsFragment;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -12,30 +13,14 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-/**
- * Created by Simar on 2/18/2019.
- */
+public class FileHandler {
 
-public class JsonWrapper {
-
-
-    public static QueueWrapper getDataFromFile(Context context){
-        String val = readFromFile(context);
-        return (new Gson()).fromJson(val, QueueWrapper.class);
-    }
-
-    public static void writeToFile(QueueWrapper queueWrapper, Context context){
-        writeToFile((new Gson()).toJson(queueWrapper),context);
-    }
-
-
-
-    private static String readFromFile(Context context) {
+    public static String readFromFile(Context context , String fileName) {
 
         String ret = "";
 
         try {
-            InputStream inputStream = context.openFileInput("data.txt");
+            InputStream inputStream = context.openFileInput(fileName);
 
             if ( inputStream != null ) {
                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
@@ -59,9 +44,9 @@ public class JsonWrapper {
 
         return ret;
     }
-    private static void writeToFile(String data,Context context) {
+    public static void writeToFile(String data,Context context, String filename) {
         try {
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput("data.txt", Context.MODE_PRIVATE));
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput(filename, Context.MODE_PRIVATE));
             outputStreamWriter.write(data);
             outputStreamWriter.close();
         }

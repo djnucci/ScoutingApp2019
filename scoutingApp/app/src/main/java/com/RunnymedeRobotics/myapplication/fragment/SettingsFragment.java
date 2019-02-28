@@ -24,8 +24,8 @@ public class SettingsFragment extends BasicFragment {
     EditText ipEditText;
     EditText compEditText;
 
-    static String ipAddress = "";
-    static String competetion = "";
+    public static String ipAddress = "";
+    public static String competetion = "";
 
 
 
