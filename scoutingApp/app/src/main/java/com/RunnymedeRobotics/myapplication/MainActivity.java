@@ -1,6 +1,8 @@
 package com.RunnymedeRobotics.myapplication;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.RunnymedeRobotics.myapplication.apicalls.CallAPI;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
 import com.RunnymedeRobotics.myapplication.fragment.BasicFragment;
 import com.RunnymedeRobotics.myapplication.fragment.InitInfoFragment;
@@ -42,6 +45,11 @@ public class MainActivity extends AppCompatActivity
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new BasicFragment(R.layout.app_bar_main)).commit();
             navigationView.setCheckedItem(R.id.nav_main_page);
+        }
+        if( Build.VERSION.SDK_INT >= 9){
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+
+            StrictMode.setThreadPolicy(policy);
         }
 
         //Updates global settings and gets them
@@ -155,7 +163,6 @@ public class MainActivity extends AppCompatActivity
 
     public void switchScoutingTab(View button){
         int layout;
-
         switch (button.getId()){
             case R.id.scouting_start_setup:
             case R.id.scouting_setup_setup:
