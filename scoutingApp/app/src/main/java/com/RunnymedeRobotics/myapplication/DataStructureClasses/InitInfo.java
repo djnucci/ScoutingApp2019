@@ -1,4 +1,4 @@
-package com.RunnymedeRobotics.myapplication.pojo;
+package com.RunnymedeRobotics.myapplication.DataStructureClasses;
 
 /**
  * The type Init info.

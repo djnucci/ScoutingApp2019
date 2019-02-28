@@ -1,7 +1,7 @@
-package com.RunnymedeRobotics.myapplication.jsonqueue;
-import com.RunnymedeRobotics.myapplication.DataStructureClasses.SubmitMatch;
+package com.RunnymedeRobotics.myapplication.DataStructureClasses;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by Simar on 2/18/2019.
@@ -29,4 +29,6 @@ public class QueueWrapper {
     public void addToQueueWrapper(SubmitMatch submitMatch){
         submitMatchArrayList.add(submitMatch);
     }
+
+
 }

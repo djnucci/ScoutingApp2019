@@ -22,11 +22,10 @@
 
         <TextView
             android:id="@+id/comp_text_view"
-            android:paddingTop="25dp"
             android:layout_width="wrap_content"
-            android:paddingLeft="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:paddingTop="25dp"
             android:text="Regional " />
     </LinearLayout>
 
@@ -39,17 +38,16 @@
             android:id="@+id/ip_address_text_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="25dp"
-            android:paddingRight="100dp"
-            android:paddingLeft="100dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:paddingLeft="100dp"
+            android:paddingTop="25dp"
+            android:paddingRight="100dp" />
 
         <TextView
             android:id="@+id/textView6"
             android:paddingTop="25dp"
-            android:paddingLeft="100dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

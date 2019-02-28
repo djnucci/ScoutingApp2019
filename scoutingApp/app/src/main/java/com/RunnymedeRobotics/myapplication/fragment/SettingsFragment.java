@@ -1,6 +1,7 @@
 package com.RunnymedeRobotics.myapplication.fragment;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 
 import com.RunnymedeRobotics.myapplication.R;
 
@@ -20,11 +21,15 @@ public class SettingsFragment extends BasicFragment {
 
     Button storeDataBtn;
 
-    TextView ipTextView;
-    TextView compeTextView;
+    EditText ipEditText;
+    EditText compEditText;
 
-    String ipAddress = "";
-    String competetion = "";
+    static String ipAddress = "";
+    static String competetion = "";
+
+
+
+
 
     public SettingsFragment(){}
 
@@ -36,34 +41,44 @@ public class SettingsFragment extends BasicFragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        storeDataBtn = (Button) getView().findViewById(R.id.save_settings);
-        ipTextView = (TextView) getView().findViewById(R.id.ip_address_text_edit);
-        compeTextView = (TextView) getView().findViewById(R.id.comp_text_view);
-
+        View view =  inflater.inflate(this.layout, container, false);
+        storeDataBtn = (Button) view.findViewById(R.id.save_settings);
+        ipEditText = (EditText) view.findViewById(R.id.ip_address_text_edit);
+        compEditText = (EditText) view.findViewById(R.id.regional_text_edit);
 
         SharedPreferences pref = getContext().getSharedPreferences("settings",0);
         final SharedPreferences.Editor editor = pref.edit();
+
 
         //Gets the stored strings and sets it to the local variables
         ipAddress = pref.getString("ip",null);
         competetion = pref.getString("competition",null);
 
         //Sets the stored prefrences to the text view
-        ipTextView.setText(ipAddress);
-        compeTextView.setText(competetion);
+        ipEditText.setText(ipAddress);
+        compEditText.setText(competetion);
 
 
         storeDataBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Updates settings
-                competetion = compeTextView.getText().toString();
-                ipAddress = ipTextView.getText().toString();
+                competetion = compEditText.getText().toString();
+                ipAddress = ipEditText.getText().toString();
                 editor.putString("competition",competetion);
                 editor.putString("ip",ipAddress);
                 editor.commit();
             }
         });
-        return inflater.inflate(this.layout, container, false);
+        return view;
     }
+
+    public static void updateSettings(Context context){
+
+        SharedPreferences pref = context.getSharedPreferences("settings",0);
+        final SharedPreferences.Editor editor = pref.edit();
+        ipAddress = pref.getString("ip",null);
+        competetion = pref.getString("competition",null);
+    }
+
 }

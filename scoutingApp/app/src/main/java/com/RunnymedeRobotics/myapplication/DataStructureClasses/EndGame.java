@@ -1,7 +1,5 @@
-package com.RunnymedeRobotics.myapplication.pojo;
+package com.RunnymedeRobotics.myapplication.DataStructureClasses;
 
-
-import java.sql.Time;
 
 /**
  * The type End game.
@@ -50,12 +48,12 @@ public class EndGame {
     /**
      * Climb Start
      */
-    Time cimbStart;
+    int cimbStart;
 
     /**
      * Climb End timestamp
      */
-    Time climbEnd;
+    int climbEnd;
     /**
      * Instantiates a new End game.
      */
@@ -74,7 +72,7 @@ public class EndGame {
      * @param cimbStart
      * @param climbEnd
      */
-    public EndGame(int id, boolean levelOne, boolean levelTwo, boolean levelThree, boolean ramp, float timeToClimb, char failLevel, Time cimbStart, Time climbEnd) {
+    public EndGame(int id, boolean levelOne, boolean levelTwo, boolean levelThree, boolean ramp, float timeToClimb, char failLevel, int cimbStart, int climbEnd) {
         this.id = id;
         this.levelOne = levelOne;
         this.levelTwo = levelTwo;
@@ -218,7 +216,7 @@ public class EndGame {
      *
      * @return Value of Climb End timestamp.
      */
-    public Time getClimbEnd() {
+    public int getClimbEnd() {
         return climbEnd;
     }
 
@@ -227,7 +225,7 @@ public class EndGame {
      *
      * @return Value of Climb Start.
      */
-    public Time getCimbStart() {
+    public int getCimbStart() {
         return cimbStart;
     }
 
@@ -236,7 +234,7 @@ public class EndGame {
      *
      * @param cimbStart New value of Climb Start.
      */
-    public void setCimbStart(Time cimbStart) {
+    public void setCimbStart(int cimbStart) {
         this.cimbStart = cimbStart;
     }
 
@@ -245,7 +243,7 @@ public class EndGame {
      *
      * @param climbEnd New value of Climb End timestamp.
      */
-    public void setClimbEnd(Time climbEnd) {
+    public void setClimbEnd(int climbEnd) {
         this.climbEnd = climbEnd;
     }
 }

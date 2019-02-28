@@ -1,4 +1,4 @@
-package com.RunnymedeRobotics.myapplication.pojo;
+package com.RunnymedeRobotics.myapplication.DataStructureClasses;
 
 import java.sql.Time;
 /**
@@ -247,6 +247,5 @@ public class Cycle {
     public Time getDropoffTime() {
         return dropoffTime;
     }
-
 
 }

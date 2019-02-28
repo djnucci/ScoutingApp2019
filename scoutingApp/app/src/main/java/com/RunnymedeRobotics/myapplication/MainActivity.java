@@ -12,10 +12,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.RunnymedeRobotics.myapplication.DataStructureClasses.SubmitMatch;
 import com.RunnymedeRobotics.myapplication.fragment.BasicFragment;
+import com.RunnymedeRobotics.myapplication.fragment.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
+
+    public static SubmitMatch globalSubmitMatch;
 
     private int currentLayout;
 
@@ -38,6 +42,9 @@ public class MainActivity extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new BasicFragment(R.layout.app_bar_main)).commit();
             navigationView.setCheckedItem(R.id.nav_main_page);
         }
+
+        //Updates global settings and gets them
+        SettingsFragment.updateSettings(this);
     }
 
     @Override
@@ -123,6 +130,9 @@ public class MainActivity extends AppCompatActivity
                 layout = R.layout.stats;
                 switchBasicFrag(layout);
                 break;
+            case R.id.nav_settings:
+                layout = R.layout.settings_fragment;
+                switchBasicFrag(layout,new SettingsFragment(layout));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -132,6 +142,12 @@ public class MainActivity extends AppCompatActivity
 
     public void switchBasicFrag(int layout){
         Fragment f = new BasicFragment(layout);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,f).commit();
+        currentLayout = layout;
+    }
+
+    public void switchBasicFrag(int layout, Fragment fragment){
+        Fragment f = fragment;
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,f).commit();
         currentLayout = layout;
     }

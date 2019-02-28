@@ -1,4 +1,4 @@
-package com.RunnymedeRobotics.myapplication.pojo;
+package com.RunnymedeRobotics.myapplication.DataStructureClasses;
 
 /**
  * Class for the data structure for the auto data set on the MYSQL server
