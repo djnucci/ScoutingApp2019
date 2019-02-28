@@ -8,6 +8,7 @@ public class Match {
         private int b2;
         private int b3;
         private int mathcNum;
+        private  int test;
 
 
         public void match(int r1,int r2,int r3,int b1,int b2,int b3) {
