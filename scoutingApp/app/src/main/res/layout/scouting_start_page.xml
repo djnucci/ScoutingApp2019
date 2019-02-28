@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -13,59 +14,150 @@
 
     <include layout="@layout/content_main" />
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TableRow
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="50dp" />
 
-            <Button
-                android:id="@+id/scouting_start_setup"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/scouting_tab_height"
-                android:layout_weight="1"
-                android:onClick="switchScoutingTab"
-                android:text="Setup" />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/scout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/scouting_start_match"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/scouting_tab_height"
-                android:layout_weight="1"
-                android:onClick="switchScoutingTab"
-                android:text="Match Play" />
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Please Enter Your Name:" />
+        </android.support.design.widget.TextInputLayout>
 
-            <Button
-                android:id="@+id/scouting_start_endgame"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/scouting_tab_height"
-                android:layout_weight="1"
-                android:onClick="switchScoutingTab"
-                android:text="End Game" />
-        </TableRow>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
 
-    </TableLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/match_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Please Enter Match Number:"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:singleLine="true" />
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="256dp"
-            android:layout_height="156dp"
-            android:text="STARTPAGE"
-            android:textAlignment="center"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </android.support.constraint.ConstraintLayout>
+        </android.support.design.widget.TextInputLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/red_one"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/scouting_tab_height"
+                    android:layout_weight="1"
+                    android:background="#FF0000"
+                    android:text="Red One" />
+
+                <Button
+                    android:id="@+id/red_two"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/scouting_tab_height"
+                    android:layout_weight="1"
+                    android:background="#FF0000"
+                    android:text="Red Two" />
+
+                <Button
+                    android:id="@+id/red_three"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/scouting_tab_height"
+                    android:layout_weight="1"
+                    android:background="#FF0000"
+                    android:text="Red Three" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp" >
+
+                <Button
+                    android:id="@+id/blue_one"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/scouting_tab_height"
+                    android:layout_weight="1"
+                    android:background="#0000FF"
+                    android:text="Blue One"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/blue_two"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/scouting_tab_height"
+                    android:layout_weight="1"
+                    android:background="#0000FF"
+                    android:text="Blue Two"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/blue_three"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/scouting_tab_height"
+                    android:layout_weight="1"
+                    android:background="#0000FF"
+                    android:text="Blue Three"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+        </TableLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Team Number:"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <Button
+            android:id="@+id/scouting_start_setup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="switchScoutingTab"
+            android:text="Submit"
+            android:textSize="18sp" />
+
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

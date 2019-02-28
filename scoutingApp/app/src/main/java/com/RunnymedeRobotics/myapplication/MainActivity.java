@@ -50,10 +50,8 @@ public class MainActivity extends AppCompatActivity
         } else {
             switch (currentLayout){
                 case R.layout.stats:
-                    navigationView.setCheckedItem(R.id.nav_main_page);
                     break;
                 case R.layout.transfer:
-                    navigationView.setCheckedItem(R.id.nav_main_page);
                     break;
                 case R.layout.schedule:
                     navigationView.setCheckedItem(R.id.nav_main_page);
@@ -149,14 +147,12 @@ public class MainActivity extends AppCompatActivity
                 layout = R.layout.scouting_setup;
                 switchBasicFrag(layout);
                 break;
-            case R.id.scouting_start_match:
             case R.id.scouting_setup_match:
             case R.id.scouting_match_match:
             case R.id.scouting_endgame_match:
                 layout = R.layout.scouting_match_play;
                 switchBasicFrag(layout);
                 break;
-            case R.id.scouting_start_endgame:
             case R.id.scouting_setup_endgame:
             case R.id.scouting_match_endgame:
             case R.id.scouting_endgame_endgame:
