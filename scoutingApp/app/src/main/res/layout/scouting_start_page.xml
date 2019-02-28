@@ -20,7 +20,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="75dp" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/scout_name"
@@ -36,7 +36,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="100dp" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/match_number"
@@ -56,7 +56,7 @@
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="50dp" />
+            android:layout_height="100dp" />
 
         <TableLayout
             android:layout_width="match_parent"
@@ -150,7 +150,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="25dp" />
+            android:layout_height="50dp" />
 
         <Button
             android:id="@+id/scouting_start_setup"
