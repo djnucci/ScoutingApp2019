@@ -1,6 +1,7 @@
 package com.RunnymedeRobotics.myapplication;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -8,11 +9,13 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener{
 
     private int currentLayout;
 
@@ -52,7 +55,6 @@ public class MainActivity extends AppCompatActivity
                 case R.layout.transfer:
                     navigationView.setCheckedItem(R.id.nav_main_page);
                     break;
-
                 case R.layout.schedule:
                     navigationView.setCheckedItem(R.id.nav_main_page);
                     break;
@@ -91,6 +93,8 @@ public class MainActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -132,5 +136,33 @@ public class MainActivity extends AppCompatActivity
         Fragment f = new basicFragment(layout);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,f).commit();
         currentLayout = layout;
+    }
+
+    public void switchScoutingTab(View button){
+        int layout;
+
+        switch (button.getId()){
+            case R.id.scouting_start_setup:
+            case R.id.scouting_setup_setup:
+            case R.id.scouting_match_setup:
+            case R.id.scouting_endgame_setup:
+                layout = R.layout.scouting_setup;
+                switchBasicFrag(layout);
+                break;
+            case R.id.scouting_start_match:
+            case R.id.scouting_setup_match:
+            case R.id.scouting_match_match:
+            case R.id.scouting_endgame_match:
+                layout = R.layout.scouting_match_play;
+                switchBasicFrag(layout);
+                break;
+            case R.id.scouting_start_endgame:
+            case R.id.scouting_setup_endgame:
+            case R.id.scouting_match_endgame:
+            case R.id.scouting_endgame_endgame:
+                layout = R.layout.scouting_endgame;
+                switchBasicFrag(layout);
+                break;
+        }
     }
 }
