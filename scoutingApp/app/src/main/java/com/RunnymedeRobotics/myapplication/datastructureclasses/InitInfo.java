@@ -1,4 +1,4 @@
-package com.RunnymedeRobotics.myapplication.DataStructureClasses;
+package com.RunnymedeRobotics.myapplication.datastructureclasses;
 
 /**
  * The type Init info.

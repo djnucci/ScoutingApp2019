@@ -12,8 +12,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.RunnymedeRobotics.myapplication.DataStructureClasses.SubmitMatch;
+import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
 import com.RunnymedeRobotics.myapplication.fragment.BasicFragment;
+import com.RunnymedeRobotics.myapplication.fragment.InitInfoFragment;
 import com.RunnymedeRobotics.myapplication.fragment.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -124,7 +125,7 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_scouting:
                 layout = R.layout.scouting_start_page;
-                switchBasicFrag(layout);
+                switchBasicFrag(layout, new InitInfoFragment(layout));
                 break;
             case R.id.nav_stats:
                 layout = R.layout.stats;

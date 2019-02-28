@@ -1,7 +1,6 @@
-package com.RunnymedeRobotics.myapplication.DataStructureClasses;
+package com.RunnymedeRobotics.myapplication.datastructureclasses;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 /**
  * Created by Simar on 2/18/2019.

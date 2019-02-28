@@ -1,6 +1,4 @@
-package com.RunnymedeRobotics.myapplication.DataStructureClasses;
-
-import java.awt.*;
+package com.RunnymedeRobotics.myapplication.datastructureclasses;
 
 public class Teleop {
 

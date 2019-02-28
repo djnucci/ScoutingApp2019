@@ -1,5 +1,5 @@
 package com.RunnymedeRobotics.myapplication.jsonqueue;
-import com.RunnymedeRobotics.myapplication.DataStructureClasses.SubmitMatch;
+import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
 
 import java.util.ArrayList;
 

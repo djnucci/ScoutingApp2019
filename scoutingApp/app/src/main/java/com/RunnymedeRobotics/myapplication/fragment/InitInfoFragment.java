@@ -9,8 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
-import com.RunnymedeRobotics.myapplication.DataStructureClasses.InitInfo;
-import com.RunnymedeRobotics.myapplication.DataStructureClasses.SubmitMatch;
+import com.RunnymedeRobotics.myapplication.datastructureclasses.InitInfo;
+import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
 import com.RunnymedeRobotics.myapplication.MainActivity;
 import com.RunnymedeRobotics.myapplication.R;
 

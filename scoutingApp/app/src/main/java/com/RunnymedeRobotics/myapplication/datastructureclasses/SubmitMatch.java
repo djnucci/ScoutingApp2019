@@ -1,6 +1,5 @@
-package com.RunnymedeRobotics.myapplication.DataStructureClasses;
+package com.RunnymedeRobotics.myapplication.datastructureclasses;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
