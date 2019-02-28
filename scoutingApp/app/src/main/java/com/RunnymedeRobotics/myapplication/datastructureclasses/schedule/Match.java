@@ -1,4 +1,4 @@
-package com.RunnymedeRobotics.myapplication.datastructureclasses;
+package com.RunnymedeRobotics.myapplication.datastructureclasses.schedule;
 
 public class Match {
 
@@ -103,5 +103,14 @@ public class Match {
                 ", blue3=" + blue3 +
                 ", mathcNum=" + mathcNum +
                 '}';
+    }
+
+    public char getAllianceColour(int team){
+            if(team == red1 || team == red2 || team == red3){
+                return 'r';
+            }
+            else {
+                return 'r';
+            }
     }
 }

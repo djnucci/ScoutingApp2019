@@ -1,4 +1,4 @@
-package com.RunnymedeRobotics.myapplication.datastructureclasses;
+package com.RunnymedeRobotics.myapplication.datastructureclasses.schedule;
 
 import java.util.ArrayList;
 
@@ -17,6 +17,11 @@ public class MatchLists {
     public void setMatchArrayList(ArrayList<Match> matchArrayList) {
         this.matchArrayList = matchArrayList;
     }
+
+    public Match getMatch(int match){
+       return matchArrayList.get(match-1);
+    }
+
 
 
 }

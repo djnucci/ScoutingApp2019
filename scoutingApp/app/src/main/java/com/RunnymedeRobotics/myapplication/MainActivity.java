@@ -1,21 +1,26 @@
 package com.RunnymedeRobotics.myapplication;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.support.design.widget.NavigationView;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.RunnymedeRobotics.myapplication.apicalls.CallAPI;
+import com.RunnymedeRobotics.myapplication.datastructureclasses.schedule.MatchLists;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
+import com.RunnymedeRobotics.myapplication.filehandler.InflateSchedule;
 import com.RunnymedeRobotics.myapplication.fragment.BasicFragment;
 import com.RunnymedeRobotics.myapplication.fragment.InitInfoFragment;
 import com.RunnymedeRobotics.myapplication.fragment.SettingsFragment;
@@ -24,6 +29,8 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
 
     public static SubmitMatch globalSubmitMatch;
+    public static MatchLists matchLists;
+
 
     private int currentLayout;
 
@@ -33,6 +40,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -52,8 +60,11 @@ public class MainActivity extends AppCompatActivity
             StrictMode.setThreadPolicy(policy);
         }
 
+
         //Updates global settings and gets them
         SettingsFragment.updateSettings(this);
+        matchLists = InflateSchedule.inflateSchedule(this);
+        //Log.e("match1 : ", matchLists.getMatch(0).toString());
     }
 
     @Override
