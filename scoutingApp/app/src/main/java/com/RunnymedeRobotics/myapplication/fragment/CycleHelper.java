@@ -56,15 +56,11 @@ public class CycleHelper {
     public void addCycle(Cycle cycle){
         CycleHelper.cycleArrayList.add(cycle);
     }
-
-    public void addCycle(Cycle cycle, boolean autoTime){
-
-    }
+    
 
     public Cycle getCycle(int id){
         return cycleArrayList.get(id);
     }
-
 
 
 }
