@@ -56,7 +56,7 @@ public class CycleHelper {
     public void addCycle(Cycle cycle){
         CycleHelper.cycleArrayList.add(cycle);
     }
-    
+
 
     public Cycle getCycle(int id){
         return cycleArrayList.get(id);
