@@ -67,6 +67,7 @@ public class InitInfo {
         this.allianceColour = allianceColour;
     }
 
+
     /**
      * Gets id.
      *

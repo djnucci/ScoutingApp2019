@@ -20,16 +20,16 @@ import org.apache.http.impl.cookie.BestMatchSpec;
 public class SetupFragment extends BasicFragment {
     private int layout;
 
-    RadioButton levelOneBtn;
-    RadioButton levelTwoRightBtn;
-    RadioButton levelTwoLeftBtn;
+    private RadioButton levelOneBtn;
+    private RadioButton levelTwoRightBtn;
+    private RadioButton levelTwoLeftBtn;
 
-    RadioButton hatchPreload;
-    RadioButton cargoPreload;
-    RadioButton noPrelaod;
+    private RadioButton hatchPreload;
+    private RadioButton cargoPreload;
+    private  RadioButton noPrelaod;
 
-    Button matchPlayTab;
-    Button endGameTab;
+   private Button matchPlayTab;
+    private Button endGameTab;
 
     public SetupFragment(){}
 

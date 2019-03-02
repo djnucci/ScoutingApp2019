@@ -1,0 +1,150 @@
+package com.RunnymedeRobotics.myapplication.fragment;
+
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+
+import com.RunnymedeRobotics.myapplication.R;
+import com.RunnymedeRobotics.myapplication.datastructureclasses.EndGame;
+
+public class EndGameFragment extends BasicFragment {
+    /**
+     * layout
+     */
+    private int layout;
+    /**
+     * initiating the layout properties for the endgame screen
+     */
+    private CheckBox levelOneClimb;
+    private CheckBox levelTwoLeftClimb;
+    private CheckBox levelTwoRightClimb;
+    private CheckBox levelThreeClimb;
+
+    private CheckBox buddyd;
+
+    private RadioGroup climbFailRadiogrp;
+
+    private RadioButton levelOneClimbFail;
+    private RadioButton levelTwoClimbFail;
+    private RadioButton levelThreeClimbFail;
+
+    private Button finalSubmitMatch;
+
+    public EndGameFragment() {
+    }
+
+    @SuppressLint("ValidFragment")
+    public EndGameFragment(int layout) {
+        this.layout = layout;
+    }
+
+    /**
+     * Gets the values from different checkboxes.
+     * Final submit btn to finish the match.
+     * TODO: Timestamps
+     * TODO: Timer implementation
+     * TODO: Creating JSON files and submitting match to server
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(this.layout, container, false);
+
+
+        levelOneClimb = (CheckBox) view.findViewById(R.id.level_one_endgame_climb_chkbx);
+        levelTwoLeftClimb = (CheckBox) view.findViewById(R.id.level_two_engame_climb_left_chkbx);
+        levelTwoRightClimb = (CheckBox) view.findViewById(R.id.level_two_endgame_climb_right_chkbx);
+        levelThreeClimb = (CheckBox)  view.findViewById(R.id.level_three_endgame_climb_chkbx);
+
+        buddyd = (CheckBox) view.findViewById(R.id.buddyd_climb_chkbx);
+
+        climbFailRadiogrp = (RadioGroup) view.findViewById(R.id.climb_fail_radiogroup);
+
+        levelOneClimbFail = (RadioButton) view.findViewById(R.id.level_one_fail_rdbtn);
+        levelTwoClimbFail = (RadioButton) view.findViewById(R.id.level_two_fail_rdbtn);
+        levelThreeClimbFail = (RadioButton) view.findViewById(R.id.level_three_fail_rdbtn);
+
+        finalSubmitMatch = (Button) view.findViewById(R.id.final_submit_btn);
+
+        finalSubmitMatch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            /**
+             * TODO: TIMER
+             * TODO: VALUES FOR timeToClimb, climbStart, climbEnd for the EndGame Object
+             */
+            public void onClick(View v){
+                /**
+                 * New object of endgame to record data for the match
+                 */
+                EndGame endgame = new EndGame();
+                /**
+                 * Sets values of all radiobtns(default of ramp is 'N')
+                 * and chechboxes(default being false for climbs)
+                 */
+                if(levelOneClimb.isChecked()){
+                    endgame.setLevelOne(true);
+                }
+                else {
+                    endgame.setLevelOne(false);
+                }
+
+                if(levelTwoLeftClimb.isChecked() || levelTwoRightClimb.isChecked()){
+                    endgame.setLevelTwo(true);
+                }
+                else {
+                    endgame.setLevelTwo(false);
+                }
+
+                if(levelThreeClimb.isChecked()){
+                    endgame.setLevelThree(true);
+                }
+                else{
+                    endgame.setLevelThree(false);
+                }
+
+                if(buddyd.isChecked()){
+                    endgame.setRamp(true);
+                }
+                else {
+                    endgame.setRamp(false);
+                }
+
+                if(levelOneClimbFail.isChecked()){
+                    endgame.setFailLevel('1');
+                }
+                else if(levelTwoClimbFail.isChecked()){
+                    endgame.setFailLevel('2');
+                }
+                else if(levelThreeClimbFail.isChecked()){
+                    endgame.setFailLevel('3');
+                }
+                else{
+                    endgame.setFailLevel('N');
+                }
+
+
+            }}
+
+
+
+
+        );
+
+
+        return view;
+    }
+
+
+}

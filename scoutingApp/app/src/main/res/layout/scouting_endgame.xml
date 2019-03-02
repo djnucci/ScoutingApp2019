@@ -60,7 +60,85 @@
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/level_three_endgame_climb_chkbx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Level 3"
+                tools:layout_editor_absoluteX="157dp"
+                tools:layout_editor_absoluteY="68dp" />
+
+            <CheckBox
+                android:id="@+id/level_two_engame_climb_left_chkbx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Level 2"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="137dp" />
+
+            <CheckBox
+                android:id="@+id/level_two_endgame_climb_right_chkbx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Level 2"
+                tools:layout_editor_absoluteX="265dp"
+                tools:layout_editor_absoluteY="145dp" />
+
+            <CheckBox
+                android:id="@+id/level_one_endgame_climb_chkbx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Level 1"
+                tools:layout_editor_absoluteX="156dp"
+                tools:layout_editor_absoluteY="218dp" />
+
+            <CheckBox
+                android:id="@+id/buddyd_climb_chkbx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CheckBox"
+                tools:layout_editor_absoluteX="148dp"
+                tools:layout_editor_absoluteY="299dp" />
+
+            <Button
+                android:id="@+id/final_submit_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUBMIT"
+                tools:layout_editor_absoluteX="156dp"
+                tools:layout_editor_absoluteY="559dp" />
+
+            <RadioGroup
+                android:id="@+id/climb_fail_radiogroup"
+                android:layout_width="115dp"
+                android:layout_height="141dp"
+                tools:layout_editor_absoluteX="41dp"
+                tools:layout_editor_absoluteY="413dp">
+
+                <RadioButton
+                    android:id="@+id/level_one_fail_rdbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Level 1" />
+
+                <RadioButton
+                    android:id="@+id/level_two_fail_rdbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Level 2" />
+
+                <RadioButton
+                    android:id="@+id/level_three_fail_rdbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Level 3" />
+            </RadioGroup>
+        </android.support.constraint.ConstraintLayout>
 
     </LinearLayout>
 
