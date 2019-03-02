@@ -46,12 +46,12 @@ public class Cycle {
     /**
      * pickup Timetsamp
      */
-    Time pickupTime;
+    int pickupTime;
 
     /**
      * Time stamp for dropoff
      */
-    Time dropoffTime;
+    int dropoffTime;
 
 
 
@@ -73,7 +73,7 @@ public class Cycle {
      * @param pickupTime
      * @param dropoffTime
      */
-    public Cycle(int id, int cycleNumber, char fieldElement, String pickUp, String place, boolean defense, boolean drop, Time pickupTime, Time dropoffTime) {
+    public Cycle(int id, int cycleNumber, char fieldElement, String pickUp, String place, boolean defense, boolean drop, int pickupTime, int dropoffTime) {
         this.id = id;
         this.cycleNumber = cycleNumber;
         this.fieldElement = fieldElement;
@@ -217,7 +217,7 @@ public class Cycle {
      *
      * @return Value of pickupTime.
      */
-    public Time getPickupTime() {
+    public int getPickupTime() {
         return pickupTime;
     }
 
@@ -226,7 +226,7 @@ public class Cycle {
      *
      * @param dropoffTime New value of dropoffTime.
      */
-    public void setDropoffTime(Time dropoffTime) {
+    public void setDropoffTime(int dropoffTime) {
         this.dropoffTime = dropoffTime;
     }
 
@@ -235,7 +235,7 @@ public class Cycle {
      *
      * @param pickupTime New value of pickupTime.
      */
-    public void setPickupTime(Time pickupTime) {
+    public void setPickupTime(int pickupTime) {
         this.pickupTime = pickupTime;
     }
 
@@ -244,7 +244,7 @@ public class Cycle {
      *
      * @return Value of dropoffTime.
      */
-    public Time getDropoffTime() {
+    public int getDropoffTime() {
         return dropoffTime;
     }
 
