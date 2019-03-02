@@ -1,8 +1,6 @@
 package com.RunnymedeRobotics.myapplication.filehandler;
 
 import android.content.Context;
-import android.os.Environment;
-
 import com.RunnymedeRobotics.myapplication.datastructureclasses.schedule.MatchLists;
 import com.google.gson.Gson;
 

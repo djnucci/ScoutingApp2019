@@ -83,7 +83,7 @@
                 app:layout_constraintVertical_bias="1.0"
                 tools:srcCompat="@drawable/starting_platform" />
 
-            <Button
+            <RadioButton
                 android:id="@+id/setup_level_two_left"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="253dp"
@@ -95,7 +95,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
+            <RadioButton
                 android:id="@+id/setup_level_one"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="182dp"
@@ -107,7 +107,7 @@
                 app:layout_constraintStart_toEndOf="@+id/setup_level_two_left"
                 app:layout_constraintTop_toTopOf="@+id/setup_level_two_left" />
 
-            <Button
+            <RadioButton
                 android:id="@+id/setup_level_two_right"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="250dp"

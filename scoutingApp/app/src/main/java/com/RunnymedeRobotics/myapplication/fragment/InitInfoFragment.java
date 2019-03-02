@@ -121,16 +121,20 @@ public class InitInfoFragment extends BasicFragment {
                 initInfo.setMatchNumber(Integer.parseInt(matchEditText.getText().toString()));
                 initInfo.setName(nameEditText.getText().toString());
 
-                initInfo.setAllianceColour(MainActivity.matchLists.getMatch(Integer.parseInt(matchEditText.getText().toString())).getAllianceColour(
-                        Integer.parseInt(teamEditText.getText().toString())
-                ));
+                try {
+                    initInfo.setAllianceColour(MainActivity.matchLists.getMatch(Integer.parseInt(matchEditText.getText().toString())).getAllianceColour(
+                            Integer.parseInt(teamEditText.getText().toString())
+                    ));
+                }
+                catch (NullPointerException e){
+                    e.printStackTrace();
+                }
                 MainActivity.globalSubmitMatch = new SubmitMatch();
                 MainActivity.globalSubmitMatch.setInitInfo(initInfo);
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         Log.e("Submit", "Done");
-
                     }
                 }).run();
             }
