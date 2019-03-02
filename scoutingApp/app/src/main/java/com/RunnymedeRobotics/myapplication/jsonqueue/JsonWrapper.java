@@ -1,8 +1,11 @@
 package com.RunnymedeRobotics.myapplication.jsonqueue;
 
 import android.content.Context;
+import android.provider.SyncStateContract;
 import android.util.Log;
 
+import com.RunnymedeRobotics.myapplication.Constants;
+import com.RunnymedeRobotics.myapplication.MainActivity;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -19,23 +22,23 @@ import java.io.OutputStreamWriter;
 public class JsonWrapper {
 
 
-    public static QueueWrapper getDataFromFile(Context context){
-        String val = readFromFile(context);
+    public static QueueWrapper getQueueDataFromFile(Context context){
+        String val = readFromFile(context, Constants.QUEUE_FILE_NAME);
         return (new Gson()).fromJson(val, QueueWrapper.class);
     }
 
-    public static void writeToFile(QueueWrapper queueWrapper, Context context){
-        writeToFile((new Gson()).toJson(queueWrapper),context);
+    public static void writeQueueToFile(QueueWrapper queueWrapper, Context context){
+        writeToFile((new Gson()).toJson(queueWrapper),context, Constants.QUEUE_FILE_NAME);
     }
 
 
 
-    private static String readFromFile(Context context) {
+    private static String readFromFile(Context context, String fileName) {
 
         String ret = "";
 
         try {
-            InputStream inputStream = context.openFileInput("data.txt");
+            InputStream inputStream = context.openFileInput(fileName);
 
             if ( inputStream != null ) {
                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
@@ -59,9 +62,10 @@ public class JsonWrapper {
 
         return ret;
     }
-    private static void writeToFile(String data,Context context) {
+
+    public static void writeToFile(String data,Context context, String fileName) {
         try {
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput("data.txt", Context.MODE_PRIVATE));
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput(fileName, Context.MODE_PRIVATE));
             outputStreamWriter.write(data);
             outputStreamWriter.close();
         }
@@ -69,4 +73,7 @@ public class JsonWrapper {
             Log.e("Exception", "File write failed: " + e.toString());
         }
     }
+
+
+
 }

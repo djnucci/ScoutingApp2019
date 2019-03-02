@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+//TODO Redundant shift to JSONWrapper and integrate with the file reader method there
 public class InflateSchedule{
 
     public static MatchLists inflateSchedule(Context context)  {

@@ -1,13 +1,11 @@
 package com.RunnymedeRobotics.myapplication;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.support.design.widget.NavigationView;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -24,12 +22,16 @@ import com.RunnymedeRobotics.myapplication.filehandler.InflateSchedule;
 import com.RunnymedeRobotics.myapplication.fragment.BasicFragment;
 import com.RunnymedeRobotics.myapplication.fragment.InitInfoFragment;
 import com.RunnymedeRobotics.myapplication.fragment.SettingsFragment;
+import com.RunnymedeRobotics.myapplication.jsonqueue.JsonWrapper;
+import com.RunnymedeRobotics.myapplication.jsonqueue.QueueWrapper;
+import com.google.gson.Gson;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
 
     public static SubmitMatch globalSubmitMatch;
     public static MatchLists matchLists;
+    public static QueueWrapper queueWrapper;
 
 
     private int currentLayout;
@@ -61,10 +63,7 @@ public class MainActivity extends AppCompatActivity
         }
 
 
-        //Updates global settings and gets them
-        SettingsFragment.updateSettings(this);
-        matchLists = InflateSchedule.inflateSchedule(this);
-        //Log.e("match1 : ", matchLists.getMatch(0).toString());
+       startupPorcedure();
     }
 
     @Override
@@ -196,6 +195,16 @@ public class MainActivity extends AppCompatActivity
                 switchBasicFrag(layout);
                 break;
         }
+    }
+
+    public static Context getContext(){
+        return getContext();
+    }
+
+    public void startupPorcedure(){
+        SettingsFragment.updateSettings(this);
+        matchLists = InflateSchedule.inflateSchedule(this);
+        MainActivity.queueWrapper = JsonWrapper.getQueueDataFromFile(this);
     }
 
 }

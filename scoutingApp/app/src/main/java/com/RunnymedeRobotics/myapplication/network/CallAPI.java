@@ -1,12 +1,6 @@
-package com.RunnymedeRobotics.myapplication.apicalls;
+package com.RunnymedeRobotics.myapplication.network;
 
 
-import android.graphics.Bitmap;
-import android.os.AsyncTask;
-
-import com.RunnymedeRobotics.myapplication.MainActivity;
-import com.RunnymedeRobotics.myapplication.datastructureclasses.InitInfo;
-import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
 import com.RunnymedeRobotics.myapplication.fragment.SettingsFragment;
 import com.RunnymedeRobotics.myapplication.jsonqueue.QueueWrapper;
 import com.google.gson.Gson;
@@ -36,7 +30,7 @@ public class CallAPI {
      * Post local queue wrapper to server
      * @param queueWrapper
      */
-    public static String submitLocalQueue(QueueWrapper queueWrapper){
+    private static String submitLocalQueue(QueueWrapper queueWrapper){
         if(SettingsFragment.ipAddress.equals("")){
             System.out.println("Please set value to serverIP");
             return "Please set value to serverIP";
@@ -44,7 +38,7 @@ public class CallAPI {
 
         //specifies http post to server ip and creates httppost object
         HttpClient httpclient = new DefaultHttpClient();
-        HttpPost httppost = new HttpPost(SettingsFragment.ipAddress);
+        HttpPost httppost = new HttpPost(SettingsFragment.ipAddress+"Database/addQueueWrapper");
 
 
         try {
@@ -68,5 +62,8 @@ public class CallAPI {
         return "Post Error";
     }
 }
+
+
+
 
 }

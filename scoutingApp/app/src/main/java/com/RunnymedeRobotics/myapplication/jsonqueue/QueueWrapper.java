@@ -1,5 +1,7 @@
 package com.RunnymedeRobotics.myapplication.jsonqueue;
+import com.RunnymedeRobotics.myapplication.MainActivity;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -10,6 +12,7 @@ import java.util.ArrayList;
 public class QueueWrapper {
 
     ArrayList<SubmitMatch> submitMatchArrayList = new ArrayList<>();
+    private static Gson gson = new Gson();
 
     public QueueWrapper() {
     }
@@ -29,4 +32,7 @@ public class QueueWrapper {
     public void addToQueueWrapper(SubmitMatch submitMatch){
         submitMatchArrayList.add(submitMatch);
     }
+
+
+
 }

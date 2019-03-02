@@ -19,7 +19,7 @@ public class MatchLists {
     }
 
     public Match getMatch(int match){
-       return matchArrayList.get(match-1);
+       return matchArrayList.get(match);
     }
 
 
