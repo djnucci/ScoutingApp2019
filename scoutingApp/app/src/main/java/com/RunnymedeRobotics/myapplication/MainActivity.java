@@ -173,6 +173,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void switchScoutingTab(View button){
+        Log.e("Tab Init","True");
         int layout;
         switch (button.getId()){
             case R.id.scouting_start_setup:
@@ -196,4 +197,5 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
     }
+
 }

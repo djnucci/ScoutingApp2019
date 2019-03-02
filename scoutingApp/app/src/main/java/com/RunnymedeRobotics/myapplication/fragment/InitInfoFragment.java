@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -38,8 +40,6 @@ public class InitInfoFragment extends BasicFragment {
     private static int team;
 
 
-
-
     public InitInfoFragment(){}
 
     @SuppressLint("ValidFragment")
@@ -50,7 +50,7 @@ public class InitInfoFragment extends BasicFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view =  inflater.inflate(this.layout, container, false);
+        final View view =  inflater.inflate(this.layout, container, false);
 
         nameEditText = (EditText) view.findViewById(R.id.name_edit_text);
         matchEditText = (EditText) view.findViewById(R.id.match_edit_text);
@@ -110,35 +110,6 @@ public class InitInfoFragment extends BasicFragment {
         buttonListner(blue2Btn);
         buttonListner(blue3Btn);
 
-        submitBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                InitInfo initInfo = new InitInfo();
-
-
-                initInfo.setEvent(SettingsFragment.competetion);
-                initInfo.setTeamNumber(Integer.parseInt(teamEditText.getText().toString()));
-                initInfo.setMatchNumber(Integer.parseInt(matchEditText.getText().toString()));
-                initInfo.setName(nameEditText.getText().toString());
-
-                try {
-                    initInfo.setAllianceColour(MainActivity.matchLists.getMatch(Integer.parseInt(matchEditText.getText().toString())).getAllianceColour(
-                            Integer.parseInt(teamEditText.getText().toString())
-                    ));
-                }
-                catch (NullPointerException e){
-                    e.printStackTrace();
-                }
-                MainActivity.globalSubmitMatch = new SubmitMatch();
-                MainActivity.globalSubmitMatch.setInitInfo(initInfo);
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Log.e("Submit", "Done");
-                    }
-                }).run();
-            }
-        });
 
         return view;
     }
@@ -160,6 +131,41 @@ public class InitInfoFragment extends BasicFragment {
         });
         return team;
     }
+
+    public void onDestroy(){
+
+
+        InitInfo initInfo = new InitInfo();
+
+
+        initInfo.setEvent(SettingsFragment.competetion);
+        initInfo.setTeamNumber(Integer.parseInt(teamEditText.getText().toString()));
+        initInfo.setMatchNumber(Integer.parseInt(matchEditText.getText().toString()));
+        initInfo.setName(nameEditText.getText().toString());
+
+        try {
+            initInfo.setAllianceColour(MainActivity.matchLists.getMatch(Integer.parseInt(matchEditText.getText().toString())).getAllianceColour(
+                    Integer.parseInt(teamEditText.getText().toString())
+            ));
+        }
+        catch (NullPointerException e){
+            e.printStackTrace();
+        }
+        MainActivity.globalSubmitMatch = new SubmitMatch();
+        MainActivity.globalSubmitMatch.setInitInfo(initInfo);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Log.e("Submit", "Done");
+            }
+        }).run();
+
+        super.onDestroy();
+    }
+
+
+
+
 
 
 }
