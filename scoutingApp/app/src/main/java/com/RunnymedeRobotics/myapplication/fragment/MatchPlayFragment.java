@@ -57,9 +57,6 @@ public class MatchPlayFragment extends BasicFragment {
     private Button pickupLooseCargoBtn;
     private Button dropGamePieceBtn;
 
-    private ScrollView rocketFarHatchScrollView;
-    private ScrollView rocketCloseHatchScrollView;
-    private ScrollView rocketMidCargoScrollView;
 
     public MatchPlayFragment() {
     }
@@ -82,6 +79,7 @@ public class MatchPlayFragment extends BasicFragment {
         //crossDropGamePieceBtn = (Button) view.findViewById(R.id.mat);
         crossFieldBtn = (Button) view.findViewById(R.id.matchplay_cross_field_btn);
 
+        Log.e("int val: " ,R.id.matchplay_pickup_hp_left_hatch_btn +"");
         pickupHpLeftHatchBtn = (Button) view.findViewById(R.id.matchplay_pickup_hp_left_hatch_btn);
         pickupHpLeftCargoBtn = (Button) view.findViewById(R.id.matchplay_pickup_hp_left_cargo_btn);
         pickupHpRightHatchBtn = (Button) view.findViewById(R.id.matchplay_pickup_hp_right_hatch_btn);
