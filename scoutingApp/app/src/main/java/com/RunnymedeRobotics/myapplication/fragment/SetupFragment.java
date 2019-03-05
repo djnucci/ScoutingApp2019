@@ -57,6 +57,7 @@ public class SetupFragment extends BasicFragment {
                 if (cargoPreload.isChecked()) {
                     auto.setStartingObj('C');
                     auto.setAutoPreload('1');
+                    System.out.print("ABC");
                 } else if (hatchPreload.isChecked()) {
                     auto.setStartingObj('H');
                     auto.setAutoPreload('1');

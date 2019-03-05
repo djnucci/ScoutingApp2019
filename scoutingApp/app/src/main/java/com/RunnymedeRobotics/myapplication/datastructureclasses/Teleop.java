@@ -8,6 +8,11 @@ public class Teleop {
     public Teleop() {
     }
 
+    /**
+     *
+     * @param id
+     * @param timeCrosses
+     */
     public Teleop(int id, int timeCrosses) {
         this.id = id;
         this.timeCrosses = timeCrosses;

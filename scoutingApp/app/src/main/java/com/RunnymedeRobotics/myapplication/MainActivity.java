@@ -21,6 +21,7 @@ import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
 import com.RunnymedeRobotics.myapplication.filehandler.InflateSchedule;
 import com.RunnymedeRobotics.myapplication.fragment.BasicFragment;
 import com.RunnymedeRobotics.myapplication.fragment.InitInfoFragment;
+import com.RunnymedeRobotics.myapplication.fragment.MatchPlayFragment;
 import com.RunnymedeRobotics.myapplication.fragment.SettingsFragment;
 import com.RunnymedeRobotics.myapplication.jsonqueue.JsonWrapper;
 import com.RunnymedeRobotics.myapplication.jsonqueue.QueueWrapper;
@@ -184,6 +185,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.scouting_setup_match:
             case R.id.scouting_match_match:
+                layout = R.layout.scouting_match_play;
+                switchBasicFrag(layout,new MatchPlayFragment(layout));
+                break;
             case R.id.scouting_endgame_match:
                 layout = R.layout.scouting_match_play;
                 switchBasicFrag(layout);

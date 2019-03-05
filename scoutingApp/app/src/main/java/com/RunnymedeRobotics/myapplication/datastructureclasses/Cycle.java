@@ -7,8 +7,8 @@ import java.sql.Time;
  * * Cycle
  *  *      game_piece (Char)
  *  *      Score (bool)
- *  *      pickup_location (char)
- *  *      dropoff_location (char)
+ *  *      pickup_location (String)
+ *  *      dropoff_location (String)
  *  *      pickup_time (seconds) (int)
  *  *      dropoff_time (seconds) (int)
  */
