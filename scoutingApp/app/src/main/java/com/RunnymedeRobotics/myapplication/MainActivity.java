@@ -21,6 +21,7 @@ import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
 import com.RunnymedeRobotics.myapplication.filehandler.InflateSchedule;
 import com.RunnymedeRobotics.myapplication.fragment.BasicFragment;
 import com.RunnymedeRobotics.myapplication.fragment.InitInfoFragment;
+import com.RunnymedeRobotics.myapplication.fragment.MatchesFragment;
 import com.RunnymedeRobotics.myapplication.fragment.SettingsFragment;
 import com.RunnymedeRobotics.myapplication.jsonqueue.JsonWrapper;
 import com.RunnymedeRobotics.myapplication.jsonqueue.QueueWrapper;
@@ -135,7 +136,7 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_schedule:
                 layout = R.layout.schedule;
-                switchBasicFrag(layout);
+                switchBasicFrag(layout , new MatchesFragment(layout));
                 break;
             case R.id.nav_file_transfer:
                 layout = R.layout.transfer;

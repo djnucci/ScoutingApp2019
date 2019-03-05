@@ -74,14 +74,7 @@
                 tools:layout_editor_absoluteX="209dp"
                 tools:layout_editor_absoluteY="0dp" />
 
-            <ImageView
-                android:id="@+id/matchplay_field_image"
-                android:layout_width="match_parent"
-                android:layout_height= "match_parent"
-                android:layout_marginTop="100dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:srcCompat="@drawable/teleop_field" />
+
 
             <Button
                 android:id="@+id/button4"
