@@ -113,4 +113,24 @@ public class Match {
                 return 'r';
             }
     }
+
+    public int getTeam(int i){
+
+            int teamNum = 0;
+            switch (i) {
+                case 1:
+                    teamNum = red1;
+                case 2 :
+                    teamNum = red2;
+                case 3 :
+                    teamNum = red3;
+                case 4:
+                    teamNum = blue1;
+                case 5 :
+                    teamNum = blue2;
+                case 6 :
+                    teamNum = blue3;
+            }
+            return teamNum;
+    }
 }
