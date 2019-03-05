@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ScrollView;
 
 import com.RunnymedeRobotics.myapplication.R;
+import com.RunnymedeRobotics.myapplication.datastructureclasses.Cycle;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,6 +24,9 @@ public class MatchPlayFragment extends BasicFragment {
     private int crossNum;
     private static boolean hasCrossed ;
     private int layout;
+    private int cycleNum;
+
+    Cycle c;
 
     private Button startMatchBtn;
 
@@ -68,6 +72,8 @@ public class MatchPlayFragment extends BasicFragment {
     private ScrollView rocketFarHatchScrollView;
     private ScrollView rocketCloseHatchScrollView;
     private ScrollView rocketMidCargoScrollView;
+
+    private Button defenseBtn;
 
     ArrayList<Button> pickupBtns = new ArrayList<Button>(Arrays.asList(pickupHpLeftHatchBtn,pickupHpLeftCargoBtn,
                                                                        pickupHpRightHatchBtn,pickupHpRightCargoBtn,
@@ -128,6 +134,8 @@ public class MatchPlayFragment extends BasicFragment {
         hasCrossed = isCrossed(crossNum);
          hasPiece = true;
          gameStart  = false;
+         cycleNum = 0;
+         //pickedUpPiece = ?
 
 
 
@@ -172,12 +180,13 @@ public class MatchPlayFragment extends BasicFragment {
         pickupLooseCargoBtn = (Button) view.findViewById(R.id.matchplay_pickup_freeplay_cargo_btn);
         dropGamePieceBtn = (Button) view.findViewById(R.id.matchplay_drop_alliance_side_btn);
 
+        defenseBtn = (Button) view.findViewById(R.id.matchplay_defense_btn);
 
 
-        pickupBtns = new ArrayList<Button>( Arrays.asList(pickupHpLeftHatchBtn,pickupHpLeftCargoBtn,
-                pickupHpRightHatchBtn,pickupHpRightCargoBtn,
-                pickupCargoBayLeftBtn,pickupCargoBayRightBtn,
-                pickupLooseHatchBtn,pickupLooseCargoBtn,crossPickupHatchBtn,crossPickupCargoBtn));
+
+        pickupBtns = new ArrayList<Button>( Arrays.asList(
+                pickupHpLeftHatchBtn,pickupHpRightHatchBtn,pickupLooseHatchBtn,crossPickupHatchBtn,
+                pickupHpRightCargoBtn,pickupCargoBayLeftBtn,pickupCargoBayRightBtn,pickupLooseCargoBtn,crossPickupCargoBtn,pickupHpLeftCargoBtn));
 
        scoreBtns = new ArrayList<Button>(Arrays.asList(scoreBusLeftFarBtn,scoreBusLeftMiddleBtn,
                 scoreBusLeftCloseBtn,scoreBusRightFarBtn,
@@ -214,6 +223,9 @@ public class MatchPlayFragment extends BasicFragment {
         //Log.e("STATE","ITS GETTING HERE");
         makeBtnsInvisible(crossBtns);
 
+
+
+
         for(int i = 0; i < scoreBtns.size();i++){
             scoreBtns.get(i).setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -223,15 +235,31 @@ public class MatchPlayFragment extends BasicFragment {
                 }
             });
         }
+
+
+
         for(int i = 0; i < pickupBtns.size();i++){
+            //Dumb way but it works to YEET
+            final int copyOfi = i;
             pickupBtns.get(i).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    CycleHelper.TimeHepler.start();
+                    c= new Cycle();
+                    cycleNum++;
                     hasPiece= true;
                     decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls);
+                    c.setCycleNumber(cycleNum);
+                    //char test = findPickupPiece(copyOfi);
+                    c.setFieldElement(findPickupPiece(copyOfi));
+                    c.setPickupTime((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
+
                 }
             });
         }
+
+
+
         for(int i = 0; i < dropBtns.size();i++){
             dropBtns.get(i).setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -354,6 +382,16 @@ public class MatchPlayFragment extends BasicFragment {
         else{
             return false;
         }
+    }
+    public char findPickupPiece(int place){
+        if (place <=3){
+            return 'H';
+        }
+        else {
+            return 'C';
+        }
+
+
     }
 }
 
