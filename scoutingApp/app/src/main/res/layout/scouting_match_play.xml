@@ -522,7 +522,7 @@
                 app:layout_constraintVertical_bias="0.713" />
 
             <Button
-                android:id="@+id/not_sure_yet_btn"
+                android:id="@+id/matchplay_cross_drop_gamepiece_btn"
                 android:layout_width="227dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -539,12 +539,12 @@
 
             <Button
                 android:id="@+id/matchplay_start_match_btn"
-                android:layout_width="769dp"
-                android:layout_height="967dp"
+                android:layout_width="183dp"
+                android:layout_height="124dp"
                 android:text="start"
                 android:textSize="80sp"
-                tools:layout_editor_absoluteX="5dp"
-                tools:layout_editor_absoluteY="-2dp" />
+                tools:layout_editor_absoluteX="53dp"
+                tools:layout_editor_absoluteY="75dp" />
 
         </android.support.constraint.ConstraintLayout>
 
