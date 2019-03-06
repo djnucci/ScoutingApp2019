@@ -197,7 +197,7 @@ public class MatchPlayFragment extends BasicFragment {
 
 
 
-
+        Log.e("BTN ID", getBtnIds(view,scoreRocketFarSideHatchLowBtn));
 
 
 
@@ -363,9 +363,11 @@ public class MatchPlayFragment extends BasicFragment {
 //            makeScrollViewInvisible(scoreScrolls1);
             makeBtnsInvisible(dropBtns1);
             makeBtnsVisible(crossBtns1);
+            crossFieldBtn.setText("Cross back");
         }
         else if (hasCrossed== false)
     {
+        crossFieldBtn.setText("Cross");
 
 
             if(hasPiece == true){
@@ -410,5 +412,6 @@ public class MatchPlayFragment extends BasicFragment {
 
         super.onDestroy();
     }
+
 }
 
