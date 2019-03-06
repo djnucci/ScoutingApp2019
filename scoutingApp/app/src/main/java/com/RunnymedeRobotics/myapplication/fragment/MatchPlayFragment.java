@@ -422,6 +422,7 @@ public class MatchPlayFragment extends BasicFragment {
     public void onDestroy(){
 
         MainActivity.globalSubmitMatch.setCycleArrayList(cycles);
+        MainActivity.globalSubmitMatch.setTeleopsList(teleops1);
         Log.e("TEST", MainActivity.globalSubmitMatch.getAuto().getAutoPreload()+"");
 
         super.onDestroy();
