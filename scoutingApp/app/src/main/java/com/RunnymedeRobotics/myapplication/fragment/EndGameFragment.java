@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,7 @@ import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.RunnymedeRobotics.myapplication.MainActivity;
 import com.RunnymedeRobotics.myapplication.R;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.Auto;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.EndGame;
@@ -136,6 +139,14 @@ public class EndGameFragment extends BasicFragment {
                 /**
                  * New object of endgame to record data for the match
                  */
+
+
+                /**
+                 * Sets values of all radiobtns(default of ramp is 'N')
+                 * and chechboxes(default being false for climbs)
+                 */
+
+
                 EndGame endgame = new EndGame();
                 /**
                  * Sets values of all radiobtns(default of ramp is 'N')
@@ -188,6 +199,15 @@ public class EndGameFragment extends BasicFragment {
                     endgame.setTimeToClimb((int) climbDuration);
                 }
 
+                MainActivity.globalSubmitMatch.setEndGame(endgame);
+                Log.e("LEVEL FAIL", MainActivity.globalSubmitMatch.getEndGame().getFailLevel()+"");
+
+
+                InitInfoFragment initInfo = new InitInfoFragment(R.layout.scouting_start_page);
+                FragmentTransaction f = getActivity().getSupportFragmentManager().beginTransaction();
+                f.replace(R.id.fragment_container, initInfo);
+                f.addToBackStack(null);
+                f.commit();
             }}
 
 
@@ -197,6 +217,64 @@ public class EndGameFragment extends BasicFragment {
 
         return view;
     }
+    public void onDestroy(){
+        EndGame endgame = new EndGame();
+        /**
+         * Sets values of all radiobtns(default of ramp is 'N')
+         * and chechboxes(default being false for climbs)
+         */
+        if(levelOneClimb.isChecked()){
+            endgame.setLevelOne(true);
+        }
+        else {
+            endgame.setLevelOne(false);
+        }
+
+        if(levelTwoLeftClimb.isChecked() || levelTwoRightClimb.isChecked()){
+            endgame.setLevelTwo(true);
+        }
+        else {
+            endgame.setLevelTwo(false);
+        }
+
+        if(levelThreeClimb.isChecked()){
+            endgame.setLevelThree(true);
+        }
+        else{
+            endgame.setLevelThree(false);
+        }
+
+        if(buddyd.isChecked()){
+            endgame.setRamp(true);
+        }
+        else {
+            endgame.setRamp(false);
+        }
+
+        if(levelOneClimbFail.isChecked()){
+            endgame.setFailLevel('1');
+        }
+        else if(levelTwoClimbFail.isChecked()){
+            endgame.setFailLevel('2');
+        }
+        else if(levelThreeClimbFail.isChecked()){
+            endgame.setFailLevel('3');
+        }
+        else{
+            endgame.setFailLevel('N');
+        }
+
+        if(climbTimeEnd>0 && climbTimeStart>0){
+            endgame.setCimbStart((int)climbTimeStart);
+            endgame.setClimbEnd((int) climbTimeEnd);
+            endgame.setTimeToClimb((int) climbDuration);
+        }
+
+        MainActivity.globalSubmitMatch.setEndGame(endgame);
+        Log.e("LEVEL FAIL", MainActivity.globalSubmitMatch.getEndGame().getFailLevel()+"");
+        super.onDestroy();
+    }
+
 
 
 }

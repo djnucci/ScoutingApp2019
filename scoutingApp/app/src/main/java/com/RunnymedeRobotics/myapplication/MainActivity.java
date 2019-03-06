@@ -20,6 +20,7 @@ import com.RunnymedeRobotics.myapplication.datastructureclasses.schedule.MatchLi
 import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
 import com.RunnymedeRobotics.myapplication.filehandler.InflateSchedule;
 import com.RunnymedeRobotics.myapplication.fragment.BasicFragment;
+import com.RunnymedeRobotics.myapplication.fragment.EndGameFragment;
 import com.RunnymedeRobotics.myapplication.fragment.InitInfoFragment;
 import com.RunnymedeRobotics.myapplication.fragment.MatchPlayFragment;
 import com.RunnymedeRobotics.myapplication.fragment.SettingsFragment;
@@ -197,7 +198,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.scouting_match_endgame:
             case R.id.scouting_endgame_endgame:
                 layout = R.layout.scouting_endgame;
-                switchBasicFrag(layout);
+                switchBasicFrag(layout, new EndGameFragment(layout));
                 break;
         }
     }

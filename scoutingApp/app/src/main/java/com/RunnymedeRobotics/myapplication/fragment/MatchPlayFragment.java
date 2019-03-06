@@ -221,7 +221,7 @@ public class MatchPlayFragment extends BasicFragment {
 
 
 
-/*        if(MainActivity.globalSubmitMatch.getAuto().getAutoPreload() == '1'){
+        if(MainActivity.globalSubmitMatch.getAuto().getAutoPreload() == '1'){
             makeBtnsInvisible(pickupBtns);
             //Log.e("STATE","ITS GETTING HERE");
             makeBtnsInvisible(crossBtns);
@@ -229,7 +229,7 @@ public class MatchPlayFragment extends BasicFragment {
         else{
             makeBtnsInvisible(scoreBtns);
         }
-*/
+
 
 
 
