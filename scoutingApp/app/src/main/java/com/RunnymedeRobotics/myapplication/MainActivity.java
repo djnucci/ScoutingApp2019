@@ -25,6 +25,7 @@ import com.RunnymedeRobotics.myapplication.fragment.InitInfoFragment;
 import com.RunnymedeRobotics.myapplication.fragment.MatchPlayFragment;
 import com.RunnymedeRobotics.myapplication.fragment.SettingsFragment;
 import com.RunnymedeRobotics.myapplication.fragment.SetupFragment;
+import com.RunnymedeRobotics.myapplication.fragment.SyncDataFragment;
 import com.RunnymedeRobotics.myapplication.jsonqueue.JsonWrapper;
 import com.RunnymedeRobotics.myapplication.jsonqueue.QueueWrapper;
 import com.google.gson.Gson;
@@ -142,7 +143,7 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_file_transfer:
                 layout = R.layout.transfer;
-                switchBasicFrag(layout);
+                switchBasicFrag(layout,new SyncDataFragment(layout));
                 break;
             case R.id.nav_scouting:
                 layout = R.layout.scouting_start_page;

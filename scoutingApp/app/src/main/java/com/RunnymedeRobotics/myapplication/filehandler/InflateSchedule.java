@@ -1,6 +1,8 @@
 package com.RunnymedeRobotics.myapplication.filehandler;
 
 import android.content.Context;
+import android.util.Log;
+
 import com.RunnymedeRobotics.myapplication.datastructureclasses.schedule.MatchLists;
 import com.google.gson.Gson;
 
@@ -14,7 +16,7 @@ public class InflateSchedule{
 
     public static MatchLists inflateSchedule(Context context)  {
         File sdcard = new File(context.getFilesDir().getPath());
-
+        Log.e("SD CARD LOCATION : " , context.getFilesDir().getPath()+"");
 //Get the text file
         File file = new File(sdcard,"schedule.json");
 
