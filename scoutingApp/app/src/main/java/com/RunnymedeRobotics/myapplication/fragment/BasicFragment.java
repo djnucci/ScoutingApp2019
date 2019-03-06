@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 public class BasicFragment extends Fragment {
@@ -33,5 +34,11 @@ public class BasicFragment extends Fragment {
 
     public void setLayout(int layout) {
         this.layout = layout;
+    }
+
+    public static String getBtnIds(View view, Button btn){
+        int btnId = btn.getId();
+        String id = view.getResources().getResourceName(btnId);
+        return  id.substring(39, id.length());
     }
 }

@@ -61,6 +61,7 @@ public class InitInfoFragment extends BasicFragment {
         blue2Btn = (Button) view.findViewById(R.id.blue_two);
         blue3Btn = (Button) view.findViewById(R.id.blue_three);
 
+        Log.e("INIT INFO BTN ID", getBtnIds(view,blue2Btn));
 
         matchEditText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -133,6 +134,7 @@ public class InitInfoFragment extends BasicFragment {
     public void onDestroy(){
         try {
             Log.e("OnDestroy Called", " : TRUE");
+
             InitInfo initInfo = new InitInfo();
             initInfo.setEvent(SettingsFragment.competetion);
             initInfo.setTeamNumber(Integer.parseInt(teamEditText.getText().toString()));
