@@ -1,6 +1,7 @@
 package com.RunnymedeRobotics.myapplication.network;
 
 
+import android.content.Context;
 import android.util.Log;
 
 import com.RunnymedeRobotics.myapplication.MainActivity;
@@ -34,7 +35,7 @@ public class CallAPI {
      * Post local queue wrapper to server
      * @param queueWrapper
      */
-    public  static String submitLocalQueue(QueueWrapper queueWrapper) throws java.lang.IllegalStateException{
+    public  static String submitLocalQueue(QueueWrapper queueWrapper, Context context) throws java.lang.IllegalStateException{
         if(SettingsFragment.ipAddress.equals("")){
             System.out.println("Please set value to serverIP");
             return "Please set value to serverIP";
@@ -57,7 +58,7 @@ public class CallAPI {
         //Executes http response
         HttpResponse httpResponse = httpclient.execute(httppost);
         //returns the response from server if any
-            JsonWrapper.newQueue(MainActivity.getContext());
+            JsonWrapper.newQueue(context);
         return "Post Completed ==> " + httpResponse.toString();
     }
     catch (ClientProtocolException e){

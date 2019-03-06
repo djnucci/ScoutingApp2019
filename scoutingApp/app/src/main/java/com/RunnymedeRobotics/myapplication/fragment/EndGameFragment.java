@@ -209,7 +209,7 @@ public class EndGameFragment extends BasicFragment {
                 MainActivity.queueWrapper.addToQueueWrapper(MainActivity.globalSubmitMatch);
                 JsonWrapper.writeQueueToFile(MainActivity.queueWrapper, getContext());
                 JsonWrapper.writeMatchToFile(MainActivity.globalSubmitMatch, getContext());
-                CallAPI.submitLocalQueue(MainActivity.queueWrapper);
+                CallAPI.submitLocalQueue(MainActivity.queueWrapper, getContext());
                 Log.e("LEVEL FAIL", MainActivity.globalSubmitMatch.getEndGame().getFailLevel()+"");
 
 
