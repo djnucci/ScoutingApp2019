@@ -34,7 +34,7 @@ public class MatchPlayFragment extends BasicFragment {
     ArrayList<Cycle> cycles;
 
     Teleop t = new Teleop();
-    ArrayList<Teleop> teleops;
+    ArrayList<Teleop> teleops1;
 
     private Button startMatchBtn;
 
@@ -198,6 +198,8 @@ public class MatchPlayFragment extends BasicFragment {
 
         cycles = new ArrayList<Cycle>();
 
+        teleops1 = new ArrayList<Teleop>();
+
 
 
 
@@ -292,10 +294,11 @@ public class MatchPlayFragment extends BasicFragment {
         crossFieldBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                t = new Teleop();
                 crossNum ++;
                 hasCrossed = isCrossed(crossNum);
                 t.setTimeCrosses((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
-                teleops.add(t);
+                teleops1.add(t);
                 decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls);
                 Log.e("CROSSED VALUE", crossNum+"" + "hasCrossed: " + hasCrossed);
             }
