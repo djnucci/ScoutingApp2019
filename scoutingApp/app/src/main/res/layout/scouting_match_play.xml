@@ -51,7 +51,7 @@
                     android:layout_height="@dimen/scouting_tab_height"
                     android:layout_weight="1"
                     android:onClick="switchScoutingTab"
-                    android:text="End Game" />
+                    android:text="Climb" />
 
             </TableRow>
 
@@ -97,12 +97,19 @@
 
             <ImageView
                 android:id="@+id/matchplay_field_image"
-                android:layout_width="match_parent"
-                android:layout_height="856dp"
+                android:layout_width="752dp"
+                android:layout_height="842dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:srcCompat="@drawable/teleop_field"
-                tools:layout_editor_absoluteX="0dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/teleop_field" />
 
             <Button
                 android:id="@+id/matchplay_cargoship_leftside_middle_scoring_btn"
@@ -120,7 +127,7 @@
                 app:layout_constraintHorizontal_bias="0.313"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.251" />
+                app:layout_constraintVertical_bias="0.171" />
 
             <Button
                 android:id="@+id/matchplay_cargoship_leftside_close_scoring_btn"
@@ -135,10 +142,10 @@
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.318"
+                app:layout_constraintHorizontal_bias="0.313"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.31" />
+                app:layout_constraintVertical_bias="0.225" />
 
             <Button
                 android:id="@+id/matchplay_cargoship_rightside_close_scoring_btn"
@@ -156,7 +163,7 @@
                 app:layout_constraintHorizontal_bias="0.688"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.298" />
+                app:layout_constraintVertical_bias="0.226" />
 
             <Button
                 android:id="@+id/matchplay_cargoship_frontside_left_scoring_btn"
@@ -171,10 +178,10 @@
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.478"
+                app:layout_constraintHorizontal_bias="0.469"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.464" />
+                app:layout_constraintVertical_bias="0.383" />
 
             <Button
                 android:id="@+id/matchplay_cargoship_frontside_right_scoring_btn"
@@ -189,10 +196,10 @@
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.533"
+                app:layout_constraintHorizontal_bias="0.531"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.464" />
+                app:layout_constraintVertical_bias="0.383" />
 
             <Button
                 android:id="@+id/matchplay_cargoship_leftside_far_scoring_btn"
@@ -209,7 +216,7 @@
                 app:layout_constraintHorizontal_bias="0.313"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.194" />
+                app:layout_constraintVertical_bias="0.116" />
 
             <Button
                 android:id="@+id/matchplay_cargoship_rightside_far_scoring_btn"
@@ -226,7 +233,7 @@
                 app:layout_constraintHorizontal_bias="0.688"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.184" />
+                app:layout_constraintVertical_bias="0.116" />
 
             <Button
                 android:id="@+id/matchplay_cargoship_rightside_middle_scoring_btn"
@@ -243,7 +250,7 @@
                 app:layout_constraintHorizontal_bias="0.688"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.242" />
+                app:layout_constraintVertical_bias="0.17" />
 
             <ScrollView
                 android:id="@+id/right_rocket_far_hatch_scroll_view"
@@ -256,10 +263,10 @@
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.992"
+                app:layout_constraintHorizontal_bias="0.971"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.256">
+                app:layout_constraintVertical_bias="0.182">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -301,10 +308,10 @@
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.848"
+                app:layout_constraintHorizontal_bias="0.864"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.343">
+                app:layout_constraintVertical_bias="0.29">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -346,10 +353,10 @@
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.957"
+                app:layout_constraintHorizontal_bias="0.943"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.461">
+                app:layout_constraintVertical_bias="0.405">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -395,7 +402,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.971" />
+                app:layout_constraintVertical_bias="0.919" />
 
             <Button
                 android:id="@+id/matchplay_pickup_hp_left_cargo_btn"
@@ -409,10 +416,10 @@
                 android:text="cargo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.118"
+                app:layout_constraintHorizontal_bias="0.114"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.97" />
+                app:layout_constraintVertical_bias="0.916" />
 
             <Button
                 android:id="@+id/matchplay_pickup_hp_right_cargo_btn"
@@ -429,7 +436,7 @@
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.967" />
+                app:layout_constraintVertical_bias="0.921" />
 
             <Button
                 android:id="@+id/matchplay_pickup_hp_right_hatch_btn"
@@ -443,10 +450,10 @@
                 android:text="hatch"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.892"
+                app:layout_constraintHorizontal_bias="0.893"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.971" />
+                app:layout_constraintVertical_bias="0.93" />
 
             <Button
                 android:id="@+id/matchplay_cross_cargo_pickup_btn"
@@ -501,8 +508,8 @@
 
             <Button
                 android:id="@+id/matchplay_pickup_freeplay_hatch_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="125dp"
+                android:layout_height="102dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
@@ -511,15 +518,15 @@
                 android:text="GAtch from ground"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.051"
+                app:layout_constraintHorizontal_bias="0.064"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.641" />
+                app:layout_constraintVertical_bias="0.506" />
 
             <Button
                 android:id="@+id/matchplay_pickup_freeplay_cargo_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="124dp"
+                android:layout_height="111dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
@@ -528,10 +535,10 @@
                 android:text="Cargo from ground"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.051"
+                app:layout_constraintHorizontal_bias="0.064"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.708" />
+                app:layout_constraintVertical_bias="0.684" />
 
             <Button
                 android:id="@+id/matchplay_drop_alliance_side_btn"
@@ -545,10 +552,9 @@
                 android:text="game piece dropped"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.391"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.677" />
+                app:layout_constraintVertical_bias="0.736" />
 
             <Button
                 android:id="@+id/matchplay_cross_drop_gamepiece_btn"
@@ -559,7 +565,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="@android:color/holo_orange_light"
-                android:text="Drop"
+                android:text="Game Piece Dropped"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
@@ -568,16 +574,7 @@
                 app:layout_constraintVertical_bias="0.008" />
 
             <Button
-                android:id="@+id/matchplay_start_match_btn"
-                android:layout_width="183dp"
-                android:layout_height="124dp"
-                android:text="start"
-                android:textSize="80sp"
-                tools:layout_editor_absoluteX="53dp"
-                tools:layout_editor_absoluteY="75dp" />
-
-            <Button
-                android:id="@+id/matchplay_defense_btn"
+                android:id="@+id/matchplay_defended_btn"
                 android:layout_width="122dp"
                 android:layout_height="90dp"
                 android:layout_marginStart="8dp"
@@ -585,13 +582,30 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="@android:color/holo_red_light"
-                android:text="Defense"
+                android:text="Defended by opponent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.78"
+                app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.684" />
+                app:layout_constraintVertical_bias="0.846" />
+
+            <Button
+                android:id="@+id/matchplay_start_match_btn"
+                android:layout_width="767dp"
+                android:layout_height="953dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="start"
+                android:textSize="80sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
 
         </android.support.constraint.ConstraintLayout>
 

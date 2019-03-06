@@ -1,6 +1,7 @@
 package com.RunnymedeRobotics.myapplication.fragment;
 
 import android.annotation.SuppressLint;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 
 import com.RunnymedeRobotics.myapplication.MainActivity;
@@ -25,6 +27,7 @@ public class SetupFragment extends BasicFragment {
     Button matchPlayTab;
     Button endGameTab;
     private int layout;
+    ImageView habPlatforms;
 
     public SetupFragment() {
     }
@@ -51,6 +54,9 @@ public class SetupFragment extends BasicFragment {
         matchPlayTab = (Button) view.findViewById(R.id.scouting_setup_match);
         endGameTab = (Button) view.findViewById(R.id.scouting_setup_endgame);
 
+        habPlatforms = (ImageView) view.findViewById(R.id.setup_platform_image);
+
+        habPlatforms.setVisibility(View.VISIBLE);
 /*
         matchPlayTab.setOnClickListener(new View.OnClickListener() {
             @Override

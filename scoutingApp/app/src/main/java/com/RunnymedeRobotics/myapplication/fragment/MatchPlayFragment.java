@@ -17,6 +17,7 @@ import com.RunnymedeRobotics.myapplication.datastructureclasses.Cycle;
 import com.RunnymedeRobotics.myapplication.MainActivity;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.Teleop;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -81,7 +82,7 @@ public class MatchPlayFragment extends BasicFragment {
     private ScrollView rocketMidCargoScrollView;
     private ScrollView rocketCloseHatchScrollView;
 
-    private Button defenseBtn;
+    private Button defendedBtn;
 
     ArrayList<Button> pickupBtns = new ArrayList<Button>(Arrays.asList(pickupHpLeftHatchBtn,pickupHpLeftCargoBtn,
                                                                        pickupHpRightHatchBtn,pickupHpRightCargoBtn,
@@ -104,8 +105,14 @@ public class MatchPlayFragment extends BasicFragment {
 
     ArrayList<Button> crossBtns = new ArrayList<Button>(Arrays.asList(crossDropGamePieceBtn,crossPickupCargoBtn,crossPickupHatchBtn));
 
+    ArrayList<Button> crossDropBtns = new ArrayList<Button>(Arrays.asList(crossDropGamePieceBtn));
+
+    ArrayList<Button> defendedBtns = new ArrayList<Button>(Arrays.asList(defendedBtn));
+
     ArrayList<Button> allBtns;
 
+
+    ArrayList<Button> crossPickupBtns = new ArrayList<Button>(Arrays.asList(crossPickupHatchBtn,crossPickupCargoBtn));
     public MatchPlayFragment() {
         makeBtnsVisible(scoreBtns);
     }
@@ -172,13 +179,14 @@ public class MatchPlayFragment extends BasicFragment {
         pickupLooseCargoBtn = (Button) view.findViewById(R.id.matchplay_pickup_freeplay_cargo_btn);
         dropGamePieceBtn = (Button) view.findViewById(R.id.matchplay_drop_alliance_side_btn);
 
-        defenseBtn = (Button) view.findViewById(R.id.matchplay_defense_btn);
+        defendedBtn = (Button) view.findViewById(R.id.matchplay_defended_btn);
 
 
 
         pickupBtns = new ArrayList<Button>( Arrays.asList(
                 pickupHpLeftHatchBtn,pickupHpRightHatchBtn,pickupLooseHatchBtn,crossPickupHatchBtn,
                 pickupHpRightCargoBtn,pickupCargoBayLeftBtn,pickupCargoBayRightBtn,pickupLooseCargoBtn,crossPickupCargoBtn,pickupHpLeftCargoBtn));
+
 
        scoreBtns = new ArrayList<Button>(Arrays.asList(scoreBusLeftFarBtn,scoreBusLeftMiddleBtn,
                 scoreBusLeftCloseBtn,scoreBusRightFarBtn,
@@ -195,6 +203,12 @@ public class MatchPlayFragment extends BasicFragment {
          dropBtns = new ArrayList<Button>(Arrays.asList(dropGamePieceBtn,crossDropGamePieceBtn));
 
          crossBtns = new ArrayList<Button>(Arrays.asList(crossDropGamePieceBtn,crossPickupCargoBtn,crossPickupHatchBtn));
+
+        crossPickupBtns = new ArrayList<Button>(Arrays.asList(crossPickupHatchBtn,crossPickupCargoBtn));
+
+        crossDropBtns = new ArrayList<Button>(Arrays.asList(crossDropGamePieceBtn));
+
+        defendedBtns = new ArrayList<Button>(Arrays.asList(defendedBtn));
 
         cycles = new ArrayList<Cycle>();
 
@@ -216,11 +230,16 @@ public class MatchPlayFragment extends BasicFragment {
             makeBtnsInvisible(pickupBtns);
             //Log.e("STATE","ITS GETTING HERE");
             makeBtnsInvisible(crossBtns);
+            makeBtnsInvisible(crossPickupBtns);
+            makeBtnsInvisible(crossDropBtns);
+
         }
         else{
             makeBtnsInvisible(scoreBtns);
+            makeBtnsInvisible(dropBtns);
+            makeBtnsInvisible(crossPickupBtns);
         }
-
+        makeBtnsInvisible(defendedBtns);
 
 
 
@@ -239,7 +258,7 @@ public class MatchPlayFragment extends BasicFragment {
                     hasPiece= true;
 
                     c.setPickUp(getBtnIds(v,pickupBtns.get(copyOfi)));
-                    decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls);
+                    decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls, crossDropBtns,crossPickupBtns,defendedBtns);
                     c.setCycleNumber(cycleNum);
                     //char test = findPickupPiece(copyOfi);
                     c.setFieldElement(findPickupPiece(copyOfi));
@@ -251,7 +270,6 @@ public class MatchPlayFragment extends BasicFragment {
             });
         }
 
-
         for(int i = 0; i < scoreBtns.size();i++){
             final int copyOfi = i;
             scoreBtns.get(i).setOnClickListener(new View.OnClickListener() {
@@ -261,16 +279,18 @@ public class MatchPlayFragment extends BasicFragment {
                     if(cycleNum == 0 && MainActivity.globalSubmitMatch.getAuto().getAutoPreload() =='1'&& CycleHelper.TimeHepler.getElapsedTimeSecs()<=15 )
                     {
                         c.setFieldElement(MainActivity.globalSubmitMatch.getAuto().getStartingObj());
-                        c.setPickUp("Preloaded");
+                        c.setPickUp("Preload from auto");
 
                     }
+                    //else if( cycleNum == 0 && MainActivity.globalSubmitMatch.getAuto().getAutoPreload() =="1")
+
                     c.setPlace(getBtnIds(v,scoreBtns.get(copyOfi)));
                     c.setDropoffTime((int) CycleHelper.TimeHepler.getElapsedTimeSecs());
                     Log.e("Dropoff time", c.getDropoffTime()+"");
                     c.setDrop(false);
                     hasPiece= false;
                     cycles.add(c);
-                    decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls);
+                    decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls, crossDropBtns,crossPickupBtns,defendedBtns);
 
                 }
             });
@@ -286,10 +306,24 @@ public class MatchPlayFragment extends BasicFragment {
                     c.setPlace("dropped");
                     c.setDropoffTime((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
                     cycles.add(c);
-                    decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls);
+                    decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls, crossDropBtns,crossPickupBtns,defendedBtns);
                 }
             });
         }
+
+
+        for(int i = 0; i < defendedBtns.size();i++){
+            //Dumb way but it works to YEET
+            final int copyOfi = i;
+            defendedBtns.get(i).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    c.setDefense(true);
+
+                }
+            });
+        }
+
 
         crossFieldBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -299,7 +333,7 @@ public class MatchPlayFragment extends BasicFragment {
                 hasCrossed = isCrossed(crossNum);
                 t.setTimeCrosses((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
                 teleops1.add(t);
-                decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls);
+                decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls, crossDropBtns,crossPickupBtns, defendedBtns);
                 Log.e("CROSSED VALUE", crossNum+"" + "hasCrossed: " + hasCrossed);
             }
         });
@@ -368,15 +402,30 @@ public class MatchPlayFragment extends BasicFragment {
             toMakeVisible.get(i).setVisibility(View.VISIBLE);
         }
     }
-    public void decideVisiblilites(ArrayList<Button> crossBtns1, ArrayList<Button> pickupBtns1, ArrayList<Button> scoreBtns1, ArrayList<Button> dropBtns1, ArrayList<ScrollView> scoreScrolls1){
+    public void decideVisiblilites(ArrayList<Button> crossBtns1, ArrayList<Button> pickupBtns1,
+                                   ArrayList<Button> scoreBtns1, ArrayList<Button> dropBtns1,
+                                   ArrayList<ScrollView> scoreScrolls1, ArrayList<Button> crossDropBtns1,
+                                   ArrayList<Button> crossPickupBtns1, ArrayList<Button> defendedBtns1){
         if(hasCrossed == true){
 
-
-            makeBtnsInvisible(pickupBtns1);
-            makeBtnsInvisible(scoreBtns1);
+            if(hasPiece == true){
+                makeBtnsInvisible(pickupBtns1);
+                makeBtnsInvisible(scoreBtns1);
 //            makeScrollViewInvisible(scoreScrolls1);
-            makeBtnsInvisible(dropBtns1);
-            makeBtnsVisible(crossBtns1);
+                makeBtnsInvisible(dropBtns1);
+                makeBtnsVisible(crossDropBtns1);
+                makeBtnsInvisible(crossPickupBtns1);
+            }
+            else{
+                makeBtnsInvisible(pickupBtns1);
+                makeBtnsInvisible(scoreBtns1);
+//            makeScrollViewInvisible(scoreScrolls1);
+                makeBtnsInvisible(dropBtns1);
+                makeBtnsVisible(crossPickupBtns1);
+                makeBtnsInvisible(crossDropBtns1);
+
+            }
+            makeBtnsInvisible(defendedBtns1);
             crossFieldBtn.setText("Cross back");
         }
         else if (hasCrossed== false)
@@ -390,11 +439,15 @@ public class MatchPlayFragment extends BasicFragment {
                 makeBtnsVisible(dropBtns1);
                 makeBtnsInvisible(pickupBtns1);
                 makeBtnsVisible(dropBtns1);
+                makeBtnsVisible(defendedBtns1);
+
+
             }
             else {
                 makeBtnsVisible(pickupBtns1);
                 makeBtnsInvisible(scoreBtns1);
                 makeBtnsInvisible(dropBtns1);
+                makeBtnsInvisible(defendedBtns1);
             }
         makeBtnsInvisible(crossBtns1);
 

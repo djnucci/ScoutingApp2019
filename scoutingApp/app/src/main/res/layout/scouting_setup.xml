@@ -53,7 +53,7 @@
                     android:layout_height="@dimen/scouting_tab_height"
                     android:layout_weight="1"
                     android:onClick="switchScoutingTab"
-                    android:text="End Game" />
+                    android:text="Climb" />
 
             </TableRow>
 
@@ -70,24 +70,34 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:id="@+id/setup_platform_image"
+                android:layout_width="755dp"
+                android:layout_height="926dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:scaleType="fitStart"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.333"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                tools:srcCompat="@drawable/starting_platform" />
+                app:layout_constraintVertical_bias="1.0"
+                tools:srcCompat="@drawable/starting_platform"
+                android:contentDescription="TODO" />
+
             <RadioGroup
                 android:layout_width="297dp"
                 android:layout_height="520dp"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="16dp"
-                >
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <RadioButton
                     android:id="@+id/setup_level_two_left"
@@ -98,7 +108,7 @@
 
                 <RadioButton
                     android:id="@+id/setup_level_one"
-                    android:layout_width="wrap_content"
+                    android:layout_width="114dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Level 1" />
@@ -112,6 +122,7 @@
             </RadioGroup>
 
             <RadioGroup
+                android:id="@+id/radioGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -148,8 +159,16 @@
                     android:layout_weight="1"
                     android:text="Nothing"
                     android:textSize="@dimen/setup_button_text_height" />
+
             </RadioGroup>
 
+            <TextView
+                android:id="@+id/setup_preload_description_txtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Preloaded"
+                tools:layout_editor_absoluteX="593dp"
+                tools:layout_editor_absoluteY="302dp" />
 
 
         </android.support.constraint.ConstraintLayout>
