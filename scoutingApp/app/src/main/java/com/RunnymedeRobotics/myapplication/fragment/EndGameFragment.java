@@ -19,6 +19,7 @@ import com.RunnymedeRobotics.myapplication.MainActivity;
 import com.RunnymedeRobotics.myapplication.R;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.Auto;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.EndGame;
+import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
 import com.RunnymedeRobotics.myapplication.jsonqueue.JsonWrapper;
 import com.RunnymedeRobotics.myapplication.jsonqueue.QueueWrapper;
 import com.RunnymedeRobotics.myapplication.network.CallAPI;
@@ -211,7 +212,7 @@ public class EndGameFragment extends BasicFragment {
                 JsonWrapper.writeMatchToFile(MainActivity.globalSubmitMatch, getContext());
                 CallAPI.submitLocalQueue(MainActivity.queueWrapper, getContext());
                 Log.e("LEVEL FAIL", MainActivity.globalSubmitMatch.getEndGame().getFailLevel()+"");
-
+                MainActivity.globalSubmitMatch = new SubmitMatch();
 
                 InitInfoFragment initInfo = new InitInfoFragment(R.layout.scouting_start_page);
                 FragmentTransaction f = getActivity().getSupportFragmentManager().beginTransaction();
