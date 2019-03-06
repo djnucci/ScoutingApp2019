@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.RunnymedeRobotics.myapplication.Constants;
 import com.RunnymedeRobotics.myapplication.MainActivity;
+import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -29,6 +30,14 @@ public class JsonWrapper {
 
     public static void writeQueueToFile(QueueWrapper queueWrapper, Context context){
         writeToFile((new Gson()).toJson(queueWrapper),context, Constants.QUEUE_FILE_NAME);
+    }
+
+    public static void writeMatchToFile(SubmitMatch submitMatch, Context context){
+        writeToFile((new Gson()).toJson(submitMatch),context, submitMatch.getInitInfo().getMatchNumber() +"_" + submitMatch.getInitInfo().getEvent()+"_match.json");
+    }
+
+    public static void newQueue(Context context){
+        writeToFile("",context, Constants.QUEUE_FILE_NAME);
     }
 
 

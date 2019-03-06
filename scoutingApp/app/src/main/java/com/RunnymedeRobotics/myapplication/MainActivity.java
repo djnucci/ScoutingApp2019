@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity
 
     public static SubmitMatch globalSubmitMatch = new SubmitMatch();
     public static MatchLists matchLists;
-    public static QueueWrapper queueWrapper;
+    public static QueueWrapper queueWrapper = new QueueWrapper();
 
 
     private int currentLayout;
@@ -212,6 +212,9 @@ public class MainActivity extends AppCompatActivity
         SettingsFragment.updateSettings(this);
         matchLists = InflateSchedule.inflateSchedule(this);
         MainActivity.queueWrapper = JsonWrapper.getQueueDataFromFile(this);
+        if(MainActivity.queueWrapper == null){
+            queueWrapper= new QueueWrapper();
+        }
     }
 
 }

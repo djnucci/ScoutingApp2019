@@ -1,7 +1,9 @@
 package com.RunnymedeRobotics.myapplication.network;
 
 
+import com.RunnymedeRobotics.myapplication.MainActivity;
 import com.RunnymedeRobotics.myapplication.fragment.SettingsFragment;
+import com.RunnymedeRobotics.myapplication.jsonqueue.JsonWrapper;
 import com.RunnymedeRobotics.myapplication.jsonqueue.QueueWrapper;
 import com.google.gson.Gson;
 
@@ -30,7 +32,7 @@ public class CallAPI {
      * Post local queue wrapper to server
      * @param queueWrapper
      */
-    private static String submitLocalQueue(QueueWrapper queueWrapper){
+    public  static String submitLocalQueue(QueueWrapper queueWrapper) throws java.lang.IllegalStateException{
         if(SettingsFragment.ipAddress.equals("")){
             System.out.println("Please set value to serverIP");
             return "Please set value to serverIP";
@@ -38,7 +40,7 @@ public class CallAPI {
 
         //specifies http post to server ip and creates httppost object
         HttpClient httpclient = new DefaultHttpClient();
-        HttpPost httppost = new HttpPost(SettingsFragment.ipAddress+"Database/addQueueWrapper");
+        HttpPost httppost = new HttpPost(SettingsFragment.ipAddress+"/Database/addQueueWrapper");
 
 
         try {
@@ -51,6 +53,9 @@ public class CallAPI {
         //Executes http response
         HttpResponse httpResponse = httpclient.execute(httppost);
         //returns the response from server if any
+            if(httpResponse.equals("post_complete")){
+                JsonWrapper.newQueue(MainActivity.getContext());
+            }
         return "Post Completed ==> " + httpResponse.toString();
     }
     catch (ClientProtocolException e){
@@ -61,7 +66,13 @@ public class CallAPI {
         e.printStackTrace();
         return "Post Error";
     }
+    catch (IllegalStateException e){
+            e.printStackTrace();
+            return "Post Error";
+    }
 }
+
+
 
 
 

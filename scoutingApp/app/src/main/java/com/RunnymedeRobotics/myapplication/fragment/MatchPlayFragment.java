@@ -100,23 +100,6 @@ public class MatchPlayFragment extends BasicFragment {
 
     ArrayList<Button> allBtns;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public MatchPlayFragment() {
         makeBtnsVisible(scoreBtns);
     }
@@ -261,6 +244,7 @@ public class MatchPlayFragment extends BasicFragment {
                     //char test = findPickupPiece(copyOfi);
                     c.setFieldElement(findPickupPiece(copyOfi));
                     c.setPickupTime((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
+                    MainActivity.globalSubmitMatch.getCycleArrayList().add(c);
 
                 }
             });
@@ -377,8 +361,6 @@ public class MatchPlayFragment extends BasicFragment {
                 makeBtnsInvisible(dropBtns1);
             }
         makeBtnsInvisible(crossBtns1);
-
-
 
         }
     }
