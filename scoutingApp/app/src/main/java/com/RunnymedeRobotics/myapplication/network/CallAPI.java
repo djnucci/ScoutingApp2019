@@ -1,6 +1,8 @@
 package com.RunnymedeRobotics.myapplication.network;
 
 
+import android.util.Log;
+
 import com.RunnymedeRobotics.myapplication.MainActivity;
 import com.RunnymedeRobotics.myapplication.fragment.SettingsFragment;
 import com.RunnymedeRobotics.myapplication.jsonqueue.JsonWrapper;
@@ -40,8 +42,10 @@ public class CallAPI {
 
         //specifies http post to server ip and creates httppost object
         HttpClient httpclient = new DefaultHttpClient();
-        HttpPost httppost = new HttpPost(SettingsFragment.ipAddress+"/Database/addQueueWrapper");
-
+        Log.e("POST ADRESS : ", SettingsFragment.ipAddress+":8080/RunnymedeRoboticsScoutingApplication_war_exploded/Database/addQueueWrapper");
+        Log.e("POST ADRESS : ", (SettingsFragment.ipAddress+":8080/RunnymedeRoboticsScoutingApplication_war_exploded/Database/addQueueWrapper").replaceAll("\\s+",""));
+        HttpPost httppost = new HttpPost("http://"+(SettingsFragment.ipAddress+":8080/RunnymedeRoboticsScoutingApplication_war_exploded/Database/addQueueWrapper").replaceAll("\\s+",""));
+        Log.e("Queue Wrapper ", (new Gson()).toJson(queueWrapper) +"");
 
         try {
             //Creates name value pair to pass onto the server
@@ -70,6 +74,7 @@ public class CallAPI {
             e.printStackTrace();
             return "Post Error";
     }
+
 }
 
 

@@ -29,7 +29,7 @@ public class MatchPlayFragment extends BasicFragment {
     private int cycleNum;
 
 
-    Cycle c;
+    Cycle c = new Cycle();
     ArrayList<Cycle> cycles;
 
     private Button startMatchBtn;

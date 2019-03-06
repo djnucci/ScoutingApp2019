@@ -33,7 +33,7 @@ public class JsonWrapper {
     }
 
     public static void writeMatchToFile(SubmitMatch submitMatch, Context context){
-        writeToFile((new Gson()).toJson(submitMatch),context, submitMatch.getInitInfo().getMatchNumber() +"_" + submitMatch.getInitInfo().getEvent()+"_match.json");
+        writeToFile((new Gson()).toJson(submitMatch),context, submitMatch.getInitInfo().getMatchNumber() +""+submitMatch.getInitInfo().getTeamNumber()+"_" + submitMatch.getInitInfo().getEvent()+"_match.json");
     }
 
     public static void newQueue(Context context){
