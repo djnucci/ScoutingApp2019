@@ -166,6 +166,7 @@ public class MainActivity extends AppCompatActivity
         Fragment f = new BasicFragment(layout);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,f).commit();
         currentLayout = layout;
+        //YEEET
     }
 
     public void switchBasicFrag(int layout, Fragment fragment){
