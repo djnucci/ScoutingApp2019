@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ScrollView;
 
 import com.RunnymedeRobotics.myapplication.R;
+import com.RunnymedeRobotics.myapplication.datastructureclasses.Auto;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.Cycle;
 import com.RunnymedeRobotics.myapplication.MainActivity;
 
@@ -29,6 +30,7 @@ public class MatchPlayFragment extends BasicFragment {
 
 
     Cycle c;
+    ArrayList<Cycle> cycles;
 
     private Button startMatchBtn;
 
@@ -190,7 +192,7 @@ public class MatchPlayFragment extends BasicFragment {
 
          crossBtns = new ArrayList<Button>(Arrays.asList(crossDropGamePieceBtn,crossPickupCargoBtn,crossPickupHatchBtn));
 
-
+        cycles = new ArrayList<Cycle>();
         CycleHelper.TimeHepler.start();
 
 
@@ -217,16 +219,6 @@ public class MatchPlayFragment extends BasicFragment {
 
 
 
-        for(int i = 0; i < scoreBtns.size();i++){
-            scoreBtns.get(i).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    hasPiece= false;
-                    decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls);
-                }
-            });
-        }
-
 
 
         for(int i = 0; i < pickupBtns.size();i++){
@@ -239,6 +231,11 @@ public class MatchPlayFragment extends BasicFragment {
                     c = new Cycle();
                     cycleNum++;
                     hasPiece= true;
+                    /**
+                     * this returns the id of the button atm
+                     * TODO: get the text of the ID of the button
+                     */
+                    c.setPickUp(pickupBtns.get(copyOfi).getId() +"");
                     decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls);
                     c.setCycleNumber(cycleNum);
                     //char test = findPickupPiece(copyOfi);
@@ -251,12 +248,35 @@ public class MatchPlayFragment extends BasicFragment {
         }
 
 
+        for(int i = 0; i < scoreBtns.size();i++){
+            final int copyOfi = i;
+            scoreBtns.get(i).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    /**
+                     * this returns the id of the button atm
+                     * TODO:get the text of the ID of the button
+                     */
+                    c.setPlace(scoreBtns.get(copyOfi).getId()+"");
+                    c.setDropoffTime((int) CycleHelper.TimeHepler.getElapsedTimeSecs());
+                    c.setDrop(false);
+                    hasPiece= false;
+                    cycles.add(c);
+                    decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls);
+                }
+            });
+        }
+
 
         for(int i = 0; i < dropBtns.size();i++){
             dropBtns.get(i).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     hasPiece= false;
+                    c.setDrop(true);
+                    c.setPlace("dropped");
+                    c.setDropoffTime((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
+                    cycles.add(c);
                     decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls);
                 }
             });
@@ -382,6 +402,13 @@ public class MatchPlayFragment extends BasicFragment {
         }
 
 
+    }
+    public void onDestroy(){
+
+        MainActivity.globalSubmitMatch.setCycleArrayList(cycles);
+        Log.e("TEST", MainActivity.globalSubmitMatch.getAuto().getAutoPreload()+"");
+
+        super.onDestroy();
     }
 }
 
