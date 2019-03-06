@@ -40,6 +40,10 @@ public class CallAPI {
             System.out.println("Please set value to serverIP");
             return "Please set value to serverIP";
         }
+        if(queueWrapper.getSubmitMatchArrayList().isEmpty()){
+            Log.e("NO QUEUE WRAPPER ", "Array List empty, qeue wrapper not submitted");
+            return "Array List empty qeue wrapper not submitted";
+        }
 
         //specifies http post to server ip and creates httppost object
         HttpClient httpclient = new DefaultHttpClient();
