@@ -45,7 +45,7 @@ public class CycleHelper {
         public static long getElapsedTimeSecs() {
             long elapsed = 0;
             if (running) {
-                elapsed = ((System.currentTimeMillis() - startTime) / 1000) % 60;
+                elapsed = ((System.currentTimeMillis() - startTime) / 1000);
             }
             return elapsed;
         }

@@ -57,9 +57,7 @@ public class CallAPI {
         //Executes http response
         HttpResponse httpResponse = httpclient.execute(httppost);
         //returns the response from server if any
-            if(httpResponse.equals("post_complete")){
-                JsonWrapper.newQueue(MainActivity.getContext());
-            }
+            JsonWrapper.newQueue(MainActivity.getContext());
         return "Post Completed ==> " + httpResponse.toString();
     }
     catch (ClientProtocolException e){
