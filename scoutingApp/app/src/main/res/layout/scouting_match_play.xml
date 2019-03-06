@@ -69,6 +69,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_green_light"
                 android:text="Cross pickup Hatch"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -85,6 +86,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_orange_dark"
                 android:text="Cross"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -110,6 +112,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_purple"
                 android:text="middle"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -127,6 +130,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="2dp"
+                android:backgroundTint="@android:color/holo_purple"
                 android:text="close"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -144,6 +148,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_purple"
                 android:text="close"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -161,6 +166,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_purple"
                 android:text="left"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -178,6 +184,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_purple"
                 android:text="right"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -195,10 +202,11 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_purple"
                 android:text="far"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.332"
+                app:layout_constraintHorizontal_bias="0.313"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.194" />
@@ -211,6 +219,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_purple"
                 android:text="far"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -227,6 +236,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_purple"
                 android:text="middle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -261,18 +271,21 @@
                         android:id="@+id/matchplay_rocket_right_far_low_hatch_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
                         android:text="Low" />
 
                     <Button
                         android:id="@+id/matchplay_rocket_right_far_mid_hatch_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
                         android:text="mid" />
 
                     <Button
                         android:id="@+id/matchplay_rocket_right_far_high_hatch_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
                         android:text="high" />
                 </LinearLayout>
             </ScrollView>
@@ -303,18 +316,21 @@
                         android:id="@+id/matchplay_rocket_right_mid_cargo_low_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
                         android:text="Low" />
 
                     <Button
                         android:id="@+id/matchplay_rocket_right_mid_cargo_mid_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
                         android:text="mid" />
 
                     <Button
                         android:id="@+id/matchplay_rocket_right_mid_cargo_high_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
                         android:text="high" />
                 </LinearLayout>
             </ScrollView>
@@ -345,30 +361,34 @@
                         android:id="@+id/matchplay_rocket_right_near_low_hatch_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
                         android:text="Low" />
 
                     <Button
                         android:id="@+id/matchplay_rocket_right_near_mid_hatch_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
                         android:text="mid" />
 
                     <Button
                         android:id="@+id/matchplay_rocket_right_near_high_hatch_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
                         android:text="high" />
                 </LinearLayout>
             </ScrollView>
 
             <Button
                 android:id="@+id/matchplay_pickup_hp_left_hatch_btn"
-                android:layout_width="60dp"
+                android:layout_width="73dp"
                 android:layout_height="157dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_green_light"
                 android:text="hatch"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -379,28 +399,30 @@
 
             <Button
                 android:id="@+id/matchplay_pickup_hp_left_cargo_btn"
-                android:layout_width="59dp"
+                android:layout_width="71dp"
                 android:layout_height="155dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_green_light"
                 android:text="cargo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.09"
+                app:layout_constraintHorizontal_bias="0.118"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.971" />
+                app:layout_constraintVertical_bias="0.97" />
 
             <Button
                 android:id="@+id/matchplay_pickup_hp_right_cargo_btn"
-                android:layout_width="53dp"
+                android:layout_width="72dp"
                 android:layout_height="142dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_green_light"
                 android:text="cagro"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -411,12 +433,13 @@
 
             <Button
                 android:id="@+id/matchplay_pickup_hp_right_hatch_btn"
-                android:layout_width="54dp"
+                android:layout_width="73dp"
                 android:layout_height="142dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_green_light"
                 android:text="hatch"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -433,6 +456,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_green_light"
                 android:text="Cross pickup cargo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -449,6 +473,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_green_light"
                 android:text="cargo bay"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -465,13 +490,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_green_light"
                 android:text="cargo bay"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.792"
+                app:layout_constraintHorizontal_bias="0.763"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.932" />
+                app:layout_constraintVertical_bias="0.93" />
 
             <Button
                 android:id="@+id/matchplay_pickup_freeplay_hatch_btn"
@@ -481,13 +507,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Free Hatch"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:text="GAtch from ground"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.326"
+                app:layout_constraintHorizontal_bias="0.051"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.603" />
+                app:layout_constraintVertical_bias="0.641" />
 
             <Button
                 android:id="@+id/matchplay_pickup_freeplay_cargo_btn"
@@ -497,13 +524,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="free cargo"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:text="Cargo from ground"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.552"
+                app:layout_constraintHorizontal_bias="0.051"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.603" />
+                app:layout_constraintVertical_bias="0.708" />
 
             <Button
                 android:id="@+id/matchplay_drop_alliance_side_btn"
@@ -513,13 +541,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_orange_light"
                 android:text="game piece dropped"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.483"
+                app:layout_constraintHorizontal_bias="0.391"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.713" />
+                app:layout_constraintVertical_bias="0.677" />
 
             <Button
                 android:id="@+id/matchplay_cross_drop_gamepiece_btn"
@@ -529,7 +558,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Button"
+                android:backgroundTint="@android:color/holo_orange_light"
+                android:text="Drop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
@@ -548,11 +578,20 @@
 
             <Button
                 android:id="@+id/matchplay_defense_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="122dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@android:color/holo_red_light"
                 android:text="Defense"
-                tools:layout_editor_absoluteX="593dp"
-                tools:layout_editor_absoluteY="598dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.78"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.684" />
 
         </android.support.constraint.ConstraintLayout>
 

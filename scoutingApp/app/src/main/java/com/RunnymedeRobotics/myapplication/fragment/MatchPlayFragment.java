@@ -13,6 +13,7 @@ import android.widget.ScrollView;
 
 import com.RunnymedeRobotics.myapplication.R;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.Cycle;
+import com.RunnymedeRobotics.myapplication.MainActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,6 +26,7 @@ public class MatchPlayFragment extends BasicFragment {
     private static boolean hasCrossed ;
     private int layout;
     private int cycleNum;
+
 
     Cycle c;
 
@@ -69,6 +71,9 @@ public class MatchPlayFragment extends BasicFragment {
     private Button pickupLooseCargoBtn;
     private Button dropGamePieceBtn;
 
+    private ScrollView rocketFarHatchScrollView;
+    private ScrollView rocketMidCargoScrollView;
+    private ScrollView rocketCloseHatchScrollView;
 
     private Button defenseBtn;
 
@@ -203,6 +208,7 @@ public class MatchPlayFragment extends BasicFragment {
          crossBtns = new ArrayList<Button>(Arrays.asList(crossDropGamePieceBtn,crossPickupCargoBtn,crossPickupHatchBtn));
 
 
+        CycleHelper.TimeHepler.start();
 
 
 
@@ -215,11 +221,15 @@ public class MatchPlayFragment extends BasicFragment {
 
 
 
+        if(MainActivity.globalSubmitMatch.getAuto().getAutoPreload() == '1'){
+            makeBtnsInvisible(pickupBtns);
+            //Log.e("STATE","ITS GETTING HERE");
+            makeBtnsInvisible(crossBtns);
+        }
+        else{
+            makeBtnsInvisible(scoreBtns);
+        }
 
-
-        makeBtnsInvisible(pickupBtns);
-        //Log.e("STATE","ITS GETTING HERE");
-        makeBtnsInvisible(crossBtns);
 
 
 
@@ -242,8 +252,8 @@ public class MatchPlayFragment extends BasicFragment {
             pickupBtns.get(i).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    CycleHelper.TimeHepler.start();
-                    c= new Cycle();
+
+                    c = new Cycle();
                     cycleNum++;
                     hasPiece= true;
                     decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls);

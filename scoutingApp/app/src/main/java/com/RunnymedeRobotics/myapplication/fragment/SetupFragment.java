@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,6 +51,7 @@ public class SetupFragment extends BasicFragment {
         matchPlayTab = (Button) view.findViewById(R.id.scouting_setup_match);
         endGameTab = (Button) view.findViewById(R.id.scouting_setup_endgame);
 
+
         matchPlayTab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,7 +65,11 @@ public class SetupFragment extends BasicFragment {
                     auto.setAutoPreload('1');
                 } else if (noPrelaod.isChecked()) {
                     auto.setStartingObj('N');
-                    auto.setAutoPreload('1');
+                    auto.setAutoPreload('0');
+                }
+                else{
+                    auto.setStartingObj('N');
+                    auto.setAutoPreload('0');
                 }
 
                 if (levelOneBtn.isChecked()) {
@@ -73,11 +79,44 @@ public class SetupFragment extends BasicFragment {
                     auto.setAutoLvl(2);
                 }
                 MainActivity.globalSubmitMatch.setAuto(auto);
+                Log.e("TEST", MainActivity.globalSubmitMatch.getAuto().getAutoPreload()+"");
 
             }
         });
 
 
+
         return view;
     }
+
+    public void onDestroy(){
+        Auto auto = new Auto();
+        if (cargoPreload.isChecked()) {
+            auto.setStartingObj('C');
+            auto.setAutoPreload('1');
+            System.out.print("ABC");
+        } else if (hatchPreload.isChecked()) {
+            auto.setStartingObj('H');
+            auto.setAutoPreload('1');
+        } else if (noPrelaod.isChecked()) {
+            auto.setStartingObj('N');
+            auto.setAutoPreload('0');
+        }
+        else{
+            auto.setStartingObj('N');
+            auto.setAutoPreload('0');
+        }
+
+        if (levelOneBtn.isChecked()) {
+            auto.setAutoLvl(1);
+        }
+        if (levelTwoLeftBtn.isChecked() || levelTwoRightBtn.isChecked()) {
+            auto.setAutoLvl(2);
+        }
+        MainActivity.globalSubmitMatch.setAuto(auto);
+        Log.e("TEST", MainActivity.globalSubmitMatch.getAuto().getAutoPreload()+"");
+
+        super.onDestroy();
+    }
+
 }

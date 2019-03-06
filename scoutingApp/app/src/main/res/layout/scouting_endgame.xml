@@ -187,6 +187,14 @@
                     android:layout_weight="1"
                     android:text="Level 3" />
             </RadioGroup>
+
+            <TextView
+                android:id="@+id/endgame_climb_fail_txtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Did the climb fail?"
+                tools:layout_editor_absoluteX="72dp"
+                tools:layout_editor_absoluteY="622dp" />
         </android.support.constraint.ConstraintLayout>
 
     </LinearLayout>

@@ -13,7 +13,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.RunnymedeRobotics.myapplication.R;
+import com.RunnymedeRobotics.myapplication.datastructureclasses.Auto;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.EndGame;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class EndGameFragment extends BasicFragment {
     /**
@@ -28,6 +32,8 @@ public class EndGameFragment extends BasicFragment {
     private CheckBox levelTwoRightClimb;
     private CheckBox levelThreeClimb;
 
+    ArrayList<CheckBox> climbLevels;
+
     private CheckBox buddyd;
 
     private RadioGroup climbFailRadiogrp;
@@ -35,6 +41,13 @@ public class EndGameFragment extends BasicFragment {
     private RadioButton levelOneClimbFail;
     private RadioButton levelTwoClimbFail;
     private RadioButton levelThreeClimbFail;
+
+    EndGame a;
+    private int climbTimeStart;
+    private int climbLevel2Time;
+    private int climbTimeEnd;
+    private int climbDuration;
+
 
     private Button finalSubmitMatch;
 
@@ -77,6 +90,41 @@ public class EndGameFragment extends BasicFragment {
         levelThreeClimbFail = (RadioButton) view.findViewById(R.id.level_three_fail_rdbtn);
 
         finalSubmitMatch = (Button) view.findViewById(R.id.final_submit_btn);
+
+        climbLevels = new ArrayList<CheckBox>(Arrays.asList(levelOneClimb,levelTwoLeftClimb,levelTwoRightClimb,levelThreeClimb));
+        climbDuration = 0;
+        climbTimeEnd =0;
+        climbTimeStart = 0;
+        a = new EndGame();
+
+           levelOneClimb.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    climbTimeStart = (int)CycleHelper.TimeHepler.getElapsedTimeSecs();
+                }
+            });
+
+        levelTwoLeftClimb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                climbTimeEnd = ((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
+            }
+        });
+        levelTwoRightClimb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                climbTimeEnd =((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
+            }
+        });
+        levelThreeClimb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                climbTimeEnd =((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
+            }
+        });
+
+
+
 
         finalSubmitMatch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,9 +182,13 @@ public class EndGameFragment extends BasicFragment {
                     endgame.setFailLevel('N');
                 }
 
+                if(climbTimeEnd>0 && climbTimeStart>0){
+                    endgame.setCimbStart((int)climbTimeStart);
+                    endgame.setClimbEnd((int) climbTimeEnd);
+                    endgame.setTimeToClimb((int) climbDuration);
+                }
 
             }}
-
 
 
 
