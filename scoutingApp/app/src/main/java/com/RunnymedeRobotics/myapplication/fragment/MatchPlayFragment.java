@@ -15,6 +15,7 @@ import com.RunnymedeRobotics.myapplication.R;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.Auto;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.Cycle;
 import com.RunnymedeRobotics.myapplication.MainActivity;
+import com.RunnymedeRobotics.myapplication.datastructureclasses.Teleop;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,6 +32,9 @@ public class MatchPlayFragment extends BasicFragment {
 
     Cycle c = new Cycle();
     ArrayList<Cycle> cycles;
+
+    Teleop t = new Teleop();
+    ArrayList<Teleop> teleops;
 
     private Button startMatchBtn;
 
@@ -193,7 +197,7 @@ public class MatchPlayFragment extends BasicFragment {
          crossBtns = new ArrayList<Button>(Arrays.asList(crossDropGamePieceBtn,crossPickupCargoBtn,crossPickupHatchBtn));
 
         cycles = new ArrayList<Cycle>();
-        CycleHelper.TimeHepler.start();
+
 
 
 
@@ -231,17 +235,15 @@ public class MatchPlayFragment extends BasicFragment {
                     c = new Cycle();
                     cycleNum++;
                     hasPiece= true;
-                    /**
-                     * this returns the id of the button atm
-                     * TODO: get the text of the ID of the button
-                     */
-                    c.setPickUp(pickupBtns.get(copyOfi).getId() +"");
+
+                    c.setPickUp(getBtnIds(v,pickupBtns.get(copyOfi)));
                     decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls);
                     c.setCycleNumber(cycleNum);
                     //char test = findPickupPiece(copyOfi);
                     c.setFieldElement(findPickupPiece(copyOfi));
                     c.setPickupTime((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
-                    MainActivity.globalSubmitMatch.getCycleArrayList().add(c);
+                    Log.e("pickup time:", c.getPickupTime()+"");
+                   // MainActivity.globalSubmitMatch.getCycleArrayList().add(c);
 
                 }
             });
@@ -253,16 +255,21 @@ public class MatchPlayFragment extends BasicFragment {
             scoreBtns.get(i).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    /**
-                     * this returns the id of the button atm
-                     * TODO:get the text of the ID of the button
-                     */
-                    c.setPlace(scoreBtns.get(copyOfi).getId()+"");
+
+                    if(cycleNum == 0 && MainActivity.globalSubmitMatch.getAuto().getAutoPreload() =='1'&& CycleHelper.TimeHepler.getElapsedTimeSecs()<=15 )
+                    {
+                        c.setFieldElement(MainActivity.globalSubmitMatch.getAuto().getStartingObj());
+                        c.setPickUp("Preloaded");
+
+                    }
+                    c.setPlace(getBtnIds(v,scoreBtns.get(copyOfi)));
                     c.setDropoffTime((int) CycleHelper.TimeHepler.getElapsedTimeSecs());
+                    Log.e("Dropoff time", c.getDropoffTime()+"");
                     c.setDrop(false);
                     hasPiece= false;
                     cycles.add(c);
                     decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls);
+
                 }
             });
         }
@@ -287,6 +294,8 @@ public class MatchPlayFragment extends BasicFragment {
             public void onClick(View v) {
                 crossNum ++;
                 hasCrossed = isCrossed(crossNum);
+                t.setTimeCrosses((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
+                teleops.add(t);
                 decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls);
                 Log.e("CROSSED VALUE", crossNum+"" + "hasCrossed: " + hasCrossed);
             }
@@ -298,6 +307,8 @@ public class MatchPlayFragment extends BasicFragment {
             @Override
             public void onClick(View v) {
                 startMatchBtn.setVisibility(View.GONE);
+                CycleHelper.TimeHepler.start();
+
                 //Log.e("STATE","GP");
             }
 
@@ -319,7 +330,7 @@ public class MatchPlayFragment extends BasicFragment {
      */
     public void makeBtnsInvisible(ArrayList<Button> toMakeInvisible){
         for (int i = 0; i < toMakeInvisible.size(); i ++){
-            System.out.println(toMakeInvisible.get(i).getId());
+            //System.out.println(toMakeInvisible.get(i).getId());
            // Log.e("STATE:",(toMakeInvisible.get(i).getId())+"YEEEEEEEEEEEEEEEEEEEEEEEEEEEEEET     " + i);
             (toMakeInvisible.get(i)).setVisibility(View.INVISIBLE);
         }
@@ -375,7 +386,7 @@ public class MatchPlayFragment extends BasicFragment {
                // makeScrollViewVisible(scoreScrolls1);
                 makeBtnsVisible(dropBtns1);
                 makeBtnsInvisible(pickupBtns1);
-                makeBtnsInvisible(dropBtns1);
+                makeBtnsVisible(dropBtns1);
             }
             else {
                 makeBtnsVisible(pickupBtns1);
