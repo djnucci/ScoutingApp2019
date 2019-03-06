@@ -38,7 +38,7 @@ public class SetupFragment extends BasicFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(this.layout, container, false);
-
+       // final Auto auto= new Auto();
 
         levelOneBtn = (RadioButton) view.findViewById(R.id.setup_level_one);
         levelTwoLeftBtn = (RadioButton) view.findViewById(R.id.setup_level_two_left);
@@ -51,7 +51,7 @@ public class SetupFragment extends BasicFragment {
         matchPlayTab = (Button) view.findViewById(R.id.scouting_setup_match);
         endGameTab = (Button) view.findViewById(R.id.scouting_setup_endgame);
 
-
+/*
         matchPlayTab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,14 +78,25 @@ public class SetupFragment extends BasicFragment {
                 if (levelTwoLeftBtn.isChecked() || levelTwoRightBtn.isChecked()) {
                     auto.setAutoLvl(2);
                 }
+                Log.e("Preload" , auto.getAutoPreload()+"");
+                Log.e("StartingObj", auto.getStartingObj()+"");
                 MainActivity.globalSubmitMatch.setAuto(auto);
                 Log.e("TEST", MainActivity.globalSubmitMatch.getAuto().getAutoPreload()+"");
 
             }
         });
+        */
 
-
-
+/*
+        cargoPreload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                auto.setStartingObj('C');
+                auto.setAutoPreload('1');
+                MainActivity.globalSubmitMatch.setAuto(auto);
+            }
+        });
+        */
         return view;
     }
 

@@ -23,6 +23,7 @@ import com.RunnymedeRobotics.myapplication.fragment.BasicFragment;
 import com.RunnymedeRobotics.myapplication.fragment.InitInfoFragment;
 import com.RunnymedeRobotics.myapplication.fragment.MatchPlayFragment;
 import com.RunnymedeRobotics.myapplication.fragment.SettingsFragment;
+import com.RunnymedeRobotics.myapplication.fragment.SetupFragment;
 import com.RunnymedeRobotics.myapplication.jsonqueue.JsonWrapper;
 import com.RunnymedeRobotics.myapplication.jsonqueue.QueueWrapper;
 import com.google.gson.Gson;
@@ -30,7 +31,7 @@ import com.google.gson.Gson;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
 
-    public static SubmitMatch globalSubmitMatch;
+    public static SubmitMatch globalSubmitMatch = new SubmitMatch();
     public static MatchLists matchLists;
     public static QueueWrapper queueWrapper;
 
@@ -181,7 +182,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.scouting_match_setup:
             case R.id.scouting_endgame_setup:
                 layout = R.layout.scouting_setup;
-                switchBasicFrag(layout);
+                switchBasicFrag(layout, new SetupFragment(layout));
                 break;
             case R.id.scouting_setup_match:
             case R.id.scouting_match_match:
