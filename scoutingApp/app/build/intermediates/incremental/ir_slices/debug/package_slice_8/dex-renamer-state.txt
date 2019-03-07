@@ -1,0 +1,4 @@
+#Thu Mar 07 17:11:51 EST 2019
+base.0=C\:\\Users\\Hark\\Documents\\GitHub\\ScoutingApp2019\\scoutingApp\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
+path.0=classes.dex
+renamed.0=classes.dex

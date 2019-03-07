@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="Scouting app" />
+        <target>android-24</target>
+      </config>
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="caa5282d-d7c8-4016-9237-98314922a890" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="scoutingApp" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1143696172">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="PNG" value="1" />
+          <entry key="apk" value="1" />
+          <entry key="class" value="1" />
+          <entry key="java" value="56" />
+          <entry key="json" value="14" />
+          <entry key="png" value="1" />
+          <entry key="xml" value="39" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="APK" value="1" />
+          <entry key="CLASS" value="1" />
+          <entry key="Image" value="2" />
+          <entry key="JAVA" value="56" />
+          <entry key="JSON" value="14" />
+          <entry key="XML" value="39" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="7979" />
+          <entry key="json" value="1" />
+          <entry key="txt" value="1583" />
+          <entry key="xml" value="48" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="7979" />
+          <entry key="JSON" value="1" />
+          <entry key="PLAIN_TEXT" value="1583" />
+          <entry key="XML" value="48" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="scoutingApp">
+      <favorite_root url="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/datastructureclasses/Cycle.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>onclick</find>
+      <find>onCrea</find>
+      <find>match</find>
+      <find>match_match</find>
+      <find>pickedUpGamePiece</find>
+      <find>Log</find>
+      <find>makeScrollViewInvisible</find>
+      <find>log</find>
+      <find>replace</find>
+      <find>c</find>
+      <find>.getid</find>
+      <find>start</find>
+      <find>drop</find>
+      <find>main</find>
+      <find>cross</find>
+      <find>conte</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>hasPiece</replace>
+    </replaceStrings>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/stats.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/schedule.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/datastructureclasses/Teleop.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/fragment/EndGameFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/fragment/InitInfoFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/fragment/BasicFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/fragment/CycleHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/transfer.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/settings_fragment.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/fragment/MatchPlayFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/fragment/SetupFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/scouting_endgame.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/scouting_match_play.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/fragment/SyncDataFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/scouting_setup.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/datastructureclasses/SubmitMatch.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="scoutingApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="scoutingApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="scoutingApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="RunnymedeRobotics" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scoutingApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="RunnymedeRobotics" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="myapplication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scoutingApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="RunnymedeRobotics" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="myapplication" type="462c0819:PsiDirectoryNode" />
+              <item name="filehandler" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.project.structure.last.selected" value="SDK Location" />
+    <property name="android.project.structure.proportion" value="0.15" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="device.picker.selection" value="2384595722a5ce3e" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="sync.plugin.last.upgrade.timestamp" value="1551893491903" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/gradle.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/AndroidManifest.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/MainActivity.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/filehandler/InflateSchedule.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/jsonqueue/JsonWrapper.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/.name</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/caches/build_file_checksums.ser</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/caches/gradle_models.ser</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/codeStyles/Project.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/gradle.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__android_arch_core_common_1_1_1_jar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_1_jar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_collections_28_0_0_jar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_1_3_jar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_design_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_support_annotations_28_0_0_jar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_support_media_compat_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_support_v4_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_transition_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_5_jar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__junit_junit_4_12_jar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__org_apache_http_legacy_android_28.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/misc.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/modules.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/runConfigurations.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/vcs.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/gradle/wrapper/gradle-wrapper.jar</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/gradle/wrapper/gradle-wrapper.properties</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/gradlew</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/gradlew.bat</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/local.properties</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="caa5282d-d7c8-4016-9237-98314922a890" name="Default Changelist" comment="" />
+      <created>1551714864022</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551714864022</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Done setting up teleop screen YEET. Had some code for buttons but it aint workin so took out">
+      <created>1551756607327</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1551756607327</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Done setting up teleop screen YEET. Had some code for buttons but it aint workin so took out">
+      <created>1551757450922</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1551757450922</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Matchplay screen button visibility fully functional.&#10;Gonna record info in Cycle, Auto, Teleop objects now">
+      <created>1551821251568</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1551821251568</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added defense button">
+      <created>1551829707677</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1551829707678</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Endgame tab done">
+      <created>1551842031664</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1551842031664</updated>
+    </task>
+    <task id="LOCAL-00006" summary="main activity switching was incomplete. fixed now">
+      <created>1551843367320</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1551843367320</updated>
+    </task>
+    <task id="LOCAL-00007" summary="endgame submit resets to initinfo screen">
+      <created>1551844719175</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1551844719175</updated>
+    </task>
+    <task id="LOCAL-00008" summary="test boi">
+      <created>1551844795344</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1551844795344</updated>
+    </task>
+    <task id="LOCAL-00009" summary="submits cycles to global">
+      <created>1551846937245</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1551846937245</updated>
+    </task>
+    <task id="LOCAL-00010" summary="IDs actually send the ID text now, instead of the ID int">
+      <created>1551851448849</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1551851448849</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Records times for field crosses too">
+      <created>1551855678899</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1551855678899</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Records times for field crosses too.. dont crash no more">
+      <created>1551856429726</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1551856429726</updated>
+    </task>
+    <task id="LOCAL-00013" summary="forgot to add teleop arraylist to global match obj">
+      <created>1551856858604</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1551856858604</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Imma head to bed">
+      <created>1551869668209</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1551869668209</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ust making sure minimal stuff">
+      <created>1551998133725</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1551998133725</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Structure" order="0" side_tool="true" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Favorites" order="2" sideWeight="0.50161815" side_tool="true" weight="0.16044776" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Build Variants" order="5" sideWeight="0.50161815" side_tool="true" weight="0.16044776" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.4989154" visible="true" weight="0.16044776" />
+      <window_info id="Captures" order="7" sideWeight="0.5010846" side_tool="true" weight="0.16044776" />
+      <window_info anchor="bottom" id="Logcat" order="0" sideWeight="0.49946696" weight="0.4175705" />
+      <window_info anchor="bottom" id="TODO" order="1" weight="0.3286334" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.3286334" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32968238" />
+      <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" weight="0.30585682" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5010661" side_tool="true" weight="0.489154" />
+      <window_info anchor="bottom" id="Build" order="6" weight="0.35357916" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" weight="0.32968238" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.4989339" weight="0.1681128" />
+      <window_info anchor="bottom" id="Find" order="9" sideWeight="0.49946696" weight="0.5520607" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4989339" weight="0.5119306" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="right" id="Gradle" order="1" weight="0.32995737" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info anchor="right" id="Preview" order="3" weight="0.32889125" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" weight="0.3938731" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Done setting up teleop screen YEET. Had some code for buttons but it aint workin so took out" />
+    <MESSAGE value="Matchplay screen button visibility fully functional.&#10;Gonna record info in Cycle, Auto, Teleop objects now" />
+    <MESSAGE value="added defense button" />
+    <MESSAGE value="Endgame tab done" />
+    <MESSAGE value="main activity switching was incomplete. fixed now" />
+    <MESSAGE value="endgame submit resets to initinfo screen" />
+    <MESSAGE value="test boi" />
+    <MESSAGE value="submits cycles to global" />
+    <MESSAGE value="IDs actually send the ID text now, instead of the ID int" />
+    <MESSAGE value="Records times for field crosses too" />
+    <MESSAGE value="Records times for field crosses too.. dont crash no more" />
+    <MESSAGE value="forgot to add teleop arraylist to global match obj" />
+    <MESSAGE value="Imma head to bed" />
+    <MESSAGE value="ust making sure minimal stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="ust making sure minimal stuff" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk">
+      <provider selected="true" editor-type-id="apk-viewer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/fragment/MatchesFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/datastructureclasses/InitInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1475">
+          <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/datastructureclasses/Auto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2023">
+          <caret line="214" column="26" selection-start-line="214" selection-start-column="26" selection-end-line="214" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/fragment/InitInfoFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="63" column="60" selection-start-line="63" selection-start-column="60" selection-end-line="63" selection-end-column="60" />
+          <folding>
+            <element signature="e#3917#4353#0" expanded="true" />
+            <element signature="e#4352#4353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../AndroidStudio/DeviceExplorer/emulator-5554/data/user/0/com.RunnymedeRobotics.myapplication/files/121310__match.json" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/fragment/BasicFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../AndroidStudio/DeviceExplorer/emulator-5554/data/user/0/com.RunnymedeRobotics.myapplication/files/80610__match.json" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/fragment/CycleHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/datastructureclasses/Teleop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../AndroidStudio/DeviceExplorer/emulator-5554/data/user/0/com.RunnymedeRobotics.myapplication/files/222222__match.json" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/1d48aeb23e307c087960d43ad7d34f82/jars/classes.jar!/android/support/v4/app/Fragment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="118" column="35" selection-start-line="118" selection-start-column="35" selection-end-line="118" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/jsonqueue/JsonWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../AndroidStudio/DeviceExplorer/emulator-5554/data/user/0/com.RunnymedeRobotics.myapplication/files/data.json" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/datastructureclasses/EndGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1816">
+          <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/fragment/EndGameFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="209" column="77" selection-start-line="209" selection-start-column="77" selection-end-line="209" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../AndroidStudio/DeviceExplorer/emulator-5554/data/user/0/com.RunnymedeRobotics.myapplication/files/00_null_match.json" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/transfer.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/stats.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/schedule.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/settings_fragment.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/filehandler/InflateSchedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../AndroidStudio/DeviceExplorer/emulator-5554/data/user/0/com.RunnymedeRobotics.myapplication/files/6610_Durham_match.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="67" selection-end-column="2063" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/fragment/MatchPlayFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4403">
+          <caret line="282" selection-start-line="282" selection-end-line="282" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/starting_platform.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/teleop_field.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../AndroidStudio/DeviceExplorer/emulator-5554/data/user/0/com.RunnymedeRobotics.myapplication/files/37610__match.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="96" selection-end-column="2216" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../AndroidStudio/DeviceExplorer/emulator-5554/data/user/0/com.RunnymedeRobotics.myapplication/files/37610_Durham_match.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="95" selection-end-column="2221" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/scouting_start_page.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/scouting_match_play.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="10030">
+          <caret line="590" column="61" selection-start-line="590" selection-start-column="61" selection-end-line="590" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../AndroidStudio/DeviceExplorer/Scouting_app_API_24 [emulator-5554]/data/user/0/com.RunnymedeRobotics.myapplication/files/132056_Durham_match.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="55" selection-end-column="1552" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/network/CallAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/scouting_endgame.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="93" column="55" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/scouting_setup.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="98" column="57" selection-start-line="98" selection-start-column="57" selection-end-line="98" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="79" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/fragment/SyncDataFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+          <folding>
+            <element signature="e#1436#1437#0" expanded="true" />
+            <element signature="e#1465#1466#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1542#1543#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/fragment/SetupFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="51" column="15" selection-start-line="51" selection-start-column="15" selection-end-line="51" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/fragment/SettingsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/datastructureclasses/schedule/MatchLists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/datastructureclasses/schedule/Match.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/datastructureclasses/Cycle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/RunnymedeRobotics/myapplication/datastructureclasses/SubmitMatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
