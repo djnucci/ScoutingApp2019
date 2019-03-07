@@ -216,6 +216,9 @@ public class MainActivity extends AppCompatActivity
         if(MainActivity.queueWrapper == null){
             queueWrapper= new QueueWrapper();
         }
+        else {
+            Log.e("Queue Wrapper Status" , queueWrapper.getSubmitMatchArrayList().size()+"");
+        }
     }
 
 }

@@ -3,13 +3,17 @@ package com.RunnymedeRobotics.myapplication.filehandler;
 import android.content.Context;
 import android.util.Log;
 
+import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
+import com.RunnymedeRobotics.myapplication.datastructureclasses.schedule.Match;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.schedule.MatchLists;
+import com.RunnymedeRobotics.myapplication.jsonqueue.JsonWrapper;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 //TODO Redundant shift to JSONWrapper and integrate with the file reader method there
 public class InflateSchedule{
@@ -42,4 +46,6 @@ public class InflateSchedule{
         MatchLists matchLists = gson.fromJson(text.toString(),MatchLists.class);
         return matchLists;
     }
-}
+    }
+
+
