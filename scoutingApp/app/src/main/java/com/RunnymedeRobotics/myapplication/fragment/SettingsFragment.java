@@ -51,8 +51,8 @@ public class SettingsFragment extends BasicFragment {
 
 
         //Gets the stored strings and sets it to the local variables
-        ipAddress = pref.getString("ip",null);
-        competetion = pref.getString("competition",null);
+        ipAddress = pref.getString("ip","");
+        competetion = pref.getString("competition","");
 
         //Sets the stored prefrences to the text view
         ipEditText.setText(ipAddress);

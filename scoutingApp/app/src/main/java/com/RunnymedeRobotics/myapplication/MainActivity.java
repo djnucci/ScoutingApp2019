@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.RunnymedeRobotics.myapplication.datastructureclasses.schedule.MatchLists;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
@@ -220,5 +221,14 @@ public class MainActivity extends AppCompatActivity
             Log.e("Queue Wrapper Status" , queueWrapper.getSubmitMatchArrayList().size()+"");
         }
     }
+
+    public static void makeToast(String toasString, Context context){
+        Toast.makeText(context,toasString,Toast.LENGTH_LONG).show();
+    }
+
+    public static void checkSettings(Context context){
+
+    }
+
 
 }

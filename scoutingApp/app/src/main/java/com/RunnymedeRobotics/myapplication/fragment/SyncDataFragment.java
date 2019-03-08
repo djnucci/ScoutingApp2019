@@ -12,7 +12,6 @@ import android.widget.Button;
 import com.RunnymedeRobotics.myapplication.MainActivity;
 import com.RunnymedeRobotics.myapplication.R;
 import com.RunnymedeRobotics.myapplication.network.CallAPI;
-import com.RunnymedeRobotics.myapplication.R;
 /**
  * Created by Simar on 3/6/2019.
  */
@@ -32,8 +31,7 @@ public class SyncDataFragment extends BasicFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =  inflater.inflate(this.layout, container, false);
-        /*
-        syncButton = (Button) view.findViewById(R.id.sync_button);
+        syncButton = (Button) view.findViewById(R.id.sync);
         syncButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +39,7 @@ public class SyncDataFragment extends BasicFragment {
                 CallAPI.submitLocalQueue(MainActivity.queueWrapper, getContext());
             }
         });
-        */
+
         return view;
     }
 
