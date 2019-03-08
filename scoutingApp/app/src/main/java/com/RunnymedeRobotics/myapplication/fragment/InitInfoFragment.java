@@ -62,7 +62,7 @@ public class InitInfoFragment extends BasicFragment {
         blue1Btn = (Button) view.findViewById(R.id.blue_one);
         blue2Btn = (Button) view.findViewById(R.id.blue_two);
         blue3Btn = (Button) view.findViewById(R.id.blue_three);
-        
+
         MainActivity.globalSubmitMatch = new SubmitMatch();
 
         MainActivity.makeToast("Init Info",getContext());

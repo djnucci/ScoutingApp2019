@@ -8,6 +8,7 @@ import android.util.Log;
 import com.RunnymedeRobotics.myapplication.Constants;
 import com.RunnymedeRobotics.myapplication.MainActivity;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
+import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmittedFile;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -46,7 +47,9 @@ public class JsonWrapper {
 
     public static void writeMatchToFile(SubmitMatch submitMatch, Context context){
         try {
-            writeToFile((new Gson()).toJson(submitMatch), submitMatch.getInitInfo().getMatchNumber() +""+submitMatch.getInitInfo().getTeamNumber()+"_" + submitMatch.getInitInfo().getEvent()+"_match.json", context);
+            String fileName = submitMatch.getInitInfo().getMatchNumber() +""+submitMatch.getInitInfo().getTeamNumber()+"_" + submitMatch.getInitInfo().getEvent()+"_match.json";
+            writeToFile((new Gson()).toJson(submitMatch),fileName , context);
+            writeToFile((new Gson()).toJson(new SubmittedFile(fileName, submitMatch.getInitInfo().getEvent())), "files_submitted.json", context);
         } catch (IOException e) {
             e.printStackTrace();
         }
