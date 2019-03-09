@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.RunnymedeRobotics.myapplication.MainActivity;
 import com.RunnymedeRobotics.myapplication.R;
 
 
@@ -79,6 +80,18 @@ public class SettingsFragment extends BasicFragment {
         final SharedPreferences.Editor editor = pref.edit();
         ipAddress = pref.getString("ip",null);
         competetion = pref.getString("competition",null);
+    }
+
+    public static boolean checkSettings(Context context){
+        SharedPreferences pref = context.getSharedPreferences("settings",0);
+        final SharedPreferences.Editor editor = pref.edit();
+        //Gets the stored strings and sets it to the local variables
+        ipAddress = pref.getString("ip",null);
+        competetion = pref.getString("competition",null);
+        if (competetion == null){
+
+        }
+        return false;
     }
 
 }
