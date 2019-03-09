@@ -19,6 +19,8 @@ import com.RunnymedeRobotics.myapplication.MainActivity;
 import com.RunnymedeRobotics.myapplication.R;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.schedule.Match;
 
+import java.util.MissingFormatArgumentException;
+
 public class InitInfoFragment extends BasicFragment {
 
     private int layout;
@@ -61,6 +63,9 @@ public class InitInfoFragment extends BasicFragment {
         blue2Btn = (Button) view.findViewById(R.id.blue_two);
         blue3Btn = (Button) view.findViewById(R.id.blue_three);
 
+        MainActivity.globalSubmitMatch = new SubmitMatch();
+
+        MainActivity.makeToast("Init Info",getContext());
         Log.e("INIT INFO BTN ID", getBtnIds(view,blue2Btn));
 
         matchEditText.addTextChangedListener(new TextWatcher() {

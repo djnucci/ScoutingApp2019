@@ -58,7 +58,7 @@ public class SubmitMatch {
     }
 
     public void setAuto(Auto auto) {
-        this.auto = auto;
+        this.auto =  auto;
     }
 
     public EndGame getEndGame() {

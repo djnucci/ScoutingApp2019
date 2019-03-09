@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/sync_button"
+        android:id="@+id/sync"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sync Data" />
