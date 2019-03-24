@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 
 import com.RunnymedeRobotics.myapplication.R;
@@ -24,11 +25,13 @@ import java.util.Arrays;
 public class MatchPlayFragment extends BasicFragment {
     public static boolean gameStart;
     private static boolean hasPiece;
+    private  static boolean rocketExpandBtnsClicked;
     private char pickedUpPiece;
     private int crossNum;
     private static boolean hasCrossed ;
     private int layout;
     private int cycleNum;
+
 
 
     Cycle c = new Cycle();
@@ -37,6 +40,8 @@ public class MatchPlayFragment extends BasicFragment {
     Teleop t = new Teleop();
     ArrayList<Teleop> teleops1;
 
+
+    private ImageView matchImage;
     private Button startMatchBtn;
 
     private Button crossPickupHatchBtn;
@@ -62,17 +67,37 @@ public class MatchPlayFragment extends BasicFragment {
     private Button scoreBusFrontSideLeftBtn;
     private Button scoreBusFrontSideRightBtn;
 
-    private Button scoreRocketFarSideHatchLowBtn;
-    private Button scoreRocketFarSideHatchMidBtn;
-    private Button scoreRocketFarSideHatchHighBtn;
+    private Button scoreRocketRightFarSideHatchLowBtn;
+    private Button scoreRocketRightFarSideHatchMidBtn;
+    private Button scoreRocketRightFarSideHatchHighBtn;
 
-    private Button scoreRocketMidSideCargoLowBtn;
-    private Button scoreRocketMidSideCargoMidBtn;
-    private Button scoreRocketMidSideCargohighBtn;
+    private Button scoreRocketRightMidSideCargoLowBtn;
+    private Button scoreRocketRightMidSideCargoMidBtn;
+    private Button scoreRocketRightMidSideCargoHighBtn;
 
-    private Button scoreRocketNearSideHatchLowBtn;
-    private Button scoreRocketNearSideHatchMidBtn;
-    private Button scoreRocketNearSideHatchHighBtn;
+    private Button scoreRocketRightNearSideHatchLowBtn;
+    private Button scoreRocketRightNearSideHatchMidBtn;
+    private Button scoreRocketRightNearSideHatchHighBtn;
+
+    private Button scoreRocketLeftFarSideHatchLowBtn;
+    private Button scoreRocketLeftFarSideHatchMidBtn;
+    private Button scoreRocketLeftFarSideHatchHighBtn;
+
+    private Button scoreRocketLeftMidSideCargoLowBtn;
+    private Button scoreRocketLeftMidSideCargoMidBtn;
+    private Button scoreRocketLeftMidSideCargoHighBtn;
+
+    private Button scoreRocketLeftNearSideHatchLowBtn;
+    private Button scoreRocketLeftNearSideHatchMidBtn;
+    private Button scoreRocketLeftNearSideHatchHighBtn;
+
+    private Button scoreRocketRightFarSideHatchExpandOptionsBtn;
+    private Button scoreRocketRightMidSideCargoExpandOptionsBtn;
+    private Button scoreRocketRightNearSideHatchExpandOptionsBtn;
+
+    private Button scoreRocketLeftFarSideHatchExpandOptionsBtn;
+    private Button scoreRocketLeftMidSideCargoExpandOptionsBtn;
+    private Button scoreRocketLeftNearSideHatchExpandOptionsBtn;
 
     private Button pickupLooseHatchBtn;
     private Button pickupLooseCargoBtn;
@@ -90,14 +115,57 @@ public class MatchPlayFragment extends BasicFragment {
                                                                        pickupLooseHatchBtn,pickupLooseCargoBtn));
 
     ArrayList<Button> scoreBtns = new ArrayList<Button>(Arrays.asList(scoreBusLeftFarBtn,scoreBusLeftMiddleBtn,
-                                                                     scoreBusLeftCloseBtn,scoreBusRightFarBtn,
-                                                                     scoreBusRightMiddleBtn,scoreBusRightCloseBtn,
-                                                                     scoreBusFrontSideLeftBtn,scoreBusFrontSideRightBtn,
-                                                                     scoreRocketFarSideHatchLowBtn,scoreRocketFarSideHatchMidBtn,
-                                                                      scoreRocketFarSideHatchHighBtn,scoreRocketMidSideCargoLowBtn,
-                                                                     scoreRocketMidSideCargoMidBtn,scoreRocketMidSideCargohighBtn,
-                                                                     scoreRocketNearSideHatchLowBtn,scoreRocketNearSideHatchMidBtn,
-                                                                      scoreRocketNearSideHatchHighBtn));
+            scoreBusLeftCloseBtn,scoreBusRightFarBtn,
+            scoreBusRightMiddleBtn,scoreBusRightCloseBtn,
+            scoreBusFrontSideLeftBtn,scoreBusFrontSideRightBtn,
+            scoreRocketRightFarSideHatchLowBtn,scoreRocketRightFarSideHatchMidBtn,
+            scoreRocketRightFarSideHatchHighBtn,scoreRocketRightMidSideCargoLowBtn,
+            scoreRocketRightMidSideCargoMidBtn,scoreRocketRightMidSideCargoHighBtn,
+            scoreRocketRightNearSideHatchLowBtn,scoreRocketRightNearSideHatchMidBtn,
+            scoreRocketRightNearSideHatchHighBtn,scoreRocketLeftFarSideHatchLowBtn,scoreRocketLeftFarSideHatchMidBtn,
+            scoreRocketLeftFarSideHatchHighBtn,scoreRocketLeftMidSideCargoLowBtn,
+            scoreRocketLeftMidSideCargoMidBtn,scoreRocketLeftMidSideCargoHighBtn,
+            scoreRocketLeftNearSideHatchLowBtn,scoreRocketLeftNearSideHatchMidBtn,
+            scoreRocketLeftNearSideHatchHighBtn));
+
+    ArrayList<Button> scoreRocketRightFarSideHatchBtns = new ArrayList<Button>(Arrays.asList(
+            scoreRocketRightFarSideHatchLowBtn,
+            scoreRocketRightFarSideHatchMidBtn,
+            scoreRocketRightFarSideHatchHighBtn));
+
+    ArrayList<Button> scoreRocketRightMidSideCargoBtns = new ArrayList<Button>(Arrays.asList(
+            scoreRocketRightMidSideCargoLowBtn,
+            scoreRocketRightMidSideCargoMidBtn,
+            scoreRocketRightMidSideCargoHighBtn));
+
+    ArrayList<Button> scoreRocketRightNearSideHatchBtns = new ArrayList<Button>(Arrays.asList(
+            scoreRocketRightNearSideHatchLowBtn,
+            scoreRocketRightNearSideHatchMidBtn,
+            scoreRocketRightNearSideHatchHighBtn));
+
+
+    ArrayList<Button> scoreRocketLeftFarSideHatchBtns = new ArrayList<Button>(Arrays.asList(
+            scoreRocketLeftFarSideHatchLowBtn,
+            scoreRocketLeftFarSideHatchMidBtn,
+            scoreRocketLeftFarSideHatchHighBtn));
+
+    ArrayList<Button> scoreRocketLeftMidSideCargoBtns = new ArrayList<Button>(Arrays.asList(
+            scoreRocketLeftMidSideCargoLowBtn,
+            scoreRocketLeftMidSideCargoMidBtn,
+            scoreRocketLeftMidSideCargoHighBtn));
+
+    ArrayList<Button> scoreRocketLeftNearSideHatchBtns = new ArrayList<Button>(Arrays.asList(
+            scoreRocketLeftNearSideHatchLowBtn,
+            scoreRocketLeftNearSideHatchMidBtn,
+            scoreRocketLeftNearSideHatchHighBtn));
+
+
+    ArrayList<Button> scoreRocketExpandBtns = new ArrayList<Button>(Arrays.asList(scoreRocketRightFarSideHatchExpandOptionsBtn,
+            scoreRocketRightMidSideCargoExpandOptionsBtn,
+            scoreRocketRightNearSideHatchExpandOptionsBtn,
+            scoreRocketLeftFarSideHatchExpandOptionsBtn,
+            scoreRocketLeftMidSideCargoExpandOptionsBtn,
+            scoreRocketLeftNearSideHatchExpandOptionsBtn));
 
     ArrayList<ScrollView> scoreScrolls = new ArrayList<ScrollView>(Arrays.asList(rocketFarHatchScrollView,rocketMidCargoScrollView,rocketCloseHatchScrollView));
 
@@ -110,6 +178,18 @@ public class MatchPlayFragment extends BasicFragment {
     ArrayList<Button> defendedBtns = new ArrayList<Button>(Arrays.asList(defendedBtn));
 
     ArrayList<Button> allBtns;
+    ArrayList<ArrayList> scoreListOfRocketBtns = new ArrayList<ArrayList>(Arrays.asList(scoreRocketLeftFarSideHatchBtns,scoreRocketLeftMidSideCargoBtns,scoreRocketLeftNearSideHatchBtns,
+            scoreRocketRightFarSideHatchBtns,scoreRocketRightMidSideCargoBtns,scoreRocketRightNearSideHatchBtns));
+    ArrayList<Button> scoreRocketBtns = new ArrayList<>(Arrays.asList(scoreRocketRightFarSideHatchLowBtn,scoreRocketRightFarSideHatchMidBtn,
+            scoreRocketRightFarSideHatchHighBtn,scoreRocketRightMidSideCargoLowBtn,
+            scoreRocketRightMidSideCargoMidBtn,scoreRocketRightMidSideCargoHighBtn,
+            scoreRocketRightNearSideHatchLowBtn,scoreRocketRightNearSideHatchMidBtn,
+            scoreRocketRightNearSideHatchHighBtn,scoreRocketLeftFarSideHatchLowBtn,scoreRocketLeftFarSideHatchMidBtn,
+            scoreRocketLeftFarSideHatchHighBtn,scoreRocketLeftMidSideCargoLowBtn,
+            scoreRocketLeftMidSideCargoMidBtn,scoreRocketLeftMidSideCargoHighBtn,
+            scoreRocketLeftNearSideHatchLowBtn,scoreRocketLeftNearSideHatchMidBtn,
+            scoreRocketLeftNearSideHatchHighBtn));
+
 
 
     ArrayList<Button> crossPickupBtns = new ArrayList<Button>(Arrays.asList(crossPickupHatchBtn,crossPickupCargoBtn));
@@ -132,11 +212,12 @@ public class MatchPlayFragment extends BasicFragment {
         hasCrossed = isCrossed(crossNum);
          hasPiece = true;
          gameStart  = false;
+         rocketExpandBtnsClicked = false;
          cycleNum = 0;
          //pickedUpPiece = ?
 
 
-
+        matchImage = (ImageView) view.findViewById(R.id.matchplay_field_image);
         startMatchBtn = (Button) view.findViewById(R.id.matchplay_start_match_btn);
 
         crossPickupHatchBtn = (Button) view.findViewById(R.id.matchplay_cross_hatch_pickup_btn);
@@ -163,17 +244,39 @@ public class MatchPlayFragment extends BasicFragment {
         scoreBusFrontSideLeftBtn = (Button) view.findViewById(R.id.matchplay_cargoship_frontside_left_scoring_btn);
         scoreBusFrontSideRightBtn = (Button) view.findViewById(R.id.matchplay_cargoship_frontside_right_scoring_btn);
 
-        scoreRocketFarSideHatchLowBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_far_low_hatch_btn);
-        scoreRocketFarSideHatchMidBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_far_mid_hatch_btn);
-        scoreRocketFarSideHatchHighBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_far_high_hatch_btn);
+        scoreRocketRightFarSideHatchLowBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_far_low_hatch_btn);
+        scoreRocketRightFarSideHatchMidBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_far_mid_hatch_btn);
+        scoreRocketRightFarSideHatchHighBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_far_high_hatch_btn);
 
-        scoreRocketMidSideCargoLowBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_mid_cargo_low_btn);
-        scoreRocketMidSideCargoMidBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_mid_cargo_mid_btn);
-        scoreRocketMidSideCargohighBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_mid_cargo_high_btn);
+        scoreRocketRightMidSideCargoLowBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_mid_cargo_low_btn);
+        scoreRocketRightMidSideCargoMidBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_mid_cargo_mid_btn);
+        scoreRocketRightMidSideCargoHighBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_mid_cargo_high_btn);
 
-        scoreRocketNearSideHatchLowBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_near_low_hatch_btn);
-        scoreRocketNearSideHatchMidBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_near_mid_hatch_btn);
-        scoreRocketNearSideHatchHighBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_near_high_hatch_btn);
+        scoreRocketRightNearSideHatchLowBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_near_low_hatch_btn);
+        scoreRocketRightNearSideHatchMidBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_near_mid_hatch_btn);
+        scoreRocketRightNearSideHatchHighBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_near_high_hatch_btn);
+
+        scoreRocketLeftFarSideHatchLowBtn = (Button) view.findViewById(R.id.matchplay_rocket_left_far_low_hatch_btn);
+        scoreRocketLeftFarSideHatchMidBtn = (Button) view.findViewById(R.id.matchplay_rocket_left_far_mid_hatch_btn);
+        scoreRocketLeftFarSideHatchHighBtn = (Button) view.findViewById(R.id.matchplay_rocket_left_far_high_hatch_btn);
+
+        scoreRocketLeftMidSideCargoLowBtn = (Button) view.findViewById(R.id.matchplay_rocket_left_mid_cargo_low_btn);
+        scoreRocketLeftMidSideCargoMidBtn = (Button) view.findViewById(R.id.matchplay_rocket_left_mid_cargo_mid_btn);
+        scoreRocketLeftMidSideCargoHighBtn = (Button) view.findViewById(R.id.matchplay_rocket_left_mid_cargo_high_btn);
+
+        scoreRocketLeftNearSideHatchLowBtn = (Button) view.findViewById(R.id.matchplay_rocket_left_near_low_hatch_btn);
+        scoreRocketLeftNearSideHatchMidBtn = (Button) view.findViewById(R.id.matchplay_rocket_left_near_mid_hatch_btn);
+        scoreRocketLeftNearSideHatchHighBtn = (Button) view.findViewById(R.id.matchplay_rocket_left_near_high_hatch_btn);
+
+
+
+        scoreRocketLeftFarSideHatchExpandOptionsBtn = (Button) view.findViewById(R.id.matchplay_rocket_left_far_hatch_expandOptions_btn);
+        scoreRocketLeftMidSideCargoExpandOptionsBtn = (Button) view.findViewById(R.id.matchplay_rocket_left_mid_cargo_expandOptions_btn);
+        scoreRocketLeftNearSideHatchExpandOptionsBtn = (Button) view.findViewById(R.id.matchplay_rocket_left_near_hatch_expandOptions_btn);
+
+        scoreRocketRightFarSideHatchExpandOptionsBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_far_hatch_expandOptions_btn);
+        scoreRocketRightMidSideCargoExpandOptionsBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_mid_cargo_expandOptions_btn);
+        scoreRocketRightNearSideHatchExpandOptionsBtn = (Button) view.findViewById(R.id.matchplay_rocket_right_near_hatch_expandOptions_btn);
 
         pickupLooseHatchBtn = (Button) view.findViewById(R.id.matchplay_pickup_freeplay_hatch_btn);
         pickupLooseCargoBtn = (Button) view.findViewById(R.id.matchplay_pickup_freeplay_cargo_btn);
@@ -191,12 +294,56 @@ public class MatchPlayFragment extends BasicFragment {
        scoreBtns = new ArrayList<Button>(Arrays.asList(scoreBusLeftFarBtn,scoreBusLeftMiddleBtn,
                 scoreBusLeftCloseBtn,scoreBusRightFarBtn,
                 scoreBusRightMiddleBtn,scoreBusRightCloseBtn,
-                scoreBusFrontSideLeftBtn,scoreBusFrontSideRightBtn,
-                scoreRocketFarSideHatchLowBtn,scoreRocketFarSideHatchMidBtn,
-                scoreRocketFarSideHatchHighBtn,scoreRocketMidSideCargoLowBtn,
-                scoreRocketMidSideCargoMidBtn,scoreRocketMidSideCargohighBtn,
-                scoreRocketNearSideHatchLowBtn,scoreRocketNearSideHatchMidBtn,
-                scoreRocketNearSideHatchHighBtn));
+                scoreBusFrontSideLeftBtn,scoreBusFrontSideRightBtn
+                ));
+       scoreRocketBtns = new ArrayList<>(Arrays.asList(
+               scoreRocketRightFarSideHatchLowBtn,scoreRocketRightFarSideHatchMidBtn,scoreRocketRightFarSideHatchHighBtn,
+               scoreRocketRightMidSideCargoLowBtn,scoreRocketRightMidSideCargoMidBtn,scoreRocketRightMidSideCargoHighBtn,
+               scoreRocketRightNearSideHatchLowBtn,scoreRocketRightNearSideHatchMidBtn,scoreRocketRightNearSideHatchHighBtn,
+               scoreRocketLeftFarSideHatchLowBtn,scoreRocketLeftFarSideHatchMidBtn,scoreRocketLeftFarSideHatchHighBtn,
+               scoreRocketLeftMidSideCargoLowBtn,scoreRocketLeftMidSideCargoMidBtn,scoreRocketLeftMidSideCargoHighBtn,
+               scoreRocketLeftNearSideHatchLowBtn,scoreRocketLeftNearSideHatchMidBtn,scoreRocketLeftNearSideHatchHighBtn));
+
+         scoreRocketRightFarSideHatchBtns = new ArrayList<Button>(Arrays.asList(
+                scoreRocketRightFarSideHatchLowBtn,
+                scoreRocketRightFarSideHatchMidBtn,
+                scoreRocketRightFarSideHatchHighBtn));
+
+       scoreRocketRightMidSideCargoBtns = new ArrayList<Button>(Arrays.asList(
+                scoreRocketRightMidSideCargoLowBtn,
+                scoreRocketRightMidSideCargoMidBtn,
+                scoreRocketRightMidSideCargoHighBtn));
+
+         scoreRocketRightNearSideHatchBtns = new ArrayList<Button>(Arrays.asList(
+                scoreRocketRightNearSideHatchLowBtn,
+                scoreRocketRightNearSideHatchMidBtn,
+                scoreRocketRightNearSideHatchHighBtn));
+
+
+        scoreRocketLeftFarSideHatchBtns = new ArrayList<Button>(Arrays.asList(
+                scoreRocketLeftFarSideHatchLowBtn,
+                scoreRocketLeftFarSideHatchMidBtn,
+                scoreRocketLeftFarSideHatchHighBtn));
+
+         scoreRocketLeftMidSideCargoBtns = new ArrayList<Button>(Arrays.asList(
+                scoreRocketLeftMidSideCargoLowBtn,
+                scoreRocketLeftMidSideCargoMidBtn,
+                scoreRocketLeftMidSideCargoHighBtn));
+
+         scoreRocketLeftNearSideHatchBtns = new ArrayList<Button>(Arrays.asList(
+                scoreRocketLeftNearSideHatchLowBtn,
+                scoreRocketLeftNearSideHatchMidBtn,
+                scoreRocketLeftNearSideHatchHighBtn));
+
+        scoreRocketExpandBtns = new ArrayList<Button>(Arrays.asList(scoreRocketLeftFarSideHatchExpandOptionsBtn,
+                scoreRocketLeftMidSideCargoExpandOptionsBtn,
+                scoreRocketLeftNearSideHatchExpandOptionsBtn,
+                scoreRocketRightFarSideHatchExpandOptionsBtn,
+                scoreRocketRightMidSideCargoExpandOptionsBtn,
+                scoreRocketRightNearSideHatchExpandOptionsBtn));
+
+         scoreListOfRocketBtns = new ArrayList<ArrayList>(Arrays.asList(scoreRocketLeftFarSideHatchBtns,scoreRocketLeftMidSideCargoBtns,scoreRocketLeftNearSideHatchBtns,
+                scoreRocketRightFarSideHatchBtns,scoreRocketRightMidSideCargoBtns,scoreRocketRightNearSideHatchBtns));
 
          scoreScrolls = new ArrayList<ScrollView>(Arrays.asList(rocketFarHatchScrollView,rocketMidCargoScrollView,rocketCloseHatchScrollView));
 
@@ -217,7 +364,7 @@ public class MatchPlayFragment extends BasicFragment {
 
 
 
-        Log.e("BTN ID", getBtnIds(view,scoreRocketFarSideHatchLowBtn));
+        Log.e("BTN ID", getBtnIds(view,scoreRocketRightFarSideHatchLowBtn));
 
 
 
@@ -259,12 +406,14 @@ public class MatchPlayFragment extends BasicFragment {
 
                     c.setPickUp(getBtnIds(v,pickupBtns.get(copyOfi)));
                     decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls, crossDropBtns,crossPickupBtns,defendedBtns);
+                    makeRocketBtnsInvisible();
                     c.setCycleNumber(cycleNum);
                     //char test = findPickupPiece(copyOfi);
                     c.setFieldElement(findPickupPiece(copyOfi));
                     c.setPickupTime((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
                     Log.e("pickup time:", c.getPickupTime()+"");
                    // MainActivity.globalSubmitMatch.getCycleArrayList().add(c);
+                    rocketExpandBtnsClicked = false;
 
                 }
             });
@@ -291,10 +440,71 @@ public class MatchPlayFragment extends BasicFragment {
                     hasPiece= false;
                     cycles.add(c);
                     decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls, crossDropBtns,crossPickupBtns,defendedBtns);
+                    makeRocketBtnsInvisible();
+                    rocketExpandBtnsClicked = false;
+                }
+            });
+        }
+        matchImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                makeRocketBtnsInvisible();
+                if(hasPiece && !hasCrossed){
+                    makeBtnsVisible(scoreRocketExpandBtns);
+                }
+
+
+
+            }
+        });
+        for(int i = 0; i < scoreRocketExpandBtns.size();i++){
+            final int copyOfi = i;
+            final ArrayList<Button> sizeOfRocketBtnsForEachList = scoreListOfRocketBtns.get(i);
+            scoreRocketExpandBtns.get(i).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //scoreRocketExpandBtns.get(copyOfi).setVisibility(View.INVISIBLE);
+                    rocketExpandBtnsClicked = true;
+                    for(int j = 0; j<sizeOfRocketBtnsForEachList.size(); j++){
+                        ArrayList<Button> rocketBtnIndex = scoreListOfRocketBtns.get(copyOfi);
+                        rocketBtnIndex.get(j).setVisibility(View.VISIBLE);
+                    }
+
+                    decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls, crossDropBtns,crossPickupBtns,defendedBtns);
+                    rocketExpandBtnsClicked = false;
+                   // makeRocketBtnsInvisible();
 
                 }
             });
         }
+
+        for(int i = 0; i < scoreRocketBtns.size();i++){
+            final int copyOfi = i;
+            scoreRocketBtns.get(i).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if(cycleNum == 0 && MainActivity.globalSubmitMatch.getAuto().getAutoPreload() =='1'&& CycleHelper.TimeHepler.getElapsedTimeSecs()<=15 )
+                    {
+                        c.setFieldElement(MainActivity.globalSubmitMatch.getAuto().getStartingObj());
+                        c.setPickUp("Preload from auto");
+
+                    }
+                    //else if( cycleNum == 0 && MainActivity.globalSubmitMatch.getAuto().getAutoPreload() =="1")
+
+                    c.setPlace(getBtnIds(v,scoreRocketBtns.get(copyOfi)));
+                    c.setDropoffTime((int) CycleHelper.TimeHepler.getElapsedTimeSecs());
+                    Log.e("Dropoff time", c.getDropoffTime()+"");
+                    c.setDrop(false);
+                    hasPiece= false;
+                    cycles.add(c);
+                    decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls, crossDropBtns,crossPickupBtns,defendedBtns);
+                    makeRocketBtnsInvisible();
+                    rocketExpandBtnsClicked = false;
+                }
+            });
+        }
+
 
 
         for(int i = 0; i < dropBtns.size();i++){
@@ -307,6 +517,7 @@ public class MatchPlayFragment extends BasicFragment {
                     c.setDropoffTime((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
                     cycles.add(c);
                     decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls, crossDropBtns,crossPickupBtns,defendedBtns);
+                    makeRocketBtnsInvisible();
                 }
             });
         }
@@ -334,6 +545,7 @@ public class MatchPlayFragment extends BasicFragment {
                 t.setTimeCrosses((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
                 teleops1.add(t);
                 decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls, crossDropBtns,crossPickupBtns, defendedBtns);
+                makeRocketBtnsInvisible();
                 Log.e("CROSSED VALUE", crossNum+"" + "hasCrossed: " + hasCrossed);
             }
         });
@@ -345,6 +557,7 @@ public class MatchPlayFragment extends BasicFragment {
             public void onClick(View v) {
                 startMatchBtn.setVisibility(View.GONE);
                 CycleHelper.TimeHepler.start();
+                startMatchBtn.getVisibility();
 
                 //Log.e("STATE","GP");
             }
@@ -360,6 +573,14 @@ public class MatchPlayFragment extends BasicFragment {
     public void setLayout(int layout) {
         this.layout = layout;
     }
+
+
+
+
+
+
+
+
 
     /**
      * makes all btns in arraylist invisible
@@ -402,10 +623,20 @@ public class MatchPlayFragment extends BasicFragment {
             toMakeVisible.get(i).setVisibility(View.VISIBLE);
         }
     }
+
+    public void makeRocketBtnsInvisible(){
+        for(int i = 0; i < this.scoreListOfRocketBtns.size();i++){
+            for(int j = 0; j< this.scoreListOfRocketBtns.get(i).size(); j++){
+                ArrayList<Button> test = scoreListOfRocketBtns.get(i);
+                test.get(j).setVisibility(View.INVISIBLE);
+            }
+        }
+    }
     public void decideVisiblilites(ArrayList<Button> crossBtns1, ArrayList<Button> pickupBtns1,
                                    ArrayList<Button> scoreBtns1, ArrayList<Button> dropBtns1,
                                    ArrayList<ScrollView> scoreScrolls1, ArrayList<Button> crossDropBtns1,
                                    ArrayList<Button> crossPickupBtns1, ArrayList<Button> defendedBtns1){
+        setRocketBtnsVisibility(this.scoreRocketExpandBtns);
         if(hasCrossed == true){
 
             if(hasPiece == true){
@@ -435,24 +666,49 @@ public class MatchPlayFragment extends BasicFragment {
 
             if(hasPiece == true){
                 makeBtnsVisible(scoreBtns1);
+                makeBtnsVisible(scoreRocketExpandBtns);
                // makeScrollViewVisible(scoreScrolls1);
                 makeBtnsVisible(dropBtns1);
                 makeBtnsInvisible(pickupBtns1);
                 makeBtnsVisible(dropBtns1);
                 makeBtnsVisible(defendedBtns1);
-
-
+                if(rocketExpandBtnsClicked == true){
+                    makeBtnsInvisible(this.scoreRocketExpandBtns);
+                }
+                else if (rocketExpandBtnsClicked == false){
+                    makeBtnsVisible(this.scoreRocketExpandBtns);
+                }
             }
             else {
+                makeBtnsInvisible(this.scoreRocketExpandBtns);
                 makeBtnsVisible(pickupBtns1);
                 makeBtnsInvisible(scoreBtns1);
                 makeBtnsInvisible(dropBtns1);
                 makeBtnsInvisible(defendedBtns1);
+
             }
         makeBtnsInvisible(crossBtns1);
 
         }
     }
+
+    public void setRocketBtnsVisibility(ArrayList<Button> scoreRocketExpandBtns1)
+    {
+        if(hasCrossed){
+           makeBtnsInvisible(scoreRocketExpandBtns1);
+             }
+             else if (!hasCrossed){
+                 if (hasPiece){
+                     makeBtnsVisible(scoreRocketExpandBtns1);
+                 }
+                 else if(!hasPiece){
+                     makeBtnsInvisible(scoreRocketExpandBtns1);
+                 }
+        }
+
+        }
+
+
 
     public boolean isCrossed(int crossNum1){
         if(crossNum1%2 == 1){

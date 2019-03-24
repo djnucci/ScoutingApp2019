@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity
     public static SubmitMatch globalSubmitMatch = new SubmitMatch();
     public static MatchLists matchLists;
     public static QueueWrapper queueWrapper = new QueueWrapper();
+    //[startLvl, startObj]
+    public static char[] keepFromSetup = new char[2];
 
 
     private int currentLayout;

@@ -107,31 +107,46 @@ public class SetupFragment extends BasicFragment {
     }
 
     public void onDestroy(){
+        //Storing data in Auto object
         Auto auto = new Auto();
         if (cargoPreload.isChecked()) {
             auto.setStartingObj('C');
             auto.setAutoPreload('1');
+            MainActivity.keepFromSetup[1] = 'C';
             System.out.print("ABC");
         } else if (hatchPreload.isChecked()) {
             auto.setStartingObj('H');
             auto.setAutoPreload('1');
+            MainActivity.keepFromSetup[1] = 'H';
         } else if (noPrelaod.isChecked()) {
             auto.setStartingObj('N');
             auto.setAutoPreload('0');
+            MainActivity.keepFromSetup[1] = 'N';
         }
         else{
             auto.setStartingObj('N');
             auto.setAutoPreload('0');
+            MainActivity.keepFromSetup[1] = 'N';
         }
 
         if (levelOneBtn.isChecked()) {
             auto.setAutoLvl(1);
+            MainActivity.keepFromSetup[0] = '1';
         }
         if (levelTwoLeftBtn.isChecked() || levelTwoRightBtn.isChecked()) {
             auto.setAutoLvl(2);
+            MainActivity.keepFromSetup[0] = '2';
         }
         MainActivity.globalSubmitMatch.setAuto(auto);
         Log.e("TEST", MainActivity.globalSubmitMatch.getAuto().getAutoPreload()+"");
+
+
+        //storing data for tab history for the match
+
+
+
+
+
 
         super.onDestroy();
     }

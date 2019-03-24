@@ -167,7 +167,7 @@
 
             <Button
                 android:id="@+id/matchplay_cargoship_frontside_left_scoring_btn"
-                android:layout_width="38dp"
+                android:layout_width="75dp"
                 android:layout_height="132dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
@@ -178,14 +178,14 @@
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.469"
+                app:layout_constraintHorizontal_bias="0.429"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.383" />
+                app:layout_constraintVertical_bias="0.443" />
 
             <Button
                 android:id="@+id/matchplay_cargoship_frontside_right_scoring_btn"
-                android:layout_width="35dp"
+                android:layout_width="73dp"
                 android:layout_height="132dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
@@ -196,10 +196,10 @@
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.531"
+                app:layout_constraintHorizontal_bias="0.571"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.383" />
+                app:layout_constraintVertical_bias="0.444" />
 
             <Button
                 android:id="@+id/matchplay_cargoship_leftside_far_scoring_btn"
@@ -255,7 +255,7 @@
             <ScrollView
                 android:id="@+id/right_rocket_far_hatch_scroll_view"
                 android:layout_width="110dp"
-                android:layout_height="64dp"
+                android:layout_height="143dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
@@ -263,10 +263,10 @@
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.971"
+                app:layout_constraintHorizontal_bias="0.987"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.182">
+                app:layout_constraintVertical_bias="0.242">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -300,7 +300,7 @@
             <ScrollView
                 android:id="@+id/right_rocket_cargo_scroll_view"
                 android:layout_width="110dp"
-                android:layout_height="68dp"
+                android:layout_height="152dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
@@ -308,10 +308,10 @@
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.864"
+                app:layout_constraintHorizontal_bias="0.878"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.29">
+                app:layout_constraintVertical_bias="0.372">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -344,8 +344,8 @@
 
             <ScrollView
                 android:id="@+id/right_rocket_near_hatch_scroll_view"
-                android:layout_width="110dp"
-                android:layout_height="74dp"
+                android:layout_width="113dp"
+                android:layout_height="145dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
@@ -353,10 +353,10 @@
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.943"
+                app:layout_constraintHorizontal_bias="0.97"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.405">
+                app:layout_constraintVertical_bias="0.45">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -387,6 +387,140 @@
                 </LinearLayout>
             </ScrollView>
 
+            <ScrollView
+                android:id="@+id/left_rocket_near_hatch_scroll_view"
+                android:layout_width="113dp"
+                android:layout_height="145dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.012"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.52">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/matchplay_rocket_left_near_low_hatch_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
+                        android:text="Low" />
+
+                    <Button
+                        android:id="@+id/matchplay_rocket_left_near_mid_hatch_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
+                        android:text="mid" />
+
+                    <Button
+                        android:id="@+id/matchplay_rocket_left_near_high_hatch_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
+                        android:text="high" />
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/left_rocket_far_hatch_scroll_view"
+                android:layout_width="110dp"
+                android:layout_height="143dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.012"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.253">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/matchplay_rocket_left_far_low_hatch_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
+                        android:text="Low" />
+
+                    <Button
+                        android:id="@+id/matchplay_rocket_left_far_mid_hatch_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
+                        android:text="mid" />
+
+                    <Button
+                        android:id="@+id/matchplay_rocket_left_far_high_hatch_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
+                        android:text="high" />
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/left_rocket_cargo_scroll_view"
+                android:layout_width="110dp"
+                android:layout_height="151dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.121"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.371">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/matchplay_rocket_left_mid_cargo_low_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
+                        android:text="Low" />
+
+                    <Button
+                        android:id="@+id/matchplay_rocket_left_mid_cargo_mid_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
+                        android:text="mid" />
+
+                    <Button
+                        android:id="@+id/matchplay_rocket_left_mid_cargo_high_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/holo_purple"
+                        android:text="high" />
+                </LinearLayout>
+            </ScrollView>
             <Button
                 android:id="@+id/matchplay_pickup_hp_left_hatch_btn"
                 android:layout_width="73dp"
@@ -518,10 +652,10 @@
                 android:text="GAtch from ground"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.064"
+                app:layout_constraintHorizontal_bias="0.789"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.506" />
+                app:layout_constraintVertical_bias="0.738" />
 
             <Button
                 android:id="@+id/matchplay_pickup_freeplay_cargo_btn"
@@ -535,10 +669,10 @@
                 android:text="Cargo from ground"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.064"
+                app:layout_constraintHorizontal_bias="0.237"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.684" />
+                app:layout_constraintVertical_bias="0.763" />
 
             <Button
                 android:id="@+id/matchplay_drop_alliance_side_btn"
@@ -591,9 +725,104 @@
                 app:layout_constraintVertical_bias="0.846" />
 
             <Button
+                android:id="@+id/matchplay_rocket_right_far_hatch_expandOptions_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Score Hatch"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.987"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.261" />
+
+            <Button
+                android:id="@+id/matchplay_rocket_right_mid_cargo_expandOptions_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Score cargo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.876"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.348" />
+
+            <Button
+                android:id="@+id/matchplay_rocket_right_near_hatch_expandOptions_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Score hatch"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.981"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.475" />
+
+            <Button
+                android:id="@+id/matchplay_rocket_left_far_hatch_expandOptions_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Score Hatch"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.322" />
+
+            <Button
+                android:id="@+id/matchplay_rocket_left_mid_cargo_expandOptions_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Score cargo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.099"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.401" />
+
+            <Button
+                android:id="@+id/matchplay_rocket_left_near_hatch_expandOptions_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Score hatch"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.001"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
                 android:id="@+id/matchplay_start_match_btn"
-                android:layout_width="769dp"
-                android:layout_height="1018dp"
+                android:layout_width="763dp"
+                android:layout_height="970dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
@@ -603,8 +832,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.062" />
 
 
         </android.support.constraint.ConstraintLayout>
