@@ -64,10 +64,12 @@ public class InitInfoFragment extends BasicFragment {
         blue3Btn = (Button) view.findViewById(R.id.blue_three);
 
         MainActivity.globalSubmitMatch = new SubmitMatch();
+        MainActivity.startBtnPressed = false;
+        MainActivity.hasPreloadAndSetupLvlSelected = false;
 
         MainActivity.makeToast("Init Info",getContext());
         Log.e("INIT INFO BTN ID", getBtnIds(view,blue2Btn));
-
+        CycleHelper.TimeHepler.stop();
         matchEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -152,7 +154,7 @@ public class InitInfoFragment extends BasicFragment {
             } catch (NullPointerException e) {
                 e.printStackTrace();
             }
-            MainActivity.globalSubmitMatch = new SubmitMatch();
+            //MainActivity.globalSubmitMatch = new SubmitMatch();
             MainActivity.globalSubmitMatch.setInitInfo(initInfo);
         }
         catch (java.lang.NumberFormatException e){

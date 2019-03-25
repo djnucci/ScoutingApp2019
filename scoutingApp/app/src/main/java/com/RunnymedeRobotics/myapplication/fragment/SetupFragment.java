@@ -72,14 +72,13 @@ public class SetupFragment extends BasicFragment {
         setupLevelList= new ArrayList<RadioButton>(Arrays.asList(levelOneBtn,levelTwoLeftBtn,levelTwoRightBtn));
 
         habPlatforms.setVisibility(View.VISIBLE);
-        Log.e("AUTO PRELOAD", MainActivity.globalSubmitMatch.getAuto().getStartingObj() +"");
-        Log.e("AUTO LEVEL", MainActivity.globalSubmitMatch.getAuto().getAutoLvl() +"");
+
 
         if (MainActivity.globalSubmitMatch.getAuto().getStartingObj() == 'C' ){
             cargoPreload.setChecked(true);
         }
         else if(MainActivity.globalSubmitMatch.getAuto().getStartingObj() == 'H'){
-            cargoPreload.setChecked(true);
+            hatchPreload.setChecked(true);
         }
         else if(MainActivity.globalSubmitMatch.getAuto().getStartingObj() == 'N'){
             noPrelaod.setChecked(true);
@@ -212,7 +211,7 @@ if(!lvlChecked) {
         } else if (noPrelaod.isChecked()) {
             auto.setStartingObj('N');
             auto.setAutoPreload('0');
-           // MainActivity.keepFromSetup[1] = 'N';
+           // MainActivity.keepFromSetup[1] = 'N';FV
         }
         else{
             auto.setStartingObj('N');
@@ -231,7 +230,8 @@ if(!lvlChecked) {
         MainActivity.globalSubmitMatch.setAuto(auto);
         Log.e("TEST", MainActivity.globalSubmitMatch.getAuto().getAutoPreload()+"");
 
-
+        Log.e("AUTO PRELOAD", MainActivity.globalSubmitMatch.getAuto().getStartingObj() +"");
+        Log.e("AUTO LEVEL", MainActivity.globalSubmitMatch.getAuto().getAutoLvl() +"");
         //storing data for tab history for the match
 
 

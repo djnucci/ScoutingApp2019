@@ -52,7 +52,7 @@ public class EndGameFragment extends BasicFragment {
     private RadioButton levelTwoClimbFail;
     private RadioButton levelThreeClimbFail;
 
-    EndGame a;
+    //EndGame a;
     private int climbTimeStart;
     private int climbLevel2Time;
     private int climbTimeEnd;
@@ -87,7 +87,7 @@ public class EndGameFragment extends BasicFragment {
 
         //Callll once
         /** -------------------------------------------------------------        **/
-        MainActivity.globalSubmitMatch = new SubmitMatch();
+        //MainActivity.globalSubmitMatch = new SubmitMatch();
          /** ----------------------------------------------------------          **/
 
         levelOneClimb = (CheckBox) view.findViewById(R.id.level_one_endgame_climb_chkbx);
@@ -109,7 +109,7 @@ public class EndGameFragment extends BasicFragment {
         climbDuration = 0;
         climbTimeEnd =0;
         climbTimeStart = 0;
-        a = new EndGame();
+       // a = new EndGame();
 
            levelOneClimb.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -219,6 +219,8 @@ public class EndGameFragment extends BasicFragment {
                 JsonWrapper.writeQueueToFile(MainActivity.queueWrapper, getContext());
                 JsonWrapper.writeMatchToFile(MainActivity.globalSubmitMatch, getContext());
                 CallAPI.submitLocalQueue(MainActivity.queueWrapper, getContext());
+                Log.e("ATUO LVL FROM AUTO OBJ" ,MainActivity.globalSubmitMatch.getAuto().getAutoLvl() + "");
+                Log.e("LEVEL FAIL", MainActivity.globalSubmitMatch.getEndGame().getFailLevel()+"");
                 Log.e("LEVEL FAIL", MainActivity.globalSubmitMatch.getEndGame().getFailLevel()+"");
 
                 InitInfoFragment initInfo = new InitInfoFragment(R.layout.scouting_start_page);
@@ -236,6 +238,9 @@ public class EndGameFragment extends BasicFragment {
         return view;
     }
     public void onDestroy(){
+
+        Log.e("AUTO PRELOAD END", MainActivity.globalSubmitMatch.getAuto().getStartingObj() +"");
+        Log.e("AUTO LEVEL END", MainActivity.globalSubmitMatch.getAuto().getAutoLvl() +"");
         EndGame endgame = new EndGame();
         /**
          * Sets values of all radiobtns(default of ramp is 'N')
@@ -288,8 +293,9 @@ public class EndGameFragment extends BasicFragment {
             endgame.setTimeToClimb((int) climbDuration);
         }
 
-        MainActivity.globalSubmitMatch.setEndGame(endgame);
-        Log.e("LEVEL FAIL", MainActivity.globalSubmitMatch.getEndGame().getFailLevel()+"");
+       // MainActivity.globalSubmitMatch.setEndGame(endgame);
+
+
         super.onDestroy();
     }
 

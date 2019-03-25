@@ -738,6 +738,8 @@ public class MatchPlayFragment extends BasicFragment {
         MainActivity.globalSubmitMatch.setCycleArrayList(cycles);
         MainActivity.globalSubmitMatch.setTeleopsList(teleops1);
         Log.e("TEST", MainActivity.globalSubmitMatch.getAuto().getAutoPreload()+"");
+        Log.e("AUTO PRELOAD", MainActivity.globalSubmitMatch.getAuto().getStartingObj() +"");
+        Log.e("AUTO LEVEL", MainActivity.globalSubmitMatch.getAuto().getAutoLvl() +"");
 
         super.onDestroy();
     }

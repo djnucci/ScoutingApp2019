@@ -276,11 +276,11 @@
                     android:visibility="visible">
 
                     <Button
-                        android:id="@+id/matchplay_rocket_right_far_low_hatch_btn"
+                        android:id="@+id/matchplay_rocket_right_far_high_hatch_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@android:color/holo_purple"
-                        android:text="Low" />
+                        android:text="high" />
 
                     <Button
                         android:id="@+id/matchplay_rocket_right_far_mid_hatch_btn"
@@ -290,11 +290,11 @@
                         android:text="mid" />
 
                     <Button
-                        android:id="@+id/matchplay_rocket_right_far_high_hatch_btn"
+                        android:id="@+id/matchplay_rocket_right_far_low_hatch_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@android:color/holo_purple"
-                        android:text="high" />
+                        android:text="Low" />
                 </LinearLayout>
             </ScrollView>
 
@@ -321,11 +321,11 @@
                     android:visibility="visible">
 
                     <Button
-                        android:id="@+id/matchplay_rocket_right_mid_cargo_low_btn"
+                        android:id="@+id/matchplay_rocket_right_mid_cargo_high_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@android:color/holo_purple"
-                        android:text="Low" />
+                        android:text="high" />
 
                     <Button
                         android:id="@+id/matchplay_rocket_right_mid_cargo_mid_btn"
@@ -335,11 +335,12 @@
                         android:text="mid" />
 
                     <Button
-                        android:id="@+id/matchplay_rocket_right_mid_cargo_high_btn"
+                        android:id="@+id/matchplay_rocket_right_mid_cargo_low_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@android:color/holo_purple"
-                        android:text="high" />
+                        android:text="Low" />
+
                 </LinearLayout>
             </ScrollView>
 
@@ -366,11 +367,11 @@
                     android:visibility="visible">
 
                     <Button
-                        android:id="@+id/matchplay_rocket_right_near_low_hatch_btn"
+                        android:id="@+id/matchplay_rocket_right_near_high_hatch_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@android:color/holo_purple"
-                        android:text="Low" />
+                        android:text="high" />
 
                     <Button
                         android:id="@+id/matchplay_rocket_right_near_mid_hatch_btn"
@@ -380,11 +381,12 @@
                         android:text="mid" />
 
                     <Button
-                        android:id="@+id/matchplay_rocket_right_near_high_hatch_btn"
+                        android:id="@+id/matchplay_rocket_right_near_low_hatch_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@android:color/holo_purple"
-                        android:text="high" />
+                        android:text="Low" />
+
                 </LinearLayout>
             </ScrollView>
 
@@ -411,11 +413,11 @@
                     android:visibility="visible">
 
                     <Button
-                        android:id="@+id/matchplay_rocket_left_near_low_hatch_btn"
+                        android:id="@+id/matchplay_rocket_left_near_high_hatch_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@android:color/holo_purple"
-                        android:text="Low" />
+                        android:text="high" />
 
                     <Button
                         android:id="@+id/matchplay_rocket_left_near_mid_hatch_btn"
@@ -425,11 +427,12 @@
                         android:text="mid" />
 
                     <Button
-                        android:id="@+id/matchplay_rocket_left_near_high_hatch_btn"
+                        android:id="@+id/matchplay_rocket_left_near_low_hatch_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@android:color/holo_purple"
-                        android:text="high" />
+                        android:text="Low" />
+
                 </LinearLayout>
             </ScrollView>
 
@@ -456,11 +459,11 @@
                     android:visibility="visible">
 
                     <Button
-                        android:id="@+id/matchplay_rocket_left_far_low_hatch_btn"
+                        android:id="@+id/matchplay_rocket_left_far_high_hatch_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@android:color/holo_purple"
-                        android:text="Low" />
+                        android:text="high" />
 
                     <Button
                         android:id="@+id/matchplay_rocket_left_far_mid_hatch_btn"
@@ -470,11 +473,12 @@
                         android:text="mid" />
 
                     <Button
-                        android:id="@+id/matchplay_rocket_left_far_high_hatch_btn"
+                        android:id="@+id/matchplay_rocket_left_far_low_hatch_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@android:color/holo_purple"
-                        android:text="high" />
+                        android:text="Low" />
+
                 </LinearLayout>
             </ScrollView>
 
@@ -501,11 +505,11 @@
                     android:visibility="visible">
 
                     <Button
-                        android:id="@+id/matchplay_rocket_left_mid_cargo_low_btn"
+                        android:id="@+id/matchplay_rocket_left_mid_cargo_high_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@android:color/holo_purple"
-                        android:text="Low" />
+                        android:text="high" />
 
                     <Button
                         android:id="@+id/matchplay_rocket_left_mid_cargo_mid_btn"
@@ -515,11 +519,11 @@
                         android:text="mid" />
 
                     <Button
-                        android:id="@+id/matchplay_rocket_left_mid_cargo_high_btn"
+                        android:id="@+id/matchplay_rocket_left_mid_cargo_low_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@android:color/holo_purple"
-                        android:text="high" />
+                        android:text="Low" />
                 </LinearLayout>
             </ScrollView>
 
@@ -566,7 +570,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="@android:color/holo_green_light"
-                android:text="cagro hp"
+                android:text="cargo hp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -830,8 +834,8 @@
 
             <Button
                 android:id="@+id/matchplay_start_match_btn"
-                android:layout_width="777dp"
-                android:layout_height="870dp"
+                android:layout_width="104dp"
+                android:layout_height="232dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
@@ -840,10 +844,10 @@
                 android:textSize="80sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.313"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.333" />
+                app:layout_constraintVertical_bias="0.494" />
 
 
         </android.support.constraint.ConstraintLayout>
