@@ -385,8 +385,17 @@ public class MatchPlayFragment extends BasicFragment {
             makeBtnsInvisible(scoreBtns);
             makeBtnsInvisible(dropBtns);
             makeBtnsInvisible(crossPickupBtns);
+            makeBtnsInvisible(scoreRocketExpandBtns);
         }
         makeBtnsInvisible(defendedBtns);
+        for (int i = 0; i < scoreListOfRocketBtns.size(); i++){
+            int copyOfI = i;
+            //ArrayList<ArrayList> test = scoreListOfRocketBtns.get(i);
+            makeBtnsInvisible(scoreListOfRocketBtns.get(i));
+        }
+        if( MainActivity.startBtnPressed){
+            startMatchBtn.setVisibility(View.INVISIBLE);
+        }
 
 
 
@@ -468,6 +477,7 @@ public class MatchPlayFragment extends BasicFragment {
                     for(int j = 0; j<sizeOfRocketBtnsForEachList.size(); j++){
                         ArrayList<Button> rocketBtnIndex = scoreListOfRocketBtns.get(copyOfi);
                         rocketBtnIndex.get(j).setVisibility(View.VISIBLE);
+
                     }
 
                     decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls, crossDropBtns,crossPickupBtns,defendedBtns);
@@ -558,6 +568,7 @@ public class MatchPlayFragment extends BasicFragment {
                 startMatchBtn.setVisibility(View.GONE);
                 CycleHelper.TimeHepler.start();
                 startMatchBtn.getVisibility();
+                MainActivity.startBtnPressed = true;
 
                 //Log.e("STATE","GP");
             }
@@ -573,12 +584,6 @@ public class MatchPlayFragment extends BasicFragment {
     public void setLayout(int layout) {
         this.layout = layout;
     }
-
-
-
-
-
-
 
 
 

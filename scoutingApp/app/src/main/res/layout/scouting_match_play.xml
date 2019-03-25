@@ -56,6 +56,7 @@
             </TableRow>
 
         </TableLayout>
+
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -98,7 +99,7 @@
             <ImageView
                 android:id="@+id/matchplay_field_image"
                 android:layout_width="752dp"
-                android:layout_height="842dp"
+                android:layout_height="798dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
@@ -178,10 +179,10 @@
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.429"
+                app:layout_constraintHorizontal_bias="0.453"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.443" />
+                app:layout_constraintVertical_bias="0.414" />
 
             <Button
                 android:id="@+id/matchplay_cargoship_frontside_right_scoring_btn"
@@ -196,10 +197,10 @@
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.571"
+                app:layout_constraintHorizontal_bias="0.603"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.444" />
+                app:layout_constraintVertical_bias="0.414" />
 
             <Button
                 android:id="@+id/matchplay_cargoship_leftside_far_scoring_btn"
@@ -266,7 +267,7 @@
                 app:layout_constraintHorizontal_bias="0.987"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.242">
+                app:layout_constraintVertical_bias="0.19">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -308,10 +309,10 @@
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.878"
+                app:layout_constraintHorizontal_bias="0.864"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.372">
+                app:layout_constraintVertical_bias="0.292">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -356,7 +357,7 @@
                 app:layout_constraintHorizontal_bias="0.97"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.45">
+                app:layout_constraintVertical_bias="0.381">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -401,7 +402,7 @@
                 app:layout_constraintHorizontal_bias="0.012"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.52">
+                app:layout_constraintVertical_bias="0.404">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -443,10 +444,10 @@
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.012"
+                app:layout_constraintHorizontal_bias="0.017"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.253">
+                app:layout_constraintVertical_bias="0.191">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -488,10 +489,10 @@
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.121"
+                app:layout_constraintHorizontal_bias="0.113"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.371">
+                app:layout_constraintVertical_bias="0.294">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -521,6 +522,7 @@
                         android:text="high" />
                 </LinearLayout>
             </ScrollView>
+
             <Button
                 android:id="@+id/matchplay_pickup_hp_left_hatch_btn"
                 android:layout_width="73dp"
@@ -530,13 +532,13 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="@android:color/holo_green_light"
-                android:text="hatch"
+                android:text="hatch HP"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.919" />
+                app:layout_constraintVertical_bias="0.929" />
 
             <Button
                 android:id="@+id/matchplay_pickup_hp_left_cargo_btn"
@@ -547,13 +549,13 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="@android:color/holo_green_light"
-                android:text="cargo"
+                android:text="cargo hp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.114"
+                app:layout_constraintHorizontal_bias="0.107"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.916" />
+                app:layout_constraintVertical_bias="0.935" />
 
             <Button
                 android:id="@+id/matchplay_pickup_hp_right_cargo_btn"
@@ -564,7 +566,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="@android:color/holo_green_light"
-                android:text="cagro"
+                android:text="cagro hp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -581,7 +583,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="@android:color/holo_green_light"
-                android:text="hatch"
+                android:text="hatch hp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.893"
@@ -732,13 +734,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:background="@android:color/holo_purple"
                 android:text="Score Hatch"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.987"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.261" />
+                app:layout_constraintVertical_bias="0.235" />
 
             <Button
                 android:id="@+id/matchplay_rocket_right_mid_cargo_expandOptions_btn"
@@ -748,13 +751,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:background="@android:color/holo_purple"
                 android:text="Score cargo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.876"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.348" />
+                app:layout_constraintVertical_bias="0.306" />
 
             <Button
                 android:id="@+id/matchplay_rocket_right_near_hatch_expandOptions_btn"
@@ -764,13 +768,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:background="@android:color/holo_purple"
                 android:text="Score hatch"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.981"
+                app:layout_constraintHorizontal_bias="0.958"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.475" />
+                app:layout_constraintVertical_bias="0.375" />
 
             <Button
                 android:id="@+id/matchplay_rocket_left_far_hatch_expandOptions_btn"
@@ -780,13 +785,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:background="@android:color/holo_purple"
                 android:text="Score Hatch"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.012"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.322" />
+                app:layout_constraintVertical_bias="0.261" />
 
             <Button
                 android:id="@+id/matchplay_rocket_left_mid_cargo_expandOptions_btn"
@@ -796,13 +802,14 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:background="@android:color/holo_purple"
                 android:text="Score cargo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.099"
+                app:layout_constraintHorizontal_bias="0.109"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.401" />
+                app:layout_constraintVertical_bias="0.34" />
 
             <Button
                 android:id="@+id/matchplay_rocket_left_near_hatch_expandOptions_btn"
@@ -812,17 +819,19 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
+                android:background="@android:color/holo_purple"
                 android:text="Score hatch"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.001"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.408" />
 
             <Button
                 android:id="@+id/matchplay_start_match_btn"
-                android:layout_width="763dp"
-                android:layout_height="970dp"
+                android:layout_width="777dp"
+                android:layout_height="870dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
@@ -831,9 +840,10 @@
                 android:textSize="80sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.062" />
+                app:layout_constraintVertical_bias="0.333" />
 
 
         </android.support.constraint.ConstraintLayout>

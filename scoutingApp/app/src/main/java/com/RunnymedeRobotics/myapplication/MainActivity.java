@@ -31,6 +31,8 @@ import com.RunnymedeRobotics.myapplication.jsonqueue.JsonWrapper;
 import com.RunnymedeRobotics.myapplication.jsonqueue.QueueWrapper;
 import com.google.gson.Gson;
 
+import java.util.Set;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -39,6 +41,8 @@ public class MainActivity extends AppCompatActivity
     public static QueueWrapper queueWrapper = new QueueWrapper();
     //[startLvl, startObj]
     public static char[] keepFromSetup = new char[2];
+    public static boolean hasPreloadAndSetupLvlSelected = false;
+    public static boolean startBtnPressed = false;
 
 
     private int currentLayout;
@@ -191,6 +195,14 @@ public class MainActivity extends AppCompatActivity
                 switchBasicFrag(layout, new SetupFragment(layout));
                 break;
             case R.id.scouting_setup_match:
+                if(hasPreloadAndSetupLvlSelected){
+                    layout = R.layout.scouting_match_play;
+                    switchBasicFrag(layout,new MatchPlayFragment(layout));
+                    break;
+                }
+                else {
+                    break;
+                }
             case R.id.scouting_match_match:
                 layout = R.layout.scouting_match_play;
                 switchBasicFrag(layout,new MatchPlayFragment(layout));
@@ -206,6 +218,7 @@ public class MainActivity extends AppCompatActivity
                 switchBasicFrag(layout, new EndGameFragment(layout));
                 break;
         }
+
     }
 
     public static Context getContext(){

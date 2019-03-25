@@ -114,6 +114,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Level 3" />
+
+                <RadioButton
+                    android:id="@+id/level_none_fail_rdbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="None" />
             </RadioGroup>
 
             <TextView

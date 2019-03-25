@@ -121,18 +121,22 @@ public class EndGameFragment extends BasicFragment {
         levelTwoLeftClimb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                levelOneClimb.setChecked(true);
                 climbTimeEnd = ((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
+
             }
         });
         levelTwoRightClimb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                levelOneClimb.setChecked(true);
                 climbTimeEnd =((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
             }
         });
         levelThreeClimb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                levelOneClimb.setChecked(true);
                 climbTimeEnd =((int)CycleHelper.TimeHepler.getElapsedTimeSecs());
             }
         });
