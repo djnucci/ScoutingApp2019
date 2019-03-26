@@ -210,7 +210,7 @@ public class MatchPlayFragment extends BasicFragment {
 
         crossNum = 0;
         hasCrossed = isCrossed(crossNum);
-         hasPiece = true;
+
          gameStart  = false;
          rocketExpandBtnsClicked = false;
          cycleNum = 0;
@@ -382,6 +382,9 @@ public class MatchPlayFragment extends BasicFragment {
 
         }
         else{
+            hasPiece = false;
+            decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls, crossDropBtns,crossPickupBtns,defendedBtns);
+            makeRocketBtnsInvisible();
             makeBtnsInvisible(scoreBtns);
             makeBtnsInvisible(dropBtns);
             makeBtnsInvisible(crossPickupBtns);

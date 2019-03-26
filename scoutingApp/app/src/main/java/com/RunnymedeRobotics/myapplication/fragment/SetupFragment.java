@@ -232,6 +232,7 @@ if(!lvlChecked) {
 
         Log.e("AUTO PRELOAD", MainActivity.globalSubmitMatch.getAuto().getStartingObj() +"");
         Log.e("AUTO LEVEL", MainActivity.globalSubmitMatch.getAuto().getAutoLvl() +"");
+        Log.e("AUTO PRELOAD", MainActivity.globalSubmitMatch.getAuto().getAutoPreload() +"");
         //storing data for tab history for the match
 
 
