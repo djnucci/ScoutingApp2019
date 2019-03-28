@@ -374,12 +374,15 @@ public class MatchPlayFragment extends BasicFragment {
 
 
         if(MainActivity.globalSubmitMatch.getAuto().getAutoPreload() == '1'){
+            hasPiece = true;
+            decideVisiblilites(crossBtns,  pickupBtns,  scoreBtns,  dropBtns,scoreScrolls, crossDropBtns,crossPickupBtns,defendedBtns);
             makeBtnsInvisible(pickupBtns);
             //Log.e("STATE","ITS GETTING HERE");
             makeBtnsInvisible(crossBtns);
             makeBtnsInvisible(crossPickupBtns);
             makeBtnsInvisible(crossDropBtns);
-
+            Log.e("DEFEND BTN VISIBILITY", "YEET");
+            makeBtnsVisible(defendedBtns);
         }
         else{
             hasPiece = false;
@@ -390,7 +393,7 @@ public class MatchPlayFragment extends BasicFragment {
             makeBtnsInvisible(crossPickupBtns);
             makeBtnsInvisible(scoreRocketExpandBtns);
         }
-        makeBtnsInvisible(defendedBtns);
+
         for (int i = 0; i < scoreListOfRocketBtns.size(); i++){
             int copyOfI = i;
             //ArrayList<ArrayList> test = scoreListOfRocketBtns.get(i);

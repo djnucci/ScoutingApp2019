@@ -116,6 +116,37 @@ public class InitInfoFragment extends BasicFragment {
         buttonListner(blue2Btn);
         buttonListner(blue3Btn);
 
+        submitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //Log.e("STATE","GP");
+                try {
+                    Log.e("OnDestroy Called", " : TRUE");
+
+                    InitInfo initInfo = new InitInfo();
+                    initInfo.setEvent(SettingsFragment.competetion);
+                    initInfo.setTeamNumber(Integer.parseInt(teamEditText.getText().toString()));
+                    initInfo.setMatchNumber(Integer.parseInt(matchEditText.getText().toString()));
+                    initInfo.setName(nameEditText.getText().toString());
+                    try {
+                        initInfo.setAllianceColour(MainActivity.matchLists.getMatch(Integer.parseInt(matchEditText.getText().toString())).getAllianceColour(
+                                Integer.parseInt(teamEditText.getText().toString())
+                        ));
+                    } catch (NullPointerException e) {
+                        e.printStackTrace();
+                    }
+                    MainActivity.globalSubmitMatch = new SubmitMatch();
+                    MainActivity.globalSubmitMatch.setInitInfo(initInfo);
+                } catch (java.lang.NumberFormatException e) {
+                    e.printStackTrace();
+
+                }
+
+            }
+        });
+
+
 
         return view;
     }
@@ -138,8 +169,10 @@ public class InitInfoFragment extends BasicFragment {
         return team;
     }
 
+
+
     public void onDestroy(){
-        try {
+      /*  try {
             Log.e("OnDestroy Called", " : TRUE");
 
             InitInfo initInfo = new InitInfo();
@@ -154,12 +187,14 @@ public class InitInfoFragment extends BasicFragment {
             } catch (NullPointerException e) {
                 e.printStackTrace();
             }
-            //MainActivity.globalSubmitMatch = new SubmitMatch();
+            MainActivity.globalSubmitMatch = new SubmitMatch();
             MainActivity.globalSubmitMatch.setInitInfo(initInfo);
         }
         catch (java.lang.NumberFormatException e){
             e.printStackTrace();
         }
+        */
+
         super.onDestroy();
     }
 }

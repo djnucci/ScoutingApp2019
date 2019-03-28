@@ -86,9 +86,9 @@ public class EndGameFragment extends BasicFragment {
         View view = inflater.inflate(this.layout, container, false);
 
         //Callll once
-        /** -------------------------------------------------------------        **/
-        //MainActivity.globalSubmitMatch = new SubmitMatch();
+        /** -------------------------------------------------------------
          /** ----------------------------------------------------------          **/
+        //MainActivity.globalSubmitMatch = new SubmitMatch();
 
         levelOneClimb = (CheckBox) view.findViewById(R.id.level_one_endgame_climb_chkbx);
         levelTwoLeftClimb = (CheckBox) view.findViewById(R.id.level_two_engame_climb_left_chkbx);
@@ -293,8 +293,8 @@ public class EndGameFragment extends BasicFragment {
             endgame.setTimeToClimb((int) climbDuration);
         }
 
-       // MainActivity.globalSubmitMatch.setEndGame(endgame);
-
+        MainActivity.globalSubmitMatch.setEndGame(endgame);
+        //MainActivity.globalSubmitMatch = new SubmitMatch();
 
         super.onDestroy();
     }
