@@ -9,6 +9,7 @@ import com.RunnymedeRobotics.myapplication.Constants;
 import com.RunnymedeRobotics.myapplication.MainActivity;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmittedFile;
+import com.RunnymedeRobotics.myapplication.datastructureclasses.schedule.MatchLists;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -37,6 +38,12 @@ public class JsonWrapper {
         return (new Gson()).fromJson(val, QueueWrapper.class);
     }
 
+    public static MatchLists inflateMatchList(Context context){
+        String val = readFromFile(context,Constants.MATCH_LIST_FILENAME);
+        return (new Gson()).fromJson(val,MatchLists.class);
+    }
+
+
     public static void writeQueueToFile(QueueWrapper queueWrapper, Context context){
         try {
             writeToFile((new Gson()).toJson(queueWrapper), Constants.QUEUE_FILE_NAME,context);
@@ -47,13 +54,15 @@ public class JsonWrapper {
 
     public static void writeMatchToFile(SubmitMatch submitMatch, Context context){
         try {
-            String fileName = submitMatch.getInitInfo().getMatchNumber() +""+submitMatch.getInitInfo().getTeamNumber()+"_" + submitMatch.getInitInfo().getEvent()+"_match.json";
+            String fileName = submitMatch.getInitInfo().getMatchNumber() +"_"+submitMatch.getInitInfo().getTeamNumber()+"_" + submitMatch.getInitInfo().getEvent()+"_match.json";
             writeToFile((new Gson()).toJson(submitMatch),fileName , context);
             writeToFile((new Gson()).toJson(new SubmittedFile(fileName, submitMatch.getInitInfo().getEvent())), "files_submitted.json", context);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+
 
     public static void newQueue(Context context){
         try {

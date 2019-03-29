@@ -399,6 +399,7 @@ public class MatchPlayFragment extends BasicFragment {
             //ArrayList<ArrayList> test = scoreListOfRocketBtns.get(i);
             makeBtnsInvisible(scoreListOfRocketBtns.get(i));
         }
+        Log.e("BIT", "CH");
         if( MainActivity.startBtnPressed){
             startMatchBtn.setVisibility(View.INVISIBLE);
         }
@@ -571,7 +572,7 @@ public class MatchPlayFragment extends BasicFragment {
         startMatchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startMatchBtn.setVisibility(View.GONE);
+                startMatchBtn.setVisibility(View.INVISIBLE);
                 CycleHelper.TimeHepler.start();
                 startMatchBtn.getVisibility();
                 MainActivity.startBtnPressed = true;
@@ -582,6 +583,7 @@ public class MatchPlayFragment extends BasicFragment {
         });
         return view;
     }
+
 
     public int getLayout() {
         return layout;

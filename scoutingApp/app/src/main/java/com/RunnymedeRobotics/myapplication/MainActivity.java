@@ -15,11 +15,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
+import com.RunnymedeRobotics.myapplication.datastructureclasses.InitInfo;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.schedule.MatchLists;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
-import com.RunnymedeRobotics.myapplication.filehandler.InflateSchedule;
 import com.RunnymedeRobotics.myapplication.fragment.BasicFragment;
 import com.RunnymedeRobotics.myapplication.fragment.EndGameFragment;
 import com.RunnymedeRobotics.myapplication.fragment.InitInfoFragment;
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity
     public static char[] keepFromSetup = new char[2];
     public static boolean hasPreloadAndSetupLvlSelected = false;
     public static boolean startBtnPressed = false;
-
+    public static boolean flagBool = false;
 
     private int currentLayout;
 
@@ -183,15 +184,16 @@ public class MainActivity extends AppCompatActivity
         currentLayout = layout;
     }
 
-    public void switchScoutingTab(View button){
+    public void switchScoutingTab(View button){ ;
         Log.e("Tab Init","True");
         int layout;
         switch (button.getId()){
-            case R.id.scouting_start_setup:
+            //case R.id.scouting_start_setup:
             case R.id.scouting_setup_setup:
             case R.id.scouting_match_setup:
             case R.id.scouting_endgame_setup:
                 layout = R.layout.scouting_setup;
+                Log.e("Switch basic frag " , "called boi");
                 switchBasicFrag(layout, new SetupFragment(layout));
                 break;
             case R.id.scouting_setup_match:
@@ -227,7 +229,7 @@ public class MainActivity extends AppCompatActivity
 
     public void startupPorcedure(){
         SettingsFragment.updateSettings(this);
-        matchLists = InflateSchedule.inflateSchedule(this);
+        matchLists = JsonWrapper.inflateMatchList(this);
         MainActivity.queueWrapper = JsonWrapper.getQueueDataFromFile(this);
         if(MainActivity.queueWrapper == null){
             queueWrapper= new QueueWrapper();
@@ -244,6 +246,22 @@ public class MainActivity extends AppCompatActivity
     public static void checkSettings(Context context){
 
     }
+/*
+    public static void insertInitInfo(EditText nameEditText, EditText matchEditText, EditText teamEditText, char allianceColour, boolean flagBool){
+        if(!flagBool) {
+            InitInfo initInfo = new InitInfo();
+            initInfo.setEvent(SettingsFragment.competetion);
+            initInfo.setTeamNumber(Integer.parseInt(teamEditText.getText().toString()));
+            initInfo.setMatchNumber(Integer.parseInt(matchEditText.getText().toString()));
+            initInfo.setName(nameEditText.getText().toString());
+            if (nameEditText != null) {
+                initInfo.setAllianceColour(allianceColour);
+            }
+            MainActivity.globalSubmitMatch = new SubmitMatch();
+            MainActivity.globalSubmitMatch.setInitInfo(initInfo);
+        }
+    }
+    */
 
 
 }

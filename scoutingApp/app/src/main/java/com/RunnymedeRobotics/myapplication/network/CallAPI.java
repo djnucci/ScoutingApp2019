@@ -62,7 +62,11 @@ public class CallAPI {
         //Executes http response
         HttpResponse httpResponse = httpclient.execute(httppost);
         //returns the response from server if any
-            JsonWrapper.newQueue(context);
+            /**
+             * removes the querrywrapper  and inserts a new querry wrapper file.
+             * JsonWrapper.newQueue(context);
+             */
+
         return "Post Completed ==> " + httpResponse.toString();
     }
     catch (ClientProtocolException e){

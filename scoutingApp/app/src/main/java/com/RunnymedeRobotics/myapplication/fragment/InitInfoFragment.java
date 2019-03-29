@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -36,7 +38,7 @@ public class InitInfoFragment extends BasicFragment {
     Button blue1Btn;
     Button blue2Btn;
     Button blue3Btn;
-
+   public InitInfo initInfo = new InitInfo();
     private static int team;
 
 
@@ -50,7 +52,8 @@ public class InitInfoFragment extends BasicFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View view =  inflater.inflate(this.layout, container, false);
+         View view =  inflater.inflate(this.layout, container, false);
+        InitInfo initInfo = new InitInfo();
 
         nameEditText = (EditText) view.findViewById(R.id.name_edit_text);
         matchEditText = (EditText) view.findViewById(R.id.match_edit_text);
@@ -116,11 +119,12 @@ public class InitInfoFragment extends BasicFragment {
         buttonListner(blue2Btn);
         buttonListner(blue3Btn);
 
+
+
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                //Log.e("STATE","GP");
+                Log.e("STATE","GP");
                 try {
                     Log.e("OnDestroy Called", " : TRUE");
 
@@ -138,10 +142,18 @@ public class InitInfoFragment extends BasicFragment {
                     }
                     MainActivity.globalSubmitMatch = new SubmitMatch();
                     MainActivity.globalSubmitMatch.setInitInfo(initInfo);
+                    SetupFragment setupFragment = new SetupFragment(R.layout.scouting_setup);
+                    FragmentTransaction f = getActivity().getSupportFragmentManager().beginTransaction();
+                    f.replace(R.id.fragment_container, setupFragment);
+                    f.commit();
                 } catch (java.lang.NumberFormatException e) {
                     e.printStackTrace();
 
                 }
+                Log.e("InitInfo Student", MainActivity.globalSubmitMatch.getInitInfo().getName());
+                Log.e("InitInfo team", MainActivity.globalSubmitMatch.getInitInfo().getTeamNumber() + "");
+                Log.e("InitInfo alliance", MainActivity.globalSubmitMatch.getInitInfo().getAllianceColour() + "");
+                Log.e("InitInfo match", MainActivity.globalSubmitMatch.getInitInfo().getMatchNumber() + "");
 
             }
         });
@@ -172,10 +184,10 @@ public class InitInfoFragment extends BasicFragment {
 
 
     public void onDestroy(){
-      /*  try {
+     /*  try {
             Log.e("OnDestroy Called", " : TRUE");
 
-            InitInfo initInfo = new InitInfo();
+
             initInfo.setEvent(SettingsFragment.competetion);
             initInfo.setTeamNumber(Integer.parseInt(teamEditText.getText().toString()));
             initInfo.setMatchNumber(Integer.parseInt(matchEditText.getText().toString()));
@@ -193,8 +205,18 @@ public class InitInfoFragment extends BasicFragment {
         catch (java.lang.NumberFormatException e){
             e.printStackTrace();
         }
-        */
 
+        Log.e("InitInfo Student", MainActivity.globalSubmitMatch.getInitInfo().getName());
+        Log.e("InitInfo team", MainActivity.globalSubmitMatch.getInitInfo().getTeamNumber()+"");
+        Log.e("InitInfo alliance", MainActivity.globalSubmitMatch.getInitInfo().getAllianceColour()+"");
+        Log.e("InitInfo match", MainActivity.globalSubmitMatch.getInitInfo().getMatchNumber()+"");
+        */
         super.onDestroy();
     }
+
+
+    public InitInfo getInitInfo(){
+        return this.initInfo;
+    }
+
 }

@@ -156,7 +156,6 @@
             android:id="@+id/scouting_start_setup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="switchScoutingTab"
             android:text="Submit"
             android:textSize="18sp" />
 

@@ -239,13 +239,15 @@ public class EndGameFragment extends BasicFragment {
     }
     public void onDestroy(){
 
-        Log.e("AUTO PRELOAD END", MainActivity.globalSubmitMatch.getAuto().getStartingObj() +"");
-        Log.e("AUTO LEVEL END", MainActivity.globalSubmitMatch.getAuto().getAutoLvl() +"");
-        EndGame endgame = new EndGame();
+
+        //Log.e("AUTO PRELOAD END", MainActivity.globalSubmitMatch.getAuto().getStartingObj() +"");
+        //Log.e("AUTO LEVEL END", MainActivity.globalSubmitMatch.getAuto().getAutoLvl() +"");
+       // EndGame endgame = new EndGame();
         /**
          * Sets values of all radiobtns(default of ramp is 'N')
          * and chechboxes(default being false for climbs)
          */
+        /*
         if(levelOneClimb.isChecked()){
             endgame.setLevelOne(true);
         }
@@ -294,8 +296,8 @@ public class EndGameFragment extends BasicFragment {
         }
 
         MainActivity.globalSubmitMatch.setEndGame(endgame);
-        //MainActivity.globalSubmitMatch = new SubmitMatch();
-
+        MainActivity.globalSubmitMatch = new SubmitMatch();
+*/
         super.onDestroy();
     }
 
