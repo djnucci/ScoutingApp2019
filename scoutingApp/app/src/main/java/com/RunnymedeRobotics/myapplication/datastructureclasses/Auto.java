@@ -1,5 +1,8 @@
 package com.RunnymedeRobotics.myapplication.datastructureclasses;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
 /**
  * Class for the data structure for the auto data set on the MYSQL server
  *
@@ -8,39 +11,48 @@ package com.RunnymedeRobotics.myapplication.datastructureclasses;
  * Auto_preload (char)
  *
  */
+@DatabaseTable(tableName = "auto")
 public class Auto {
 
     /**
      * The Id.
      */
+    @DatabaseField(id = true )
     int id;
     /**
      * The Start pos.
      */
+    @DatabaseField
     String startPos = "";
     /**
      * The Place pos.
      */
+    @DatabaseField
     String placePos = "";
     /**
      * The Starting obj.
      */
+    @DatabaseField
     char startingObj = ' ';
     /**
      * The Time.
      */
+    @DatabaseField
     float time;
     /**
      * Auto Lvl
      */
+    @DatabaseField
     int autoLvl;
     /**
      * Auto Order
      */
+    @DatabaseField
     int autoOrder;
     /**
      * Auto Preload
      */
+    @DatabaseField
     char autoPreload;
 
     /**

@@ -49,7 +49,7 @@ public class InitInfoFragment extends BasicFragment {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view =  inflater.inflate(this.layout, container, false);
 
         nameEditText = (EditText) view.findViewById(R.id.name_edit_text);
@@ -103,6 +103,8 @@ public class InitInfoFragment extends BasicFragment {
                 catch (java.lang.NumberFormatException e){
                     Log.e("error: ", e.toString());
                     e.printStackTrace();
+
+
                 }
             }
         });
@@ -114,6 +116,40 @@ public class InitInfoFragment extends BasicFragment {
         buttonListner(blue2Btn);
         buttonListner(blue3Btn);
 
+        submitBtn.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(hasFocus){
+                    try {
+                        Log.e("OnDestroy Called", " : TRUE");
+
+                        InitInfo initInfo = new InitInfo();
+                        initInfo.setEvent(SettingsFragment.competetion);
+                        initInfo.setTeamNumber(Integer.parseInt(teamEditText.getText().toString()));
+                        initInfo.setMatchNumber(Integer.parseInt(matchEditText.getText().toString()));
+                        initInfo.setName(nameEditText.getText().toString());
+                        try {
+                            initInfo.setAllianceColour(MainActivity.matchLists.getMatch(Integer.parseInt(matchEditText.getText().toString())).getAllianceColour(
+                                    Integer.parseInt(teamEditText.getText().toString())
+                            ));
+                        } catch (NullPointerException e) {
+                            e.printStackTrace();
+                        }
+                        MainActivity.globalSubmitMatch = new SubmitMatch();
+                        MainActivity.globalSubmitMatch.setInitInfo(initInfo);
+                        Log.e("TEAM NO : ",initInfo.getName());
+                    }
+                    catch (java.lang.NumberFormatException e){
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+
+            // Set title bar
+            ((MainActivity) getActivity())
+                    .setActionBarTitle("ScoutingApp");
 
         return view;
     }
@@ -134,30 +170,12 @@ public class InitInfoFragment extends BasicFragment {
             }
         });
         return team;
+
+
     }
 
     public void onDestroy(){
-        try {
-            Log.e("OnDestroy Called", " : TRUE");
 
-            InitInfo initInfo = new InitInfo();
-            initInfo.setEvent(SettingsFragment.competetion);
-            initInfo.setTeamNumber(Integer.parseInt(teamEditText.getText().toString()));
-            initInfo.setMatchNumber(Integer.parseInt(matchEditText.getText().toString()));
-            initInfo.setName(nameEditText.getText().toString());
-            try {
-                initInfo.setAllianceColour(MainActivity.matchLists.getMatch(Integer.parseInt(matchEditText.getText().toString())).getAllianceColour(
-                        Integer.parseInt(teamEditText.getText().toString())
-                ));
-            } catch (NullPointerException e) {
-                e.printStackTrace();
-            }
-            MainActivity.globalSubmitMatch = new SubmitMatch();
-            MainActivity.globalSubmitMatch.setInitInfo(initInfo);
-        }
-        catch (java.lang.NumberFormatException e){
-            e.printStackTrace();
-        }
         super.onDestroy();
     }
 }

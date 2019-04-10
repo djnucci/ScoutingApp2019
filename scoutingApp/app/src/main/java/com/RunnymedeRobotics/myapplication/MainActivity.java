@@ -1,6 +1,7 @@
 package com.RunnymedeRobotics.myapplication;
 
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -8,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -220,6 +222,9 @@ public class MainActivity extends AppCompatActivity
         }
 
     }
+    public void setActionBarTitle(String title) {
+        getSupportActionBar().setTitle(title);
+    }
 
     public static Context getContext(){
         return getContext();
@@ -242,6 +247,18 @@ public class MainActivity extends AppCompatActivity
     }
 
     public static void checkSettings(Context context){
+
+    }
+
+    public void setActionBar(String heading) {
+        // TODO Auto-generated method stub
+
+       ActionBar actionBar = getSupportActionBar();
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(false);
+        actionBar.setDisplayShowHomeEnabled(false);
+        actionBar.setTitle(heading);
+        actionBar.show();
 
     }
 

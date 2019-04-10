@@ -574,6 +574,11 @@ public class MatchPlayFragment extends BasicFragment {
             }
 
         });
+
+        ((MainActivity) getActivity())
+                .setActionBarTitle("You are scouting team : " +                                                                               MainActivity.globalSubmitMatch.getInitInfo().getTeamNumber());
+
+
         return view;
     }
 

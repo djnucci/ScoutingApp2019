@@ -1,5 +1,8 @@
 package com.RunnymedeRobotics.myapplication.datastructureclasses;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
 import java.sql.Time;
 /**
  * The type Cycle.
@@ -12,45 +15,55 @@ import java.sql.Time;
  *  *      pickup_time (seconds) (int)
  *  *      dropoff_time (seconds) (int)
  */
+@DatabaseTable(tableName = "cycle")
 public class Cycle {
 
     /**
      * The Id.
      */
+    @DatabaseField(id = true)
     int id;
     /**
      * The Cycle number.
      */
+    @DatabaseField
     int cycleNumber;
     /**
      * The Field element.
      */
+    @DatabaseField
     char fieldElement = ' ';
     /**
      * The Pick up location.
      */
+    @DatabaseField
     String pickUp = "";
     /**
      * The Place location.
      */
+    @DatabaseField
     String place = "";
     /**
      * The Defense.
      */
+    @DatabaseField
     boolean defense;
     /**
      * The Drop.
      */
+    @DatabaseField
     boolean drop;
 
     /**
      * pickup Timetsamp
      */
+    @DatabaseField
     int pickupTime;
 
     /**
      * Time stamp for dropoff
      */
+    @DatabaseField
     int dropoffTime;
 
 

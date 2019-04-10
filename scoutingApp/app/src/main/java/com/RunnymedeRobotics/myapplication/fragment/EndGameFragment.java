@@ -85,10 +85,6 @@ public class EndGameFragment extends BasicFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(this.layout, container, false);
 
-        //Callll once
-        /** -------------------------------------------------------------        **/
-        MainActivity.globalSubmitMatch = new SubmitMatch();
-         /** ----------------------------------------------------------          **/
 
         levelOneClimb = (CheckBox) view.findViewById(R.id.level_one_endgame_climb_chkbx);
         levelTwoLeftClimb = (CheckBox) view.findViewById(R.id.level_two_engame_climb_left_chkbx);
