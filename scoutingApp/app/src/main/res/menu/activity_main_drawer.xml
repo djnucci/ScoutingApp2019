@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_main_page"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Main Page" />
+        <item
+            android:id="@+id/nav_schedule"
+            android:icon="@drawable/ic_perm_contact_calendar_black_24dp"
+            android:title="Match Schedule" />
+        <item
+            android:id="@+id/nav_file_transfer"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Data Sharing" />
+        <item
+            android:id="@+id/nav_scouting"
+            android:icon="@drawable/ic_memory_black_24dp"
+            android:title="Scouting" />
+        <item
+            android:id="@+id/nav_stats"
+            android:icon="@drawable/ic_poll_black_24dp"
+            android:title="Quick Stats" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Settings" />
+    </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Share" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_send"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="Send" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

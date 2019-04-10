@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"/>
+
+    <include layout="@layout/content_main" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="75dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/scout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Please Enter Your Name:" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/match_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/match_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Please Enter Match Number:"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="100dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/red_one"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/scouting_tab_height"
+                    android:layout_weight="1"
+                    android:background="#FF0000"
+                    android:text="Red One" />
+
+                <Button
+                    android:id="@+id/red_two"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/scouting_tab_height"
+                    android:layout_weight="1"
+                    android:background="#FF0000"
+                    android:text="Red Two" />
+
+                <Button
+                    android:id="@+id/red_three"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/scouting_tab_height"
+                    android:layout_weight="1"
+                    android:background="#FF0000"
+                    android:text="Red Three" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp" >
+
+                <Button
+                    android:id="@+id/blue_one"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/scouting_tab_height"
+                    android:layout_weight="1"
+                    android:background="#0000FF"
+                    android:text="Blue One"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/blue_two"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/scouting_tab_height"
+                    android:layout_weight="1"
+                    android:background="#0000FF"
+                    android:text="Blue Two"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/blue_three"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/scouting_tab_height"
+                    android:layout_weight="1"
+                    android:background="#0000FF"
+                    android:text="Blue Three"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+        </TableLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/team_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Team Number:"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/scouting_start_setup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="switchScoutingTab"
+            android:text="Submit"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
