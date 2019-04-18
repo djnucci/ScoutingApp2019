@@ -2,14 +2,13 @@ package com.RunnymedeRobotics.myapplication.datastructureclasses;
 
 /**
  * The type Init info.
- *
+ * <p>
  * Initial Info :
- *      alliance_colour (char)
- *      Match (3 digit int)
- *      Team (4 digit int)
- *      Event (String)
- *      Year (4 digit int)
- *
+ * alliance_colour (char)
+ * Match (3 digit int)
+ * Team (4 digit int)
+ * Event (String)
+ * Year (4 digit int)
  */
 public class InitInfo {
 
@@ -43,6 +42,11 @@ public class InitInfo {
     int Year;
 
     /**
+     * The Is replayed.
+     */
+    int isReplayed = 0;
+
+    /**
      * Instantiates a new Init info.
      */
     public InitInfo(){}
@@ -50,14 +54,16 @@ public class InitInfo {
     /**
      * Instantiates a new Init info.
      *
-     * @param id          the id
-     * @param name        the name
-     * @param matchNumber the match number
-     * @param teamNumber  the team number
-     * @param event       the event
-     * @param year        the year
+     * @param id             the id
+     * @param name           the name
+     * @param matchNumber    the match number
+     * @param teamNumber     the team number
+     * @param event          the event
+     * @param year           the year
+     * @param allianceColour the alliance colour
+     * @param isReplayed     the is replayed
      */
-    public InitInfo(int id, String name, int matchNumber, int teamNumber, String event, int year, char allianceColour) {
+    public InitInfo(int id, String name, int matchNumber, int teamNumber, String event, int year, char allianceColour, int isReplayed) {
         this.id = id;
         this.name = name;
         this.matchNumber = matchNumber;
@@ -65,6 +71,7 @@ public class InitInfo {
         this.event = event;
         Year = year;
         this.allianceColour = allianceColour;
+        this.isReplayed = isReplayed;
     }
 
 
@@ -178,7 +185,8 @@ public class InitInfo {
 
     /**
      * Gets alliance Colour char
-     * @return
+     *
+     * @return alliance colour
      */
     public char getAllianceColour() {
         return allianceColour;
@@ -186,11 +194,31 @@ public class InitInfo {
 
     /**
      * sets alliance colour
-     * @param allianceColour
-     * @return
+     *
+     * @param allianceColour the alliance colour
+     * @return alliance colour
      */
     public InitInfo setAllianceColour(char allianceColour) {
         this.allianceColour = allianceColour;
         return this;
+    }
+
+
+    /**
+     * Is replayed boolean.
+     *
+     * @return the boolean
+     */
+    public int getIsReplayed() {
+        return isReplayed;
+    }
+
+    /**
+     * Sets replayed.
+     *
+     * @param replayed the replayed
+     */
+    public void setReplayed(int replayed) {
+        isReplayed = replayed;
     }
 }

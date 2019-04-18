@@ -26,10 +26,7 @@ public class SettingsFragment extends BasicFragment {
     EditText compEditText;
 
     public static String ipAddress = "";
-    public static String competetion = "";
-
-
-
+    public static String competition = "";
 
 
     public SettingsFragment(){}
@@ -53,20 +50,20 @@ public class SettingsFragment extends BasicFragment {
 
         //Gets the stored strings and sets it to the local variables
         ipAddress = pref.getString("ip","");
-        competetion = pref.getString("competition","");
+        competition = pref.getString("competition","");
 
         //Sets the stored prefrences to the text view
         ipEditText.setText(ipAddress);
-        compEditText.setText(competetion);
+        compEditText.setText(competition);
 
 
         storeDataBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Updates settings
-                competetion = compEditText.getText().toString();
+                competition = compEditText.getText().toString();
                 ipAddress = ipEditText.getText().toString();
-                editor.putString("competition",competetion);
+                editor.putString("competition", competition);
                 editor.putString("ip",ipAddress);
                 editor.commit();
             }
@@ -79,19 +76,18 @@ public class SettingsFragment extends BasicFragment {
         SharedPreferences pref = context.getSharedPreferences("settings",0);
         final SharedPreferences.Editor editor = pref.edit();
         ipAddress = pref.getString("ip",null);
-        competetion = pref.getString("competition",null);
+        competition = pref.getString("competition",null);
     }
 
-    public static boolean checkSettings(Context context){
-        SharedPreferences pref = context.getSharedPreferences("settings",0);
+    public static void checkSettings(Context context) {
+        SharedPreferences pref = context.getSharedPreferences("settings", 0);
         final SharedPreferences.Editor editor = pref.edit();
         //Gets the stored strings and sets it to the local variables
-        ipAddress = pref.getString("ip",null);
-        competetion = pref.getString("competition",null);
-        if (competetion == null){
-
+        ipAddress = pref.getString("ip", null);
+        competition = pref.getString("competition", null);
+        if (competition == null) {
+            MainActivity.makeToast("Please add competition in settings", context);
         }
-        return false;
     }
 
 }

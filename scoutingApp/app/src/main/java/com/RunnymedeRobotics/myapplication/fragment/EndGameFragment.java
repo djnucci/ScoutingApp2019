@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentTransaction;
-import android.telecom.Call;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,19 +14,15 @@ import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.RunnymedeRobotics.myapplication.Constants;
 import com.RunnymedeRobotics.myapplication.MainActivity;
 import com.RunnymedeRobotics.myapplication.R;
-import com.RunnymedeRobotics.myapplication.datastructureclasses.Auto;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.EndGame;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
 import com.RunnymedeRobotics.myapplication.jsonqueue.JsonWrapper;
-import com.RunnymedeRobotics.myapplication.jsonqueue.QueueWrapper;
 import com.RunnymedeRobotics.myapplication.network.CallAPI;
-
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Queue;
-import com.RunnymedeRobotics.myapplication.network.CallAPI;
 
 public class EndGameFragment extends BasicFragment {
     /**
@@ -216,18 +211,22 @@ public class EndGameFragment extends BasicFragment {
 
                 MainActivity.globalSubmitMatch.setEndGame(endgame);
                 MainActivity.queueWrapper.addToQueueWrapper(MainActivity.globalSubmitMatch);
-                JsonWrapper.writeQueueToFile(MainActivity.queueWrapper, getContext());
+                MainActivity.mainDataFile.addToQueueWrapper(MainActivity.globalSubmitMatch);
+                JsonWrapper.writeQueueToFile(MainActivity.queueWrapper, getContext(), Constants.QUEUE_FILE_NAME);
+                JsonWrapper.writeQueueToFile(MainActivity.mainDataFile, getContext(), Constants.MASTER_DATA_FILENAME);
                 JsonWrapper.writeMatchToFile(MainActivity.globalSubmitMatch, getContext());
                 CallAPI.submitLocalQueue(MainActivity.queueWrapper, getContext());
                 Log.e("ATUO LVL FROM AUTO OBJ" ,MainActivity.globalSubmitMatch.getAuto().getAutoLvl() + "");
                 Log.e("LEVEL FAIL", MainActivity.globalSubmitMatch.getEndGame().getFailLevel()+"");
                 Log.e("LEVEL FAIL", MainActivity.globalSubmitMatch.getEndGame().getFailLevel()+"");
 
+                ((MainActivity) getActivity()).setActionBar("Scouting App");
                 InitInfoFragment initInfo = new InitInfoFragment(R.layout.scouting_start_page);
                 FragmentTransaction f = getActivity().getSupportFragmentManager().beginTransaction();
                 f.replace(R.id.fragment_container, initInfo);
                 f.addToBackStack(null);
                 f.commit();
+
             }}
 
 

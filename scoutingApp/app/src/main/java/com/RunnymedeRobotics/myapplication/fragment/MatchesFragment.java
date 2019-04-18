@@ -88,7 +88,7 @@ public class MatchesFragment extends BasicFragment {
                     textViews[i][a].setWidth(100);
                     textViews[i][a].setLayoutParams(lp);
                     if(a == 0){
-                        textViews[i][a].setText(String.valueOf(matchArrayList.get(i).getMathcNum()));
+                        textViews[i][a].setText(String.valueOf(matchArrayList.get(i).getMatchNum()));
 
                     }
                     else {

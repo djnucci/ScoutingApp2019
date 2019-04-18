@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -13,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 
 import com.RunnymedeRobotics.myapplication.datastructureclasses.InitInfo;
@@ -20,8 +20,6 @@ import com.RunnymedeRobotics.myapplication.datastructureclasses.SubmitMatch;
 import com.RunnymedeRobotics.myapplication.MainActivity;
 import com.RunnymedeRobotics.myapplication.R;
 import com.RunnymedeRobotics.myapplication.datastructureclasses.schedule.Match;
-
-import java.util.MissingFormatArgumentException;
 
 public class InitInfoFragment extends BasicFragment {
 
@@ -38,6 +36,8 @@ public class InitInfoFragment extends BasicFragment {
     Button blue1Btn;
     Button blue2Btn;
     Button blue3Btn;
+    CheckBox replayedCheckBox;
+
    public InitInfo initInfo = new InitInfo();
     private static int team;
 
@@ -65,6 +65,7 @@ public class InitInfoFragment extends BasicFragment {
         blue1Btn = (Button) view.findViewById(R.id.blue_one);
         blue2Btn = (Button) view.findViewById(R.id.blue_two);
         blue3Btn = (Button) view.findViewById(R.id.blue_three);
+        replayedCheckBox = (CheckBox) view.findViewById(R.id.replayedCheckBox);
 
         MainActivity.globalSubmitMatch = new SubmitMatch();
         MainActivity.startBtnPressed = false;
@@ -89,7 +90,7 @@ public class InitInfoFragment extends BasicFragment {
             @Override
             public void afterTextChanged(Editable s) {
                 try{
-                    Match match = MainActivity.matchLists.getMatch(Integer.parseInt(matchEditText.getText().toString()));
+                    Match match = MainActivity.matchLists.getMatch(Integer.parseInt(matchEditText.getText().toString())-1);
                     red1Btn.setText(match.getR1() + "");
                     red2Btn.setText(match.getR2() + "");
                     red3Btn.setText(match.getR3() + "");
@@ -129,15 +130,19 @@ public class InitInfoFragment extends BasicFragment {
                     Log.e("OnDestroy Called", " : TRUE");
 
                     InitInfo initInfo = new InitInfo();
-                    initInfo.setEvent(SettingsFragment.competetion);
+                    initInfo.setEvent(SettingsFragment.competition);
                     initInfo.setTeamNumber(Integer.parseInt(teamEditText.getText().toString()));
                     initInfo.setMatchNumber(Integer.parseInt(matchEditText.getText().toString()));
                     initInfo.setName(nameEditText.getText().toString());
+                    initInfo.setReplayed(replayedCheckBox.isChecked()  ? 1 : 0);
                     try {
                         initInfo.setAllianceColour(MainActivity.matchLists.getMatch(Integer.parseInt(matchEditText.getText().toString())).getAllianceColour(
                                 Integer.parseInt(teamEditText.getText().toString())
                         ));
                     } catch (NullPointerException e) {
+                        e.printStackTrace();
+                    }
+                    catch (IndexOutOfBoundsException e){
                         e.printStackTrace();
                     }
                     MainActivity.globalSubmitMatch = new SubmitMatch();
@@ -188,7 +193,7 @@ public class InitInfoFragment extends BasicFragment {
             Log.e("OnDestroy Called", " : TRUE");
 
 
-            initInfo.setEvent(SettingsFragment.competetion);
+            initInfo.setEvent(SettingsFragment.competition);
             initInfo.setTeamNumber(Integer.parseInt(teamEditText.getText().toString()));
             initInfo.setMatchNumber(Integer.parseInt(matchEditText.getText().toString()));
             initInfo.setName(nameEditText.getText().toString());

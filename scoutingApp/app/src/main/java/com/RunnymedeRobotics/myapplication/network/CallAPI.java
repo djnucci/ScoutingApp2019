@@ -1,9 +1,11 @@
 package com.RunnymedeRobotics.myapplication.network;
 
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.util.Log;
 
+import com.RunnymedeRobotics.myapplication.Constants;
 import com.RunnymedeRobotics.myapplication.MainActivity;
 import com.RunnymedeRobotics.myapplication.fragment.SettingsFragment;
 import com.RunnymedeRobotics.myapplication.jsonqueue.JsonWrapper;
@@ -19,6 +21,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -61,13 +64,26 @@ public class CallAPI {
         httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
         //Executes http response
         HttpResponse httpResponse = httpclient.execute(httppost);
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            httpResponse.getEntity().writeTo(out);
+            String httpResponseEntity = out.toString();
         //returns the response from server if any
             /**
              * removes the querrywrapper  and inserts a new querry wrapper file.
              * JsonWrapper.newQueue(context);
              */
 
+            if(httpResponseEntity.equals("POST DONE")){
+            MainActivity.queueWrapper = new QueueWrapper();
+            JsonWrapper.writeQueueToFile(MainActivity.queueWrapper, context, Constants.QUEUE_FILE_NAME);
+            }
+
+            Log.e("POST STATUS ", httpResponseEntity);
+
+            MainActivity.makeToast("REPSONSE : " + httpResponseEntity, context);
         return "Post Completed ==> " + httpResponse.toString();
+
+
     }
     catch (ClientProtocolException e){
         e.printStackTrace();

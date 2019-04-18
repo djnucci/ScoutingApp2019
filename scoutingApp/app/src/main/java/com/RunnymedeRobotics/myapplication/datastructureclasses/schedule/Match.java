@@ -9,7 +9,7 @@ public class Match {
         private int blue1;
         private int blue2;
         private int blue3;
-        private int mathcNum;
+        private int matchNum;
 
 
         public void match(int r1,int r2,int r3,int b1,int b2,int b3) {
@@ -83,13 +83,13 @@ public class Match {
         }
 
 
-        public int getMathcNum() {
-            return mathcNum;
+        public int getMatchNum() {
+            return matchNum;
         }
 
 
-        public void setMathcNum(int mathcNum) {
-            this.mathcNum = mathcNum;
+        public void setMatchNum(int matchNum) {
+            this.matchNum = matchNum;
         }
 
     @Override
@@ -101,7 +101,7 @@ public class Match {
                 ", blue1=" + blue1 +
                 ", blue2=" + blue2 +
                 ", blue3=" + blue3 +
-                ", mathcNum=" + mathcNum +
+                ", matchNum=" + matchNum +
                 '}';
     }
 

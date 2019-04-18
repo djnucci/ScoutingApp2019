@@ -33,8 +33,8 @@ import static android.content.ContentValues.TAG;
 public class JsonWrapper {
 
 
-    public static QueueWrapper getQueueDataFromFile(Context context){
-        String val = readFromFile(context, Constants.QUEUE_FILE_NAME);
+    public static QueueWrapper getQueueDataFromFile(Context context, String fileName){
+        String val = readFromFile(context, fileName);
         return (new Gson()).fromJson(val, QueueWrapper.class);
     }
 
@@ -44,9 +44,9 @@ public class JsonWrapper {
     }
 
 
-    public static void writeQueueToFile(QueueWrapper queueWrapper, Context context){
+    public static void writeQueueToFile(QueueWrapper queueWrapper, Context context, String fileName){
         try {
-            writeToFile((new Gson()).toJson(queueWrapper), Constants.QUEUE_FILE_NAME,context);
+            writeToFile((new Gson()).toJson(queueWrapper), fileName,context);
         } catch (IOException e) {
             e.printStackTrace();
         }
