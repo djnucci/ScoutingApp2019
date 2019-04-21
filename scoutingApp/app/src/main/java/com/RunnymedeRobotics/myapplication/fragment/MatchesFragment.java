@@ -80,7 +80,7 @@ public class MatchesFragment extends BasicFragment {
         TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
         ArrayList<Match> matchArrayList = MainActivity.matchLists.getMatchArrayList();
 
-    /**    if (!matchArrayList.isEmpty()) {
+       if (!matchArrayList.isEmpty()) {
             Log.e("Not Empty : ", "true");
             for (int i = 0; i < matchArrayList.size(); i++) {
                 for (int a = 0; a < 6; a++) {
@@ -109,7 +109,7 @@ public class MatchesFragment extends BasicFragment {
         else {
 
         }
-     **/
+
 
 
 

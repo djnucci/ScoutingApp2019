@@ -3,16 +3,15 @@ package com.RunnymedeRobotics.myapplication.datastructureclasses;
 
 /**
  * The type End game.
- *
- Level1 (bool)
- Level2 (bool)
- Level3 (bool)
- defense (bool)
- ramp(bool)
- level_fail (int)
- Climb_start_time (seconds) (int)
- Climb_end_time (seconds) (int)
- *
+ * <p>
+ * Level1 (bool)
+ * Level2 (bool)
+ * Level3 (bool)
+ * defense (bool)
+ * ramp(bool)
+ * level_fail (int)
+ * Climb_start_time (seconds) (int)
+ * Climb_end_time (seconds) (int)
  */
 public class EndGame {
 
@@ -57,20 +56,31 @@ public class EndGame {
     /**
      * Instantiates a new End game.
      */
+    String comment;
+
+    /**
+     * The Was defended.
+     */
+    boolean wasDefended;
+
+    /**
+     * Instantiates a new End game.
+     */
     public EndGame() {
     }
 
     /**
      * Contructor for all the fields
-     * @param id
-     * @param levelOne
-     * @param levelTwo
-     * @param levelThree
-     * @param ramp
-     * @param timeToClimb
-     * @param failLevel
-     * @param cimbStart
-     * @param climbEnd
+     *
+     * @param id          the id
+     * @param levelOne    the level one
+     * @param levelTwo    the level two
+     * @param levelThree  the level three
+     * @param ramp        the ramp
+     * @param timeToClimb the time to climb
+     * @param failLevel   the fail level
+     * @param cimbStart   the cimb start
+     * @param climbEnd    the climb end
      */
     public EndGame(int id, boolean levelOne, boolean levelTwo, boolean levelThree, boolean ramp, float timeToClimb, char failLevel, int cimbStart, int climbEnd) {
         this.id = id;
@@ -245,5 +255,41 @@ public class EndGame {
      */
     public void setClimbEnd(int climbEnd) {
         this.climbEnd = climbEnd;
+    }
+
+    /**
+     * Gets comment.
+     *
+     * @return the comment
+     */
+    public String getComment() {
+        return comment;
+    }
+
+    /**
+     * Sets comment.
+     *
+     * @param comment the comment
+     */
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    /**
+     * Is was defended boolean.
+     *
+     * @return the boolean
+     */
+    public boolean isWasDefended() {
+        return wasDefended;
+    }
+
+    /**
+     * Sets was defended.
+     *
+     * @param wasDefended the was defended
+     */
+    public void setWasDefended(boolean wasDefended) {
+        this.wasDefended = wasDefended;
     }
 }

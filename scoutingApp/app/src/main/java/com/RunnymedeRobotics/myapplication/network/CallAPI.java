@@ -50,7 +50,6 @@ public class CallAPI {
 
         //specifies http post to server ip and creates httppost object
         HttpClient httpclient = new DefaultHttpClient();
-        Log.e("POST ADRESS : ", SettingsFragment.ipAddress+":8080/RunnymedeRoboticsScoutingApplication_war_exploded/Database/addQueueWrapper");
         Log.e("POST ADRESS : ", (SettingsFragment.ipAddress+":8080/RunnymedeRoboticsScoutingApplication_war_exploded/Database/addQueueWrapper").replaceAll("\\s+",""));
         HttpPost httppost = new HttpPost("http://"+(SettingsFragment.ipAddress+":8080/RunnymedeRoboticsScoutingApplication_war_exploded/Database/addQueueWrapper").replaceAll("\\s+",""));
         Log.e("Queue Wrapper ", (new Gson()).toJson(queueWrapper) +"");
