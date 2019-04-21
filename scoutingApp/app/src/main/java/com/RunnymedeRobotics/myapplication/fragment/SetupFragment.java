@@ -92,54 +92,6 @@ public class SetupFragment extends BasicFragment {
             levelTwoLeftBtn.setChecked(true);
         }
 
-
-/*
-        matchPlayTab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Auto auto = new Auto();
-                if (cargoPreload.isChecked()) {
-                    auto.setStartingObj('C');
-                    auto.setAutoPreload('1');
-                    System.out.print("ABC");
-                } else if (hatchPreload.isChecked()) {
-                    auto.setStartingObj('H');
-                    auto.setAutoPreload('1');
-                } else if (noPrelaod.isChecked()) {
-                    auto.setStartingObj('N');
-                    auto.setAutoPreload('0');
-                }
-                else{
-                    auto.setStartingObj('N');
-                    auto.setAutoPreload('0');
-                }
-
-                if (levelOneBtn.isChecked()) {
-                    auto.setAutoLvl(1);
-                }
-                if (levelTwoLeftBtn.isChecked() || levelTwoRightBtn.isChecked()) {
-                    auto.setAutoLvl(2);
-                }
-                Log.e("Preload" , auto.getAutoPreload()+"");
-                Log.e("StartingObj", auto.getStartingObj()+"");
-                MainActivity.globalSubmitMatch.setAuto(auto);
-                Log.e("TEST", MainActivity.globalSubmitMatch.getAuto().getAutoPreload()+"");
-
-            }
-        });
-        */
-
-
-/*
-        cargoPreload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                auto.setStartingObj('C');
-                auto.setAutoPreload('1');
-                MainActivity.globalSubmitMatch.setAuto(auto);
-            }
-        });
-        */
 if(!lvlChecked) {
     for (int i = 0; i < setupLevelList.size(); i++) {
         getIsLevelAndPreloadChecked();

@@ -187,41 +187,4 @@ public class InitInfoFragment extends BasicFragment {
     }
 
 
-
-    public void onDestroy(){
-     /*  try {
-            Log.e("OnDestroy Called", " : TRUE");
-
-
-            initInfo.setEvent(SettingsFragment.competition);
-            initInfo.setTeamNumber(Integer.parseInt(teamEditText.getText().toString()));
-            initInfo.setMatchNumber(Integer.parseInt(matchEditText.getText().toString()));
-            initInfo.setName(nameEditText.getText().toString());
-            try {
-                initInfo.setAllianceColour(MainActivity.matchLists.getMatch(Integer.parseInt(matchEditText.getText().toString())).getAllianceColour(
-                        Integer.parseInt(teamEditText.getText().toString())
-                ));
-            } catch (NullPointerException e) {
-                e.printStackTrace();
-            }
-            MainActivity.globalSubmitMatch = new SubmitMatch();
-            MainActivity.globalSubmitMatch.setInitInfo(initInfo);
-        }
-        catch (java.lang.NumberFormatException e){
-            e.printStackTrace();
-        }
-
-        Log.e("InitInfo Student", MainActivity.globalSubmitMatch.getInitInfo().getName());
-        Log.e("InitInfo team", MainActivity.globalSubmitMatch.getInitInfo().getTeamNumber()+"");
-        Log.e("InitInfo alliance", MainActivity.globalSubmitMatch.getInitInfo().getAllianceColour()+"");
-        Log.e("InitInfo match", MainActivity.globalSubmitMatch.getInitInfo().getMatchNumber()+"");
-        */
-        super.onDestroy();
-    }
-
-
-    public InitInfo getInitInfo(){
-        return this.initInfo;
-    }
-
 }
