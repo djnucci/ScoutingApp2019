@@ -22,6 +22,8 @@ public class MatchLists {
        return matchArrayList.get(match);
     }
 
-
+    public boolean isMatchlistPresent(){
+        return !matchArrayList.isEmpty();
+    }
 
 }

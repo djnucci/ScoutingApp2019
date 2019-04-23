@@ -104,10 +104,7 @@ if(!lvlChecked) {
                     //Log.e("LVL BTN PRESSEDL", setupLevelList.get(copyOfi).getTag().toString());
                     lvlChecked = true;
                     getIsLevelAndPreloadChecked();
-
                 }
-
-
             }
         });
         if(lvlChecked){

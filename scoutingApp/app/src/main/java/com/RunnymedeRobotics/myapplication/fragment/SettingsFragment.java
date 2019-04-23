@@ -24,6 +24,7 @@ public class SettingsFragment extends BasicFragment {
 
     EditText ipEditText;
     EditText compEditText;
+    EditText botPlacementEditText;
 
     public static String ipAddress = "";
     public static String competition = "";
@@ -43,6 +44,7 @@ public class SettingsFragment extends BasicFragment {
         storeDataBtn = (Button) view.findViewById(R.id.save_settings);
         ipEditText = (EditText) view.findViewById(R.id.ip_address_text_edit);
         compEditText = (EditText) view.findViewById(R.id.regional_text_edit);
+        botPlacementEditText = (EditText) view.findViewById(R.id.bot_placement);
 
         SharedPreferences pref = getContext().getSharedPreferences("settings",0);
         final SharedPreferences.Editor editor = pref.edit();
@@ -68,6 +70,10 @@ public class SettingsFragment extends BasicFragment {
                 editor.commit();
             }
         });
+
+
+        if(MainActivity.matchLists.isMatchlistPresent()){
+        }
         return view;
     }
 

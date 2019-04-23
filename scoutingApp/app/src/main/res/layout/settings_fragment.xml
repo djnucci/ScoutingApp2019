@@ -55,10 +55,38 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/bot_placement"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="100dp"
+            android:paddingTop="25dp"
+            android:paddingRight="100dp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:paddingTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Alliance Selection " />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="433dp"
         android:layout_height="268dp"
         android:orientation="horizontal"
-        android:paddingTop="200dp"></LinearLayout>
+        android:paddingTop="200dp">
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

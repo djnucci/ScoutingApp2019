@@ -219,7 +219,6 @@ public class EndGameFragment extends BasicFragment {
                 Log.e("ATUO LVL FROM AUTO OBJ" ,MainActivity.globalSubmitMatch.getAuto().getAutoLvl() + "");
                 Log.e("LEVEL FAIL", MainActivity.globalSubmitMatch.getEndGame().getFailLevel()+"");
                 Log.e("LEVEL FAIL", MainActivity.globalSubmitMatch.getEndGame().getFailLevel()+"");
-
                 ((MainActivity) getActivity()).setActionBar("Scouting App");
                 InitInfoFragment initInfo = new InitInfoFragment(R.layout.scouting_start_page);
                 FragmentTransaction f = getActivity().getSupportFragmentManager().beginTransaction();
@@ -235,69 +234,6 @@ public class EndGameFragment extends BasicFragment {
 
 
         return view;
-    }
-    public void onDestroy(){
-
-
-        //Log.e("AUTO PRELOAD END", MainActivity.globalSubmitMatch.getAuto().getStartingObj() +"");
-        //Log.e("AUTO LEVEL END", MainActivity.globalSubmitMatch.getAuto().getAutoLvl() +"");
-       // EndGame endgame = new EndGame();
-        /**
-         * Sets values of all radiobtns(default of ramp is 'N')
-         * and chechboxes(default being false for climbs)
-         */
-        /*
-        if(levelOneClimb.isChecked()){
-            endgame.setLevelOne(true);
-        }
-        else {
-            endgame.setLevelOne(false);
-        }
-
-        if(levelTwoLeftClimb.isChecked() || levelTwoRightClimb.isChecked()){
-            endgame.setLevelTwo(true);
-        }
-        else {
-            endgame.setLevelTwo(false);
-        }
-
-        if(levelThreeClimb.isChecked()){
-            endgame.setLevelThree(true);
-        }
-        else{
-            endgame.setLevelThree(false);
-        }
-
-        if(buddyd.isChecked()){
-            endgame.setRamp(true);
-        }
-        else {
-            endgame.setRamp(false);
-        }
-
-        if(levelOneClimbFail.isChecked()){
-            endgame.setFailLevel('1');
-        }
-        else if(levelTwoClimbFail.isChecked()){
-            endgame.setFailLevel('2');
-        }
-        else if(levelThreeClimbFail.isChecked()){
-            endgame.setFailLevel('3');
-        }
-        else{
-            endgame.setFailLevel('N');
-        }
-
-        if(climbTimeEnd>0 && climbTimeStart>0){
-            endgame.setCimbStart((int)climbTimeStart);
-            endgame.setClimbEnd((int) climbTimeEnd);
-            endgame.setTimeToClimb((int) climbDuration);
-        }
-
-        MainActivity.globalSubmitMatch.setEndGame(endgame);
-        MainActivity.globalSubmitMatch = new SubmitMatch();
-*/
-        super.onDestroy();
     }
 
 

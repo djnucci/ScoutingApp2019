@@ -110,7 +110,7 @@ public class Match {
                 return 'r';
             }
             else {
-                return 'r';
+                return 'b';
             }
     }
 
